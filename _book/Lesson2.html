@@ -1,0 +1,1057 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Classes · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lesson3.html" />
+    
+    
+    <link rel="prev" href="Lesson1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lesson1.html">
+            
+                <a href="Lesson1.html">
+            
+                    
+                    Language Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="Lesson2.html">
+            
+                <a href="Lesson2.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lesson3.html">
+            
+                <a href="Lesson3.html">
+            
+                    
+                    Advanced Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lesson4.html">
+            
+                <a href="Lesson4.html">
+            
+                    
+                    The .NET Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Lesson5.html">
+            
+                <a href="Lesson5.html">
+            
+                    
+                    Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Classes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="classes">Classes</h1><p>Namespaces are used to provide a &quot;named space&quot; in which your application resides. They&apos;re used especially to provide the C# compiler a context for all the named information in your program, such as variable names. Without namespaces, for example, you wouldn&apos;t be able to make a class named Console, as .NET already uses one in its System namespace. The purpose of namespaces is to solve this problem, and release thousands of names defined in the .NET Framework for your applications to use, along with making it so your application doesn&apos;t occupy names for other applications, if your application is intended to be used in conjunction with another. So namespaces exist to resolve ambiguities a compiler wouldn&apos;t otherwise be able to do.</p><p>Namespaces are easily defined in this way:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">namespace</span> <span class="hljs-title">MyApplication</span>
+ {
+     <span class="hljs-comment">// The content to reside in the MyApplication namespace is placed here.</span>
+ }</code></pre>
+<p>There is an entire hierarchy of namespaces provided to you by the .NET Framework, with the System namespace usually being by far the most commonly seen one. Data in a namespace is referred to by using the . operator, such as:</p><pre><code class="lang-csharp"> System.Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>);</code></pre>
+<p>This will call the WriteLine method that is a member of the Console class within the System namespace.</p><p>By using the using keyword, you explicitly tell the compiler that you&apos;ll be using a certain namespace in your program. Since the compiler would then know that, it no longer requires you to type the namespace name(s) for such declared namespaces, as you told it which namespaces it should look in, if it couldn&apos;t find the data in your application.</p><p>So one can then type like this:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">using</span> System;
+
+ <span class="hljs-keyword">namespace</span> <span class="hljs-title">MyApplication</span>
+ {
+   <span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+   {
+     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ShowGreeting</span>(<span class="hljs-params"></span>)
+     </span>{
+         Console.WriteLine(<span class="hljs-string">&quot;Hello, World!&quot;</span>); <span class="hljs-comment">// note how System is now not required</span>
+     }
+   }
+ }</code></pre>
+<p>Namespaces are global, so a namespace in one C# source file, and another with the same name in another source file, will cause the compiler to treat the different named information in these two source files as residing in the same namespace.</p><h2 id="nested-namespaces">Nested namespaces</h2><p>Normally, your entire application resides under its own special namespace, often named after your application or project name. Sometimes, companies with an entire product series decide to use nested namespaces though, where the &quot;root&quot; namespace can share the name of the company, and the nested namespaces the respective project names. This can be especially convenient, if you&apos;re a developer who has made a library with some usual functionality that can be shared across programs. If both the library and your program shared a parent namespace, that one would then not have to be explicitly declared with the using keyword, and still not have to be completely typed out. If your code was open for others to use, third party developers that may use your code would additionally then see that the same company had developed the library and the program. The developer of the library and program would finally also separate all the named information in their product source codes, for fewer headaches especially, if common names are used.</p><p>To make your application reside in a nested namespace, you can show this in two ways. Either like this:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">namespace</span> <span class="hljs-title">CodeWorks</span>
+ {
+     <span class="hljs-keyword">namespace</span> <span class="hljs-title">MyApplication</span>
+     {
+         <span class="hljs-comment">// Do stuff</span>
+     }
+ }</code></pre>
+<p>... or like this:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">namespace</span> <span class="hljs-title">CodeWorks.MyApplication</span>
+ {
+     <span class="hljs-comment">// Do stuff</span>
+ }</code></pre>
+<p>Both methods are accepted, and are identical in what they do.</p><p>As in other object-oriented programming languages, the functionality of a C# program is implemented in one or more classes. The methods and properties of a class contain the code that defines how the class behaves.</p><p>C# classes support information hiding by encapsulating functionality in properties and methods and by enabling several types of polymorphism, including subtyping polymorphism via inheritance and parametric polymorphism via generics.</p><p>Several types of C# classes can be defined, including instance classes (standard classes that can be instantiated), static classes, and structures.</p><p>Classes are defined using the keyword class followed by an identifier to name the class. Instances of the class can then be created with the new keyword followed by the name of the class.</p><p>The code below defines a class called Employee with properties Name and Age and with empty methods GetPayCheck() and Work(). It also defines a Sample class that instantiates and uses the Employee class:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _Age;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> _Name;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Age
+    {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _Age; }
+        <span class="hljs-keyword">set</span> { _Age = <span class="hljs-keyword">value</span>; }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name
+    {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _Name; }
+        <span class="hljs-keyword">set</span> { _Name = <span class="hljs-keyword">value</span>; }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GetPayCheck</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Work</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Employee marissa = <span class="hljs-keyword">new</span> Employee();
+
+        marissa.Work();
+        marissa.GetPayCheck();
+    }
+}</code></pre>
+<h2 id="methods">Methods</h2><p>C# methods are class members containing code. They may have a return value and a list of parameters, as well as a generic type declaration. Like fields, methods can be static (associated with and accessed through the class) or instance (associated with and accessed through an object instance of the class methods as well as a generic type declaration.</p><h2 id="constructors-of-classes">Constructors of classes</h2><p>A class&apos;s constructors control its initialization. A constructor&apos;s code executes to initialize an instance of the class when a program requests a new object of the class&apos;s type. Constructors often set properties of their classes, but they are not restricted to doing so.</p><p>Like other methods, a constructor can have parameters. To create an object using a constructor with parameters, the new command accepts parameters. The code below defines and then instantiates multiple objects of the Employee class, once using the constructor without parameters and once using the version with a parameter:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"></span>)
+    </span>{
+        System.Console.WriteLine(<span class="hljs-string">&quot;Constructed without parameters&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> strText</span>)
+    </span>{
+        System.Console.WriteLine(strText);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        System.Console.WriteLine(<span class="hljs-string">&quot;Start&quot;</span>);
+        Employee Alfred = <span class="hljs-keyword">new</span> Employee();
+        Employee Billy  = <span class="hljs-keyword">new</span> Employee(<span class="hljs-string">&quot;Parameter for construction&quot;</span>);
+        System.Console.WriteLine(<span class="hljs-string">&quot;End&quot;</span>);
+    }</code></pre>
+<p>Output:</p><pre><code>Start
+Constructed without parameters
+Parameter for construction
+End</code></pre>
+<p>Constructors can call each other:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> strText, <span class="hljs-keyword">int</span> iNumber</span>)
+    </span>{
+        ...
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> strText</span>)
+        : <span class="hljs-title">this</span>(<span class="hljs-params">strText, <span class="hljs-number">1234</span></span>) <span class="hljs-comment">// calls the above constructor with user-specified text and the default number</span>
+    </span>{ }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"></span>)
+        : <span class="hljs-title">this</span>(<span class="hljs-params"><span class="hljs-string">&quot;default text&quot;</span></span>) <span class="hljs-comment">// calls the above constructor with the default text</span>
+    </span>{ }
+}</code></pre>
+<h2 id="finalizers-destructors">Finalizers (Destructors)</h2><p>The opposite of constructors, finalizers define the final behavior of an object and execute when the object is no longer in use. Although they are often used in C++ to free resources reserved by an object, they are less frequently used in C# due to the .NET Framework Garbage Collector. An object&apos;s finalizer, which takes no parameters, is called sometime after an object is no longer referenced, but the complexities of garbage collection make the specific timing of finalizers uncertain.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> strText</span>)
+    </span>{
+        System.Console.WriteLine(strText);
+    }
+
+    ~Employee()
+    {
+        System.Console.WriteLine(<span class="hljs-string">&quot;Finalized!&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Employee marissa = <span class="hljs-keyword">new</span> Employee(<span class="hljs-string">&quot;Constructed!&quot;</span>);
+
+        marissa = <span class="hljs-keyword">null</span>;
+    }
+}</code></pre>
+<p>Output:</p><pre><code>Constructed!
+Finalized!</code></pre>
+<h2 id="properties">Properties</h2><p>C# properties are class members that expose functionality of methods using the syntax of fields. They simplify the syntax of calling traditional get and set methods (a.k.a. accessor methods). Like methods, they can be static or instance.</p><p>Properties are defined in the following way:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> m_iField = <span class="hljs-number">3</span>; <span class="hljs-comment">// Sets integerField with a default value of 3</span>
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> IntegerField
+    {
+        <span class="hljs-keyword">get</span>
+        {
+            <span class="hljs-keyword">return</span> m_iField;  <span class="hljs-comment">// get returns the field you specify when this property is assigned</span>
+        }
+        <span class="hljs-keyword">set</span>
+        {
+            m_iField = <span class="hljs-keyword">value</span>; <span class="hljs-comment">// set assigns the value assigned to the property of the field you specify</span>
+        }
+    }
+}</code></pre>
+<p>An even shorter way for getter/setter methods are accessors that do both in one line:</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Culture</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> TalkedCountries { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Language { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">InterculturalDialogue</span>
+{
+    Culture culture;
+
+    culture.Language = <span class="hljs-string">&quot;Italian&quot;</span>;  <span class="hljs-comment">// ==&gt; culture.SetLanguage(&quot;Italian&quot;);</span>
+
+    <span class="hljs-keyword">string</span> strThisLanguage = culture.Language; <span class="hljs-comment">// ==&gt; ... = culture.GetLanguage();</span>
+}</code></pre>
+<p>The code is equivalent to a GetLanguage and SetLanguage method definition, but without having to define these methods. The user can directly access the member, if it is not private, of course.</p><p>The C# keyword value contains the value assigned to the property. After a property is defined it can be used like a variable. If you were to write some additional code in the get and set portions of the property it would work like a method and allow you to manipulate the data before it is read or written to the variable.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyProgram</span>
+{
+    MyClass myClass = <span class="hljs-keyword">new</span> MyClass;
+
+    Console.WriteLine(myClass.IntegerField); <span class="hljs-comment">// Writes 3 to the command line.</span>
+    myClass.IntegerField = <span class="hljs-number">7</span>; <span class="hljs-comment">// Indirectly assigns 7 to the field myClass.m_iField     </span>
+}</code></pre>
+<p>Using properties in this way provides a clean, easy to use mechanism for protecting data.</p><h2 id="indexers">Indexers</h2><p>C# indexers are class members that define the behavior of the array access operation (e.g. list[0] to access the first element of list even when list is not an array).</p><p>To create an indexer, use the this keyword as in the following example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> <span class="hljs-keyword">this</span>[<span class="hljs-keyword">string</span> strKey]
+{
+    <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> coll[strKey]; }
+    <span class="hljs-keyword">set</span> { coll[strKey] = <span class="hljs-keyword">value</span>; }
+}</code></pre>
+<p>This code will create a string indexer that returns a string value. For example, if the class was EmployeeCollection, you could write code similar to the following:</p><pre><code class="lang-csharp">EmployeeCollection e = <span class="hljs-keyword">new</span> EmployeeCollection();
+.
+.
+.
+<span class="hljs-keyword">string</span> s = e[<span class="hljs-string">&quot;Jones&quot;</span>];
+e[<span class="hljs-string">&quot;Smith&quot;</span>] = <span class="hljs-string">&quot;xxx&quot;</span>;</code></pre>
+<h2 id="events">Events</h2><p>C# events are class members that expose notifications to clients of the class. Events are only fired and never assigned.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-comment">// Note: You need to know some about delegate, properties and methods to understand this sample</span>
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">EventSample</span>
+{
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> This delegate defines the signature of the appropriate method</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ContractHandler</span>(<span class="hljs-params">Employee sender</span>)</span>;
+
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span>     Employee class</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+    {
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Field for the info whether or not the Employee is engaged</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">bool</span> bIsEngaged = <span class="hljs-keyword">false</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Age of the employee</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> iAge = <span class="hljs-number">-1</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Name of the employee</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> String strName = <span class="hljs-keyword">null</span>;
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> *** The our event *** </span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Is a collection of methods that will be called when it fires</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> ContractHandler Engaged;
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Standard constructor</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Employee</span>(<span class="hljs-params"></span>)
+        </span>{
+            <span class="hljs-comment">// Here, we are adding a new method with appropriate signature (defined by delegate)</span>
+            <span class="hljs-comment">// note: when a event not have any method and it was fired, it causes a exception!</span>
+            <span class="hljs-comment">//       for all effects when programming with events, assign one private method to event</span>
+            <span class="hljs-comment">//       or simply do a verification before fire it! --&gt; if (event != null)</span>
+            <span class="hljs-keyword">this</span>.Engaged += <span class="hljs-keyword">new</span> ContractHandler(<span class="hljs-keyword">this</span>.OnEngaged);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Event handler for the &quot;engaged&quot; event</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;sender&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Sender object</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">OnEngaged</span>(<span class="hljs-params">Employee sender</span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;private void OnEngaged was called! this employee is engaged now!&quot;</span>);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Accessor for the employee name</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name
+        {
+            <span class="hljs-keyword">get</span>
+            {
+                <span class="hljs-keyword">return</span> strName;
+            }
+
+            <span class="hljs-keyword">set</span>
+            {
+                strName = <span class="hljs-keyword">value</span>;
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Accessor for the employee age</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Age
+        {
+            <span class="hljs-keyword">get</span>
+            {
+                <span class="hljs-keyword">return</span> m_iAge;
+            }
+
+            <span class="hljs-keyword">set</span>
+            {
+                m_iAge = <span class="hljs-keyword">value</span>;
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Accessor for the information about Employee engagement</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> IsEngaged
+        {
+            <span class="hljs-keyword">get</span>
+            {
+                <span class="hljs-keyword">return</span> bIsEngaged;
+            }
+
+            <span class="hljs-keyword">set</span>
+            {
+                <span class="hljs-keyword">if</span> (bIsEngaged == <span class="hljs-keyword">false</span> &amp;&amp; <span class="hljs-keyword">value</span> == <span class="hljs-keyword">true</span>)
+                {
+                    <span class="hljs-comment">// here we fires event (call all the methods that it have)</span>
+                    <span class="hljs-comment">// all times when IsEngaged is false and set to true;</span>
+                    Engaged(<span class="hljs-keyword">this</span>);
+                }
+
+                bIsEngaged = <span class="hljs-keyword">value</span>;
+            }
+        }
+    }
+
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span>     Class for the entry point</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">EntryPointClass</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] a_strArgs</span>)
+        </span>{
+            Employee simpleEmployee = <span class="hljs-keyword">new</span> Employee();
+
+            simpleEmployee.Age = <span class="hljs-number">18</span>;
+            simpleEmployee.Name = <span class="hljs-string">&quot;Samanta Rock&quot;</span>;
+
+            <span class="hljs-comment">// Here...</span>
+            <span class="hljs-comment">// This is saying when the event fire, the method added to event are called too.</span>
+            <span class="hljs-comment">// note that we cannot use =</span>
+            <span class="hljs-comment">// is only += to add methods to event or -= do retire a event</span>
+            simpleEmployee.Engaged += <span class="hljs-keyword">new</span> ContractHandler(SimpleEmployee_Engaged);
+
+            <span class="hljs-comment">// make attention here...</span>
+            <span class="hljs-comment">// when I assign true to this property, </span>
+            <span class="hljs-comment">// the event Engaged will be called</span>
+            <span class="hljs-comment">// when event is called, all method that it have, are called!</span>
+            simpleEmployee.IsEngaged = <span class="hljs-keyword">true</span>;
+
+            Console.ReadLine();
+
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Event handler for the registered &quot;engaged&quot; event</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;sender&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span>     Event sender</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SimpleEmployee_Engaged</span>(<span class="hljs-params">Employee sender</span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;The employee {0} is happy!&quot;</span>, sender.Name);
+        }
+    }
+}</code></pre>
+<p>See also here for details.</p><h2 id="operator-overloading">Operator overloading</h2><p>C# operator definitions are class members that define or redefine the behavior of basic C# operators (called implicitly or explicitly) on instances of the class:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Complex</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> m_dReal, m_dImaginary;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Real
+    {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> m_dReal; }
+        <span class="hljs-keyword">set</span> { m_dReal = <span class="hljs-keyword">value</span>; }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Imaginary
+    {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> m_dImaginary; }
+        <span class="hljs-keyword">set</span> { m_dImaginary = <span class="hljs-keyword">value</span>; }
+    }
+
+    <span class="hljs-comment">// binary operator overloading</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Complex <span class="hljs-keyword">operator</span> +(Complex c1, Complex c2)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Complex() { Real = c1.Real + c2.Real, Imaginary = c1.Imaginary + c2.Imaginary };
+    }
+
+    <span class="hljs-comment">// unary operator overloading</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Complex <span class="hljs-keyword">operator</span> -(Complex c)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Complex() { Real = -c.Real, Imaginary = -c.Imaginary };
+    }
+
+    <span class="hljs-comment">// cast operator overloading (both implicit and explicit)</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">implicit</span> <span class="hljs-keyword">operator</span> <span class="hljs-title">double</span>(<span class="hljs-params">Complex c</span>)
+    </span>{
+        <span class="hljs-comment">// return the modulus - sqrt(x^2 + y^2)</span>
+        <span class="hljs-keyword">return</span> Math.Sqrt(Math.Pow(c.Real, <span class="hljs-number">2</span>) + Math.Pow(c.Imaginary, <span class="hljs-number">2</span>));
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">explicit</span> <span class="hljs-keyword">operator</span> <span class="hljs-title">string</span>(<span class="hljs-params">Complex c</span>)
+    </span>{
+        <span class="hljs-comment">// we should be overloading the ToString() method, but this is just a demonstration</span>
+        <span class="hljs-keyword">return</span> c.Real.ToString() + <span class="hljs-string">&quot; + &quot;</span> + c.Imaginary.ToString() + <span class="hljs-string">&quot;i&quot;</span>;
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">StaticDemo</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Complex number1 = <span class="hljs-keyword">new</span> Complex() { Real = <span class="hljs-number">1</span>, Imaginary = <span class="hljs-number">2</span> };
+        Complex number2 = <span class="hljs-keyword">new</span> Complex() { Real = <span class="hljs-number">4</span>, Imaginary = <span class="hljs-number">10</span> };
+        Complex number3 = number1 + number2; <span class="hljs-comment">// number3 now has Real = 5, Imaginary = 12</span>
+
+        number3 = -number3; <span class="hljs-comment">// number3 now has Real = -5, Imaginary = -12</span>
+        <span class="hljs-keyword">double</span> testNumber = number3; <span class="hljs-comment">// testNumber will be set to the absolute value of number3</span>
+        Console.WriteLine((<span class="hljs-keyword">string</span>)number3); <span class="hljs-comment">// This will print &quot;-5 + -12i&quot;.</span>
+        <span class="hljs-comment">// The cast to string was needed because that was an explicit cast operator.</span>
+    }
+}</code></pre>
+<h2 id="structures">Structures</h2><p>Structures, or structs, are defined with the struct keyword followed by an identifier to name the structure. They are similar to classes, but have subtle differences. Structs are used as lightweight versions of classes that can help reduce memory management efforts when working with small data structures. In most situations, however, using a standard class is a better choice.</p><p>The principal difference between structs and classes is that instances of structs are values whereas instances of classes are references. Thus when you pass a struct to a function by value you get a copy of the object so changes to it are not reflected in the original because there are now two distinct objects but if you pass an instance of a class by reference then there is only one instance.</p><p>The Employee structure below declares a public and a private field. Access to the private field is granted through the public property Name:</p><pre><code class="lang-csharp"><span class="hljs-keyword">struct</span> Employee
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> m_iAge;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> m_strName;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name
+    {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> m_strName; }
+        <span class="hljs-keyword">set</span> { m_strName = <span class="hljs-keyword">value</span>; }
+    }
+}</code></pre>
+<p>Since C# 2.0, is possible to have arrays inside structures, but only in unsafe contexts:</p><pre><code class="lang-csharp"><span class="hljs-keyword">struct</span> data
+{
+    <span class="hljs-keyword">int</span> header;
+    <span class="hljs-keyword">fixed</span> <span class="hljs-keyword">int</span> values[<span class="hljs-number">10</span>];
+}</code></pre>
+<p>The array is accessed using pointer arithmetic. Values are treat arrayed values as if they were C-style arrays using indexing, etc.</p><h3 id="structure-constructors">Structure constructors</h3><p>Structures need constructors - or better to say initialisers, as they do not construct but just initialise the memory[1] - so that their contents are not left uninitialised. Therefore, constructors without parametres are not allowed.</p><p>Structure variables can be assigned one to another if and only if the structure variable on the right side of the assignment are all initialised.[2]</p><pre><code class="lang-csharp"><span class="hljs-keyword">struct</span> Timestamp
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usYear;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usMonth;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usDayOfMonth;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usHour;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usMinute;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">ushort</span> m_usSecond;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Timestamp</span>(<span class="hljs-params"><span class="hljs-keyword">ushort</span> usYear,
+        <span class="hljs-keyword">ushort</span> usMonth,
+        <span class="hljs-keyword">ushort</span> usDay,
+        <span class="hljs-keyword">ushort</span> usHour,
+        <span class="hljs-keyword">ushort</span> usMinute,
+        <span class="hljs-keyword">ushort</span> usSecond</span>)
+    </span>{
+        m_usYear = usYear - <span class="hljs-number">1900</span>;
+        m_usMonth = usMonth;
+        m_usDay = usDay;
+        m_usHour = usHour;
+        m_usMinute = usMinute;
+        m_usSecond = usSecond;
+    }
+}</code></pre>
+<h2 id="static-classes">Static classes</h2><p>Static classes are commonly used to implement a Singleton Pattern. All of the methods, properties, and fields of a static class are also static (like the WriteLine() method of the System.Console class) and can thus be used without instantiating the static class:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Writer</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Write</span>(<span class="hljs-params"></span>)
+    </span>{
+        System.Console.WriteLine(<span class="hljs-string">&quot;Text&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Sample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Writer.Write();
+    }
+}</code></pre>
+<h2 id="references">References</h2><pre><code class="lang-csharp">&#x2191; <span class="hljs-function">Greg <span class="hljs-title">Beech</span> (<span class="hljs-params"><span class="hljs-number">2008</span><span class="hljs-number">-06</span><span class="hljs-number">-16</span></span>). &quot;Structure constructors&quot;. http:<span class="hljs-comment">//social.msdn.microsoft.com/: MSDN. http://social.msdn.microsoft.com/Forums/eu/csharplanguage/thread/40085588-ccb0-42bf-8492-fa48f072b877. Retrieved 2012-04-12. &quot;Because structures are simply an inline area of memory, they cannot be null, and so the CLR has to be able to ensure that the area of memory is totally initialized rather than being partly garbage. For this reason, you&apos;ll often hear the &apos;constructors&apos; on structures called (arguably more correctly) &apos;initializers&apos; because the don&apos;t construct an object they just initialize an area of memory.&quot; </span>
+&#x2191; John Sharp. &quot;Microsoft&#xAE; Visual C#&#xAE; 2005 Step by Step / Copying Structure Variables&quot;. http:<span class="hljs-comment">//books.google.at/: Google Books. http://books.google.at/books?id=2xIWEKLvzpcC&amp;pg=PT361&amp;lpg=PT361&amp;dq=C%23+%22structure+constructors%22&amp;source=bl&amp;ots=iFU6Ln4MvS&amp;sig=aaKZtQ45wj_1akB1bPWmc2pd3sM&amp;hl=de&amp;sa=X&amp;ei=0ICGT-byDIKJ4gSsrZDLBw&amp;redir_esc=y#v=onepage&amp;q=C%23%20%22structure%20constructors%22&amp;f=false. Retrieved 2012-04-12. &quot;You&apos;re allowed to initialize or assign one struct variable to another struct variable, but only if the struct variable on the right side is completely initalized (that is, if all its fields are initialized).&quot; </span></span></code></pre>
+<h2 id="introduction">Introduction</h2><p>The .NET framework consists of several languages, all which follow the &quot;object orientated programming&quot; (OOP) approach to software development. This standard defines that all objects support</p><ul><li>Inheritance - the ability to inherit and extend existing functionality.
+</li>
+<li>Encapsulation - the ability to allow the user to only see specific parts, and to interact with it in specific ways.
+</li>
+<li>Polymorphism - the ability for an object to be assigned dynamically, but with some predictability as to what can be done with the object.
+</li></ul>
+<p>Objects are synonymous with objects in the real world. Think of any object and think of how it looks and how it is measured and interacted with. When creating OOP languages, the reasoning was that if it mimics the thought process of humans, it would simplify the coding experience.</p><p>For example, let&apos;s consider a chair, and its dimensions, weight, colour and what is it made out of. In .NET, these values are called &quot;Properties&quot;. These are values that define the object&apos;s state. Be careful, as there are two ways to expose values: Fields and Properties. The recommended approach is expose Properties and not fields.</p><p>So we have a real-world idea of the concept of an object. In terms of practicality for a computer to pass information about, passing around an object within a program would consume a lot of resources. Think of a car, how many properties that has - 100&apos;s, 1000&apos;s. A computer passing this information about all the time will waste memory, processing time and therefore a bad idea to use. So objects come in two flavours:</p><ul><li>Reference types
+</li>
+<li>Value types
+</li></ul>
+<h2 id="reference-and-value-types">Reference and Value Types</h2><p>A reference type is like a pointer to the value. Think of it like a piece of paper with a street address on it, and the address leads to your house - your object with hundreds of properties. If you want to find it, go to where the address says! This is exactly what happens inside the computer. The reference is stored as a number, corresponding to somewhere in memory where the object exists. So instead of moving an object around - like building a replica house every time you want to look at it - you just look at the original.</p><p>A value type is the exact value itself. Values are great for storing small amounts of information: numbers, dates etc.</p><p>There are differences in the way they are processed, so we will leave that until a little later in the article.</p><p>As well as querying values, we need a way to interact with the object so that some operation can be performed. Think of files - it&apos;s all well and good knowing the length of the file, but how about Read()&apos;ing it? Therefore, we can use something called methods as a way of performing actions on an object.</p><p>An example would be a rectangle. The properties of a rectangle are:</p><ul><li><code>&lt;span class=&quot;n&quot;&gt;Length&lt;/span&gt;</code>
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;Width&lt;/span&gt;</code>
+</li></ul>
+<p>The &quot;functions&quot; (or methods in .NET) would be:</p><ul><li><code>&lt;span class=&quot;n&quot;&gt;Area&lt;/span&gt;</code> (= <code>&lt;span class=&quot;n&quot;&gt;Length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Width&lt;/span&gt;</code>)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;Perimeter&lt;/span&gt;</code> (= <code>&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Length&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Width&lt;/span&gt;</code>)
+</li></ul>
+<p>Methods vary from Properties because they require some transformation of data to achieve a result. Methods can either return a result (such as Area) or not. Like above with the chair, if you Sit() on the chair, there is no expected reaction, the chair just ... works!</p><h3 id="systemobject">System.Object</h3><p>To support the first rule of OOP - Inheritance, we define something that all objects will derive from - this is System.Object, also known as Object or object. This object defines some methods that all objects can use should they need to. These methods include:</p><ul><li><code>&lt;span class=&quot;n&quot;&gt;GetHashCode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code> - retrieve a number unique to that object.
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;GetType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code> - retrieves information about the object like method names, the objects name etc.
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code> - convert the object to a textual representation - usually for outputting to the screen or file.
+</li></ul>
+<p>Since all objects derive from this class (whether you define it or not), any class will have these three methods ready to use. Since we always inherit from System.Object, or a class that itself inherits from System.Object, we therefore enhance and/or extend its functionality. Like in the real world that humans, cats, dogs, birds, fish are all an improved and specialised version of an &quot;organism&quot;.</p><h2 id="object-basics">Object basics</h2><p>All objects by default are reference types. To support value types, objects must instead inherit from the System.ValueType abstract class, rather than System.Object.</p><h3 id="constructors">Constructors</h3><p>When objects are created, they are initialized by the &quot;constructor&quot;. The constructor sets up the object, ready for use. Because objects need to be created before being used, the constructor is created implicitly, unless it is defined differently by the developer. There are 3 types of constructor:</p><ul><li>Copy Constructor
+</li>
+<li>Static Constructor
+</li>
+<li>Default constructor - takes no parameters.
+</li>
+<li>Overloaded constructor - takes parameters.
+</li></ul>
+<p>Overloaded constructors automatically remove the implicit default constructor, so a developer must explicitly define the default constructor, if they want to use it.</p><p>A constructor is a special type of method in C# that allows an object to initialize itself when it is created. If a constructor method is used, there is no need to write a separate method to assign initial values to the data members of an object.</p><p>Important characteristics of a constructor method:</p><ol><li>A constructor method has the same name as the class itself.
+</li>
+<li>A constructor method is usually declared as public.
+</li>
+<li>Constructor method is declared as public because it is used to create objects from outside the class in which it is declared. We can also declare a constructor method as private, but then such a constructor cannot be used to create objects.
+</li>
+<li>Constructor methods do not have a return type (not even void).
+</li>
+<li>C# provides a default constructor to every class. This default constructor initializes the data members to zero. But if we write our own constructor method, then the default constructor is not used.
+</li>
+<li>A constructor method is used to assign initial values to the member variables.
+</li>
+<li>The constructor is called by the new keyword when an object is created.
+</li>
+<li>We can define more than one constructor in a class. This is known as constructor overloading. All the constructor methods have the same name, but their signatures are different, i.e., number and type of parameters are different.
+</li>
+<li>If a constructor is declared, no default constructor is generated.
+</li></ol>
+<h4 id="copy-constructor">Copy Constructor</h4><p>A copy constructor creates an object by copying variables from another object. The copy constructor is called by creating an object of the required type and passing it the object to be copied.</p><p>In the following example, we pass a Rectangle object to the Rectangle constructor so that the new object has the same values as the old object.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">CopyConstructor</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span>
+    {
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> length;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> breadth;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y</span>)         <span class="hljs-comment">// constructor fn</span>
+        </span>{
+            length = x;
+            breadth = y;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span>(<span class="hljs-params">Rectangle r</span>)
+        </span>{
+            length = r.length;
+            breadth = r.breadth;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">display</span>(<span class="hljs-params"></span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;Length = &quot;</span> + length);
+            Console.WriteLine(<span class="hljs-string">&quot;Breadth = &quot;</span> + breadth);
+        }
+    }   <span class="hljs-comment">// end of class Rectangle</span>
+
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+        </span>{
+            Rectangle r1 = <span class="hljs-keyword">new</span> Rectangle(<span class="hljs-number">5</span>, <span class="hljs-number">10</span>);
+            Console.WriteLine(<span class="hljs-string">&quot;Values of first object&quot;</span>);
+            r1.display();
+
+            Rectangle r2 = <span class="hljs-keyword">new</span> Rectangle(r1);
+            Console.WriteLine(<span class="hljs-string">&quot;Values of second object&quot;</span>);
+            r2.display();
+
+            Console.ReadLine();
+        }
+    }
+}</code></pre>
+<h4 id="static-constructor">Static Constructor</h4><p>A static constructor is first called when the runtime first accesses the class. Static variables are accessible at all times, so the runtime must initialize it on its first access. The example below, when stepping through in a debugger, will show that static MyClass() is only accessed when the MyClass.Number variable is accessed.</p><p>C# supports two types of constructors: static constructor and instance constructor. Whereas an instance constructor is called every time an object of that class is created, the static constructor is called only once. A static constructor is called before any object of the class is created, and is usually used to initialize any static data members of a class.</p><p>A static constructor is declared by using the keyword static in the constructor definition. This constructor cannot have any parameters or access modifiers. In addition, a class can only have one static constructor. For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+<span class="hljs-keyword">using</span> System.Text;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">StaticConstructors</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;
+            Console.WriteLine(<span class="hljs-string">&quot;Static Number = &quot;</span> + MyClass.Number);
+        }
+    }
+
+    <span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> _number;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> Number { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _number; } }
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-title">MyClass</span>(<span class="hljs-params"></span>)
+        </span>{
+            Random r = <span class="hljs-keyword">new</span> Random();
+            _number = r.Next();
+        }
+    }
+}</code></pre>
+<h4 id="default-constructor">Default Constructor</h4><p>The default constructor takes no parameters and is implicitly defined, if no other constructors exist. The code sample below show the before, and after result of creating a class.</p><pre><code class="lang-csharp">// Created by the developer
+class MyClass
+{
+}
+
+// Created by the compiler
+class MyClass : System.Object
+{
+     public MyClass() : base()
+     {
+     }
+}</code></pre>
+<h4 id="overloaded-constructors">Overloaded Constructors</h4><p>To initialize objects in various forms, the constructors allow customization of the object by passing in parameters.</p><pre><code class="lang-csharp"> <span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _number;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Number { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _number; } }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyClass</span>(<span class="hljs-params"></span>)
+        </span>{
+            Random randomNumber = <span class="hljs-keyword">new</span> Random();
+            _number = randomNumber.Next();
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyClass</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> seed</span>)
+        </span>{
+            Random randomNumber = <span class="hljs-keyword">new</span> Random(seed);
+            _number = randomNumber.Next();
+        }
+   }</code></pre>
+<h4 id="calling-other-constructors">Calling other constructors</h4><p>To minimise code, if another constructor implements the functionality better, you can instruct the constructor to call an overloaded (or default) constructor with specific parameters.</p><pre><code class="lang-csharp"> <span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _number;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Number { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _number; } }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyClass</span>(<span class="hljs-params"></span>) : 
+             <span class="hljs-title">this</span> (<span class="hljs-params"> DateTime.Now.Milliseconds </span>) <span class="hljs-comment">// Call the other constructor passing in a value.</span>
+        </span>{
+
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyClass</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> seed</span>)
+        </span>{
+            Random r = <span class="hljs-keyword">new</span> Random(seed);
+            _number = r.Next();
+        }
+   }</code></pre>
+<p>Base classes constructors can also be called instead of constructors in the current instance</p><pre><code class="lang-csharp"> <span class="hljs-keyword">class</span> <span class="hljs-title">MyException</span> : <span class="hljs-title">Exception</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _number;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Number { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _number; } }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyException</span> (<span class="hljs-params"> <span class="hljs-keyword">int</span> errorNumber, <span class="hljs-keyword">string</span> message, Exception innerException</span>)
+                 : <span class="hljs-title">base</span>(<span class="hljs-params"> message, innerException </span>)
+        </span>{
+             _number = errorNumber;
+        }
+   }</code></pre>
+<h3 id="destructors">Destructors</h3><p>As well as being &quot;constructed&quot;, objects can also perform cleanup when they are cleared up by the garbage collector. As with constructors, the destructor also uses the same name as the class, but is preceded by the tilde (~) sign. However, the garbage collector only runs when either directly invoked, or has reason to reclaim memory, therefore the destructor may not get the chance to clean up resources for a long time. In this case, look into use of the Dispose() method, from the IDisposable interface.</p><p>Destructors are recognised via the use of the ~ symbol in front of a constructor with no access modifier. For example:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">class</span> <span class="hljs-title">MyException</span> : <span class="hljs-title">Exception</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _number;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Number { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _number; } }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyException</span> (<span class="hljs-params"> <span class="hljs-keyword">int</span> errorNumber, <span class="hljs-keyword">string</span> message, Exception innerException</span>)
+                : <span class="hljs-title">base</span>(<span class="hljs-params"> message, innerException </span>)
+        </span>{
+             _number = errorNumber;
+        }
+
+        ~MyException()
+        {
+        }
+   }</code></pre>
+<p>Encapsulation is depriving the user of a class of information he does not need, and preventing him from manipulating objects in ways not intended by the designer.</p><p>A class element having public protection level is accessible to all code anywhere in the program. These methods and properties represent the operations allowed on the class to outside users.</p><p>Methods, data members (and other elements) with private protection level represent the internal state of the class (for variables), and operations that are not allowed to outside users. The private protection level is default for all class and struct members. This means that if you do not specify the protection modifier of a method or variable, it is considered as private by the compiler.</p><p>For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Frog</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> _height = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// Methods</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">JumpLow</span>(<span class="hljs-params"></span>) </span>{ Jump(<span class="hljs-number">1</span>); }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">JumpHigh</span>(<span class="hljs-params"></span>) </span>{ Jump(<span class="hljs-number">10</span>); }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Jump</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> height</span>) </span>{ _height += height; }
+}</code></pre>
+<p>In this example, the public method the Frog class exposes are JumpLow and JumpHigh. Internally, they are implemented using the private Jump function that can jump to any height. This operation is not visible to an outside user, so they cannot make the frog jump 100 meters, only 10 or 1. The Jump private method is implemented by changing the value of a private data member _height, which is also not visible to an outside user. Some private data members are made visible by Properties.</p><h2 id="protection-levels">Protection Levels</h2><h3 id="private">Private</h3><p>Private members are only accessible within the class itself. A method in another class, even a class derived from the class with private members cannot access the members. If no protection level is specified, class members will default to private.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">PrivateSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> _name;
+
+        <span class="hljs-comment">// Methods</span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> name</span>)
+        </span>{
+            <span class="hljs-comment">// Private members can only be modified by the internal methods or constructors of class</span>
+            <span class="hljs-keyword">this</span>._name = name; 
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Person OnePerson = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Samanta&quot;</span>);
+            <span class="hljs-comment">//OnePerson._name = &quot;Sam&quot;; // This causes a error of access level</span>
+        }
+    }
+}</code></pre>
+<h3 id="protected">Protected</h3><p>Protected members can be accessed by the class itself and by any class derived from that class.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">ProtectedSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>
+    {
+        <span class="hljs-keyword">protected</span> <span class="hljs-keyword">string</span> _name;
+    }
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> When a class inherits from other class, it can access your protected and public members</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> above your created members</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Warrior</span> : <span class="hljs-title">Person</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SetName</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> name</span>)
+        </span>{
+            <span class="hljs-comment">// Protected members can be accessed by internal methods or constructors of class</span>
+            <span class="hljs-comment">// so, it can be accessed by inherit class too</span>
+            <span class="hljs-keyword">base</span>._name = name;
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Warrior OnePerson = <span class="hljs-keyword">new</span> Warrior();
+            OnePerson.SetName(<span class="hljs-string">&quot;Glades&quot;</span>); <span class="hljs-comment">// OK</span>
+            <span class="hljs-comment">// OnePerson._name = &quot;Sam&quot;; // This causes a error of access level too</span>
+            <span class="hljs-comment">// protected members can not be accessed by external scopes</span>
+        }
+    }
+}</code></pre>
+<h3 id="public">Public</h3><p>Public members can be accessed by any method in any class.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">PublicSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>
+    {
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Person BeautifulPerson = <span class="hljs-keyword">new</span> Person();
+            BeautifulPerson.Name = <span class="hljs-string">&quot;Debora&quot;</span>; <span class="hljs-comment">// OK, public member can be accessed by other scopes</span>
+        }
+    }
+}</code></pre>
+<p>It is good programming practice not to expose member variables to the outside, unless it is necessary. This is true especially for fields that should only be accessible over accessor and mutator methods (getters and setters). Exceptions are member variables that are constant.</p><h3 id="internal">Internal</h3><p>Internal members are accessible only in the same assembly and invisible outside it. If no protection level is specified for top level classes, they are treated as internal, and can only be accessed within the assembly.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">InternalSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>
+    {
+        <span class="hljs-keyword">internal</span> <span class="hljs-keyword">string</span> Name;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Person BeautifulPerson = <span class="hljs-keyword">new</span> Person();
+            BeautifulPerson.Name = <span class="hljs-string">&quot;Debora&quot;</span>; <span class="hljs-comment">// OK, internal member can be accessed by other </span>
+            <span class="hljs-comment">// scopes in same assembly supposing that Person is in another assembly, by example a </span>
+            <span class="hljs-comment">// library, the name cannot be accessed. In another assembly source, this causes an error:</span>
+            <span class="hljs-comment">// BeautifulPerson.Name = &quot;Debora&quot;; // Cannot access internal member</span>
+        }
+    }
+}</code></pre>
+<h3 id="protected-internal">Protected Internal</h3><p>Protected internal members are accessible from any class derived from that class, or any class within the same assembly. So, it means protected or internal.[1]</p><p>Here, an example:</p><pre><code class="lang-csharp">namespace InternalSample
+{
+    public class Person
+    {
+        protected internal string Name;
+    }
+
+    public class Entry
+    {
+        static void Main(string[] args)
+        {
+            Person BeautifulPerson = new Person();
+            BeautifulPerson.Name = &quot;Debora&quot;; // As above...
+        }
+    }
+}
+
+public class Book : InternalSample.Person
+{
+    static void Main(string[] args)
+    {
+        InternalSample.Person BeautifulPerson = new InternalSample.Person();
+        string aName = BeautifulPerson.Name; // Can be accessed, as Book is derived from Person
+    }
+}</code></pre>
+<h2 id="references">References</h2><pre><code class="lang-csharp">&#x2191; <span class="hljs-function">Joe <span class="hljs-title">Mayo</span> (<span class="hljs-params"><span class="hljs-number">2007</span><span class="hljs-number">-04</span><span class="hljs-number">-27</span></span>). &quot;Type Member Access Modifiers&quot;. http:<span class="hljs-comment">//www.csharp-station.com/: C# STATION. http://www.csharp-station.com/Tutorials/lesson19.aspx. Retrieved 2011-08-12. &quot;Either code from derived type or code in the same assembly. Combination of protected OR internal.&quot; </span></span></code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lesson1.html" class="navigation navigation-prev " aria-label="Previous page: Language Basics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lesson3.html" class="navigation navigation-next " aria-label="Next page: Advanced Concepts">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Classes","level":"1.3","depth":1,"next":{"title":"Advanced Concepts","level":"1.4","depth":1,"path":"Lesson3.md","ref":"Lesson3.md","articles":[]},"previous":{"title":"Language Basics","level":"1.2","depth":1,"path":"Lesson1.md","ref":"Lesson1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lesson2.md","mtime":"2016-08-04T18:05:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-04T18:05:25.850Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

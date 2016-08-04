@@ -1,0 +1,1590 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Language Basics · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lesson2.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="Lesson1.html">
+            
+                <a href="Lesson1.html">
+            
+                    
+                    Language Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lesson2.html">
+            
+                <a href="Lesson2.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lesson3.html">
+            
+                <a href="Lesson3.html">
+            
+                    
+                    Advanced Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lesson4.html">
+            
+                <a href="Lesson4.html">
+            
+                    
+                    The .NET Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Lesson5.html">
+            
+                <a href="Lesson5.html">
+            
+                    
+                    Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Language Basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="language-basics">Language Basics</h1><p>This section will define the naming conventions that are generally accepted by the C# development community. Some companies may define naming conventions that differ from this, but that is done on an individual basis and is generally discouraged. Some of the objects discussed in this section may be beyond the reader&apos;s knowledge at this point, but this section can be referred back to later.</p><h2 id="reasoning">Reasoning</h2><p>Much of the naming standards are derived from Microsoft&apos;s .NET Framework libraries. These standards have proven to make names readable and understandable &quot;at a glance&quot;. By using the correct conventions when naming objects, you ensure that other C# programmers who read your code will easily understand what objects are without having to search your code for their definition.</p><h2 id="conventions">Conventions</h2><h3 id="namespace">Namespace</h3><p>Namespaces are named using Pascal Case (also called UpperCamelCase) with no underscores. This means the first letter of every word in the name is capitalized. For example: MyNewNamespace. Also, note that Pascal Case also denotes that acronyms of three or more letters should only have the first letter capitalized (MyXmlNamespace instead of MyXMLNamespace).</p><h3 id="assemblies">Assemblies</h3><p>If an assembly contains only one namespace, they should use the same name. Otherwise, Assemblies should follow the normal Pascal Case format.</p><h3 id="classes-and-structures">Classes and Structures</h3><p>Pascal Case, no underscores or leading C, cls, or I. Classes should not have the same name as the namespace in which they reside. Any acronyms of three or more letters should be pascal case, not all caps. Try to avoid abbreviations, and try to always use nouns.</p><h3 id="exception-classes">Exception Classes</h3><p>Follow class naming conventions, but add Exception to the end of the name. In .Net 2.0, all classes should inherit from the System.Exception base class, and not inherit from the System.ApplicationException.</p><h3 id="interfaces">Interfaces</h3><p>Follow class naming conventions, but start the name with I and capitalize the letter following the I. Example: IFoo The I prefix helps to differentiate between Interfaces and classes and also to avoid name collisions.</p><h3 id="functions">Functions</h3><p>Pascal Case, no underscores except in the event handlers. Try to avoid abbreviations. Many programmers have a nasty habit of overly abbreviating everything. This should be discouraged.</p><h3 id="properties-and-public-member-variables">Properties and Public Member Variables</h3><p>Pascal Case, no underscores. Try to avoid abbreviations.</p><h3 id="parameters-and-procedure-level-variables">Parameters and Procedure-level Variables</h3><p>Camel Case (or lowerCamelCase). Try to avoid abbreviations. Camel Case is the same as Pascal case, but the first letter of the first word is lowercased.</p><h3 id="class-level-private-and-protected-variables">Class-level Private and Protected Variables</h3><p>Camel Case with a leading underscore. Always indicate protected or private in the declaration. The leading underscore is the only controversial thing in this document. The leading character helps to prevent name collisions in constructors (a parameter and a private variable having the same name).</p><h3 id="controls-on-forms">Controls on Forms</h3><p>Pascal Case with a prefix that identifies it as being part of the UI instead of a purely coded control (example a temporary variable). Many developers use ui as the prefix followed by a descriptive name such as txtUserName or lblUserNickName (&quot;txt&quot; stands for TextBox control and &quot;lbl&quot; for Label control)</p><p>Some samples are below for ASP.Net web form controls:</p><table>
+<thead>
+<tr><th>Control</th>
+<th>Prefix</th>
+<th>Example</th>
+</tr></thead><tbody>
+<tr><td>Label</td>
+<td>lbl</td>
+<td>lblSurname</td>
+</tr><tr><td>TextBox</td>
+<td>txt</td>
+<td>txtSurname</td>
+</tr><tr><td>DataGrid</td>
+<td>dg</td>
+<td>dgResults</td>
+</tr><tr><td>GridView</td>
+<td>gv</td>
+<td>gvResults2</td>
+</tr><tr><td>Button</td>
+<td>btn</td>
+<td>btnSave</td>
+</tr><tr><td>ImageButton</td>
+<td>iBtn</td>
+<td>iBtnSave</td>
+</tr><tr><td>Hyperlink</td>
+<td>lnk</td>
+<td>lnkHomePage</td>
+</tr><tr><td>DropDownList</td>
+<td>ddl</td>
+<td>ddlCompany</td>
+</tr><tr><td>ListBox</td>
+<td>lst</td>
+<td>lstCompany</td>
+</tr><tr><td>DataList</td>
+<td>dLst</td>
+<td>dlstAddress</td>
+</tr><tr><td>DataSet</td>
+<td>ds</td>
+<td>dsInvoices</td>
+</tr><tr><td>DataTable</td>
+<td>dt</td>
+<td>dtClients</td>
+</tr><tr><td>DataRow</td>
+<td>dr</td>
+<td>drUser</td>
+</tr><tr><td>Repeater</td>
+<td>rep</td>
+<td>repSection</td>
+</tr><tr><td>Checkbox</td>
+<td>chk</td>
+<td>chkMailList</td>
+</tr><tr><td>CheckBoxList</td>
+<td>chk</td>
+<td>chkAddress</td>
+</tr><tr><td>RadioButton</td>
+<td>rBtn</td>
+<td>rBtnSex</td>
+</tr><tr><td>RadioButtonList</td>
+<td>rBtn</td>
+<td>rBtnAgeGroup</td>
+</tr><tr><td>Image</td>
+<td>img</td>
+<td>imgLogo</td>
+</tr><tr><td>Panel</td>
+<td>pnl</td>
+<td>pnlSevtion</td>
+</tr><tr><td>PlaceHolder</td>
+<td>plh</td>
+<td>plhHeader</td>
+</tr><tr><td>Calendar</td>
+<td>txt</td>
+<td>txtMyDate</td>
+</tr><tr><td>AdRotator</td>
+<td>adr</td>
+<td>adrBanner</td>
+</tr><tr><td>Table</td>
+<td>tbl</td>
+<td>tblResults</td>
+</tr><tr><td>[All] Validators</td>
+<td>val (N/A)</td>
+<td>valCreditCardNumber</td>
+</tr><tr><td>ValidationSummary</td>
+<td>vals (N/A)</td>
+<td>valsErrors</td>
+</tr></tbody></table>
+
+<h3 id="constants">Constants</h3><p>Pascal Case. The use of SCREAMING_CAPS is discouraged. This is a large change from earlier conventions. Most developers now realize that in using SCREAMING_CAPS they betray more implementation than is necessary. A large portion of the .NET Framework Design Guidelines is dedicated to this discussion.</p><h2 id="example">Example</h2><p>Here is an example of a class that uses all of these naming conventions combined.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">MyExampleNamespace</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Customer</span> : <span class="hljs-title">IDisposable</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> _customerName;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> CustomerName 
+        { 
+            <span class="hljs-keyword">get</span> 
+            { 
+                <span class="hljs-keyword">return</span> _customerName; 
+            }
+            <span class="hljs-keyword">set</span>
+            {
+                _customerName = <span class="hljs-keyword">value</span>;
+                _lastUpdated = DateTime.Now;
+            }
+        }
+
+        <span class="hljs-keyword">private</span> DateTime _lastUpdated;
+
+        <span class="hljs-keyword">public</span> DateTime LastUpdated
+        {
+            <span class="hljs-keyword">get</span>
+            {
+                <span class="hljs-keyword">return</span> _lastUpdated;
+            }
+            <span class="hljs-keyword">private</span> <span class="hljs-keyword">set</span>
+            {
+                _lastUpdated = <span class="hljs-keyword">value</span>;
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UpdateCustomer</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> newName</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (!newName.Equals(CustomerName))
+            {
+                CustomerName = newName;
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"></span>)
+        </span>{
+            <span class="hljs-comment">//Do nothing</span>
+        }
+    }
+}</code></pre>
+<p>C# syntax looks quite similar to the syntax of Java because both inherit much of their syntax from C and C++. The object-oriented nature of C# requires the high-level structure of a C# program to be defined in terms of classes, whose detailed behaviors are defined by their statements.</p><h2 id="statements">Statements</h2><p>The basic unit of execution in a C# program is the statement. A statement can declare a variable, define an expression, perform a simple action by calling a method, control the flow of execution of other statements, create an object, or assign a value to a variable, property, or field. Statements are usually terminated by a semicolon.</p><p>Statements can be grouped into comma-separated statement lists or brace-enclosed statement blocks.</p><p>Examples:</p><pre><code class="lang-csharp"><span class="hljs-keyword">int</span> sampleVariable;                           <span class="hljs-comment">// declaring a variable</span>
+sampleVariable = <span class="hljs-number">5</span>;                           <span class="hljs-comment">// assigning a value</span>
+Method();                                     <span class="hljs-comment">// calling an instance method</span>
+SampleClass sampleObject = <span class="hljs-keyword">new</span> SampleClass(); <span class="hljs-comment">// creating a new instance of an object</span>
+sampleObject.ObjectMethod();                  <span class="hljs-comment">// calling a member function of an object</span>
+
+<span class="hljs-comment">// executing a &quot;for&quot; loop with an embedded &quot;if&quot; statement </span>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; upperLimit; i++)
+{
+    <span class="hljs-keyword">if</span> (SampleClass.SampleStaticMethodReturningBoolean(i))
+    {
+        sum += sampleObject.SampleMethodReturningInteger(i);
+    }
+}</code></pre>
+<h2 id="statement-blocks">Statement blocks</h2><p>A series of statements surrounded by curly braces form a block of code. Among other purposes, code blocks serve to limit scope, or the range in which a variable can be used. A variable is only accessible in the block in which it is defined. Code blocks can be nested and often appear as the bodies of methods.</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">MyMethod</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> integerValue</span>)
+</span>{  <span class="hljs-comment">// This block of code is the body of &quot;MyMethod()&quot;</span>
+
+   <span class="hljs-comment">// The &apos;integerValue&apos; integer parameter is accessible to everything in the method</span>
+
+   <span class="hljs-keyword">int</span> methodLevelVariable; <span class="hljs-comment">// This variable is accessible to everything in the method</span>
+
+   <span class="hljs-keyword">if</span> (integerValue == <span class="hljs-number">2</span>)
+   {
+      <span class="hljs-comment">// methodLevelVariable is still accessible here     </span>
+
+      <span class="hljs-keyword">int</span> limitedVariable; <span class="hljs-comment">// This variable is only accessible to code in the, if block</span>
+
+      DoSomeWork(limitedVariable);
+   }
+
+   <span class="hljs-comment">// limitedVariable is no longer accessible here</span>
+
+}  <span class="hljs-comment">// Here ends the code block for the body of &quot;MyMethod()&quot;.</span></code></pre>
+<h2 id="comments">Comments</h2><p>Comments allow inline documentation of source code. The C# compiler ignores comments. These styles of comments are allowed in C#:</p><dl>
+
+<dt>Single-line comments</dt>
+
+<dd>The `<span class="c1">//</span>` character sequence marks the following text as a single-line comment. Single-line comments, as one would expect, end at the first end-of-line following the `<span class="c1">//</span>` comment marker.</dd>
+
+<dt>Multiple-line comments</dt>
+
+<dd>Comments can span multiple lines by using the multiple-line comment style. Such comments start with `<span class="p">/*</span>` and end with `<span class="p">*/</span>`. The text between those multi-line comment markers is the comment.</dd>
+
+</dl>
+
+
+
+<pre><code class="lang-csharp"><span class="hljs-comment">// This style of a comment is restricted to one line.</span>
+<span class="hljs-comment">/* 
+   This is another style of a comment.
+   It allows multiple lines.
+*/</span></code></pre>
+<dl>
+
+<dt>XML Documentation-line comments</dt>
+
+<dd>These comments are used to generate XML documentation. Single-line and multiple-line styles can be used. The single-line style, where each line of the comment begins with `<span class="c1">//</span>`, is more common than the multiple-line style delimited by `<span class="p">/**</span>` and `<span class="p">*/</span>`.</dd>
+
+</dl>
+
+
+
+<pre><code class="lang-csharp"><span class="hljs-comment">// &lt;summary&gt; documentation here &lt;/summary&gt;</span>
+<span class="hljs-comment">// &lt;remarks&gt;</span>
+<span class="hljs-comment">//     This uses single-line style XML Documentation comments.</span>
+<span class="hljs-comment">// &lt;/remarks&gt;</span>
+
+
+<span class="hljs-comment">/** 
+ * &lt;summary&gt; documentation here &lt;/summary&gt;
+ * &lt;remarks&gt;
+ *     This uses multiple-line style XML Documentation comments.
+ * &lt;/remarks&gt;
+ */</span></code></pre>
+<h2 id="case-sensitivity">Case sensitivity</h2><p>C# is case-sensitive, including its variable and method names.</p><p>The variables myInteger and MyInteger of type int below are distinct because C# is case-sensitive:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">int</span> myInteger = <span class="hljs-number">3</span>;
+ <span class="hljs-keyword">int</span> MyInteger = <span class="hljs-number">5</span>;</code></pre>
+<p>For example, C# defines a class Console to handle most operations with the console window. Writing the following code would result in a compiler error unless an object named console had been previously defined.</p><pre><code class="lang-csharp"> <span class="hljs-comment">// Compiler error!</span>
+ console.writeline(<span class="hljs-string">&quot;Hello&quot;</span>);</code></pre>
+<p>The following corrected code compiles as expected because it uses the correct case:</p><pre><code class="lang-csharp"> Console.WriteLine(<span class="hljs-string">&quot;Hello&quot;</span>);</code></pre>
+<p>Variables are used to store values. More technically, a variable binds an object (in the general sense of the term, i.e. a specific value) to an identifier (the variable&apos;s name) so that the object can be accessed later. Variables can, for example, store a value for later use:</p><pre><code class="lang-csharp"><span class="hljs-keyword">string</span> name = <span class="hljs-string">&quot;Dr. Jones&quot;</span>;
+Console.WriteLine(<span class="hljs-string">&quot;Good morning &quot;</span> + name);</code></pre>
+<p>In this example &quot;name&quot; is the identifier and &quot;Dr. Jones&quot; is the value that we bound to it. Also, each variable is declared with an explicit type. Only values whose types are compatible with the variable&apos;s declared type can be bound to (stored in) the variable. In the above example we stored &quot;Dr. Jones&quot; into a variable of the type string. This is a legal statement. However, if we had said int name = &quot;Dr. Jones&quot;, the compiler would have thrown an error telling us that you cannot implicitly convert between int and string. There are methods for doing this, but we will talk about them later.</p><h2 id="fields-local-variables-and-parameters">Fields, local variables, and parameters</h2><p>C# supports several program elements corresponding to the general programming concept of variable: fields, parameters, and local variables.</p><h3 id="fields">Fields</h3><p>Fields, sometimes called class-level variables, are variables associated with classes or structures. An instance variable is a field associated with an instance of the class or structure, while a static variable, declared with the static keyword, is a field associated with the type itself. Fields can also be associated with their class by making them constants (const), which requires a declaration assignment of a constant value and prevents subsequent changes to the field.</p><p>Each field has a visibility of public, protected, internal, protected internal, or private (from most visible to least visible).</p><h3 id="local-variables">Local variables</h3><p>Like fields, local variables can optionally be constant (const). Constant local variables are stored in the assembly data region, while non-constant local variables are stored on (or referenced from) the stack. They thus have both a scope and an extent of the method or statement block that declares them.</p><h3 id="parameter">Parameter</h3><p>Parameters are variables associated with a method.</p><p>An in parameter may either have its value passed in from the caller to the method&apos;s environment, so that changes to the parameter by the method do not affect the value of the caller&apos;s variable, or passed in by reference, so that changes to the variables will affect the value of the caller&apos;s variable. Value types (int, double, string) are passed in &quot;by value&quot; while reference types (objects) are passed in &quot;by reference.&quot; Since this is the default for the C# compiler, it is not necessary to use .</p><p>An out parameter does not have its value copied, thus changes to the variable&apos;s value within the method&apos;s environment directly affect the value from the caller&apos;s environment. Such a variable is considered by the compiler to be unbound upon method entry, thus it is illegal to reference an out parameter before assigning it a value. It also must be assigned by the method in each valid (non-exceptional) code path through the method in order for the method to compile.</p><p>A reference parameter is similar to an out parameter, except that it is bound before the method call and it need not be assigned by the method.</p><p>A params parameter represents a variable number of parameters. If a method signature includes one, the params argument must be the last argument in the signature.</p><pre><code class="lang-csharp"><span class="hljs-comment">// Each pair of lines is what the definition of a method and a call of a </span>
+<span class="hljs-comment">//   method with each of the parameters types would look like.</span>
+<span class="hljs-comment">// In param:</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MethodOne</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> param1</span>)    <span class="hljs-comment">// definition</span>
+<span class="hljs-title">MethodOne</span>(<span class="hljs-params">variable</span>)</span>;          <span class="hljs-comment">// call</span>
+
+<span class="hljs-comment">// Out param:</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MethodTwo</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">string</span> message</span>)  <span class="hljs-comment">// definition</span>
+<span class="hljs-title">MethodTwo</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> variable</span>)</span>;            <span class="hljs-comment">// call</span>
+
+<span class="hljs-comment">// Reference param;</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">MethodThree</span>(<span class="hljs-params"><span class="hljs-keyword">ref</span> <span class="hljs-keyword">int</span> someFlag</span>)  <span class="hljs-comment">// definition</span>
+<span class="hljs-title">MethodThree</span>(<span class="hljs-params"><span class="hljs-keyword">ref</span> theFlag</span>)            <span class="hljs-comment">// call</span>
+
+<span class="hljs-comment">// Params</span>
+<span class="hljs-keyword">void</span> <span class="hljs-title">MethodFour</span>(<span class="hljs-params"><span class="hljs-keyword">params</span> <span class="hljs-keyword">string</span>[] names</span>)           <span class="hljs-comment">// definition</span>
+<span class="hljs-title">MethodFour</span>(<span class="hljs-params"><span class="hljs-string">&quot;Matthew&quot;</span>, <span class="hljs-string">&quot;Mark&quot;</span>, <span class="hljs-string">&quot;Luke&quot;</span>, <span class="hljs-string">&quot;John&quot;</span></span>)</span>;   <span class="hljs-comment">// call</span></code></pre>
+<h2 id="types">Types</h2><p>Each type in C# is either a value type or a reference type. C# has several predefined (&quot;built-in&quot;) types and allows for declaration of custom value types and reference types.</p><p>There is a fundamental difference between value types and reference types: Value types are allocated on the stack, whereas reference types are allocated on the heap.</p><h3 id="value-types">Value types</h3><p>The value types in the .NET framework are usually small, frequently used types. The benefit of using them is that the type requires very little resources to get up and running by the CLR. Value types do not require memory to be allocated on the heap and therefore will not cause garbage collection. However, in order to be useful, the value types (or types derived from it) should remain small - ideally below 16 bytes of data. If you choose to make your value type bigger, it is recommended that you do not pass it to methods (which can require a copy of all its fields), or return it from methods.</p><p>Although this sounds like a useful type to have, it does have some flaws, which need to be understood when using it.</p><ul><li>Value types are always copied (intrinsically) before being passed to a method. Changes to this new object will not be reflected back in the original object passed into the method.
+</li>
+<li>Value types do not /need/ you to call their constructor. They are automatically initialized.
+</li>
+<li>Value types always initialize their fields to 0 or null.
+</li>
+<li>Value types can NEVER be assigned a value of null (but can using Nullable types)
+</li>
+<li>Value types sometimes need to be <em>boxed</em> (wrapped inside an object), allowing their values to be used like objects.
+</li></ul>
+<h3 id="reference-types">Reference types</h3><p>Reference types are managed very differently by the CLR. All reference types consist of two parts: A pointer to the heap (which contains the object), and the object itself. Reference types are slightly heavier weight because of the management behind the scenes needed to keep track of them. However, this is a minor price to pay for the flexibility and speed gains from passing a pointer around, rather than copying values to/from methods.</p><p>When an object is initialized, by use of the constructor, and is of a reference type, the CLR must perform four operations:</p><ol><li>The CLR calculates the amount of memory required to hold the object on the heap.
+</li>
+<li>The CLR inserts the data into the newly created memory space.
+</li>
+<li>The CLR marks where the end of the space lies, so that the next object can be placed there.
+</li>
+<li>The CLR returns a reference to the newly created space.
+</li></ol>
+<p>This occurs every single time an object is created. However the assumption is that there is infinite memory, therefore some maintenance needs to take place - and that&apos;s where the garbage collector comes in.</p><h3 id="integral-types">Integral types</h3><p>Because the type system in C# is unified with other languages that are CLI-compliant, each integral C# type is actually an alias for a corresponding type in the .NET framework. Although the names of the aliases vary between .NET languages, the underlying types in the .NET framework remain the same. Thus, objects created in assemblies written in other languages of the .NET Framework can be bound to C# variables of any type to which the value can be converted, per the conversion rules below. The following illustrates the cross-language compatibility of types by comparing C# code with the equivalent Visual Basic .NET code:</p><pre><code class="lang-csharp"><span class="hljs-comment">// C#</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">UsingCSharpTypeAlias</span>(<span class="hljs-params"></span>)
+</span>{
+  <span class="hljs-keyword">int</span> i = <span class="hljs-number">42</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">EquivalentCodeWithoutAlias</span>(<span class="hljs-params"></span>)
+</span>{
+  System.Int32 i = <span class="hljs-number">42</span>;
+}</code></pre>
+<pre><code class="lang-csharp"> &apos; Visual Basic .NET
+ Public Sub UsingVisualBasicTypeAlias()
+   Dim i As Integer = 42
+ End Sub
+
+ Public Sub EquivalentCodeWithoutAlias()
+   Dim i As System.Int32 = 42
+ End Sub</code></pre>
+<p>Using the language-specific type aliases is often considered more readable than using the fully-qualified .NET Framework type names.</p><p>The fact that each C# type corresponds to a type in the unified type system gives each value type a consistent size across platforms and compilers. That consistency is an important distinction from other languages such as C, where, e.g. a long is only guaranteed to be at least as large as an int, and is implemented with different sizes by different compilers. As reference types, variables of types derived from object (i.e. any class) are exempt from the consistent size requirement. That is, the size of reference types like System.IntPtr, as opposed to value types like System.Int32, may vary by platform. Fortunately, there is rarely a need to know the actual size of a reference type.</p><p>There are two predefined reference types: object, an alias for the System.Object class, from which all other reference types derive; and string, an alias for the System.String class. C# likewise has several integral value types, each an alias to a corresponding value type in the System namespace of the .NET Framework. The predefined C# type aliases expose the methods of the underlying .NET Framework types. For example, since the .NET Framework&apos;s System.Int32 type implements a ToString() method to convert the value of an integer to its string representation, C#&apos;s int type exposes that method:</p><pre><code class="lang-csharp"><span class="hljs-keyword">int</span> i = <span class="hljs-number">97</span>;
+<span class="hljs-keyword">string</span> s = i.ToString();  <span class="hljs-comment">// The value of s is now the string &quot;97&quot;.</span></code></pre>
+<p>Likewise, the System.Int32 type implements the Parse() method, which can therefore be accessed via C#&apos;s int type:</p><pre><code class="lang-csharp"><span class="hljs-keyword">string</span> s = <span class="hljs-string">&quot;97&quot;</span>;
+<span class="hljs-keyword">int</span> i = <span class="hljs-keyword">int</span>.Parse(s); <span class="hljs-comment">// The value of i is now the integer 97.</span></code></pre>
+<p>The unified type system is enhanced by the ability to convert value types to reference types (boxing) and likewise to convert certain reference types to their corresponding value types (unboxing). This is also known as casting.</p><pre><code class="lang-csharp"><span class="hljs-keyword">object</span> boxedInteger = <span class="hljs-number">97</span>;
+<span class="hljs-keyword">int</span> unboxedInteger = (<span class="hljs-keyword">int</span>) boxedInteger;</code></pre>
+<p>Boxing and casting are, however, not type-safe: the compiler won&apos;t generate an error if the programmer mixes up the types. In the following short example the mistake is quite obvious, but in complex programs it may be very difficult to spot. Avoid boxing, if possible.</p><pre><code class="lang-csharp"><span class="hljs-keyword">object</span> getInteger = <span class="hljs-string">&quot;97&quot;</span>;
+<span class="hljs-keyword">int</span> anInteger = (<span class="hljs-keyword">int</span>) getInteger; <span class="hljs-comment">// No compile-time error. The program will crash, however.</span></code></pre>
+<p>The built-in C# type aliases and their equivalent .NET Framework types follow:</p><h4 id="integers">Integers</h4><table>
+<thead>
+<tr><th>C# Alias</th>
+<th>.NET Type</th>
+<th>Size (bits)</th>
+<th>Range</th>
+</tr></thead><tbody>
+<tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/sbyte" href="wiki/C_Sharp_Programming/Keywords/sbyte">sbyte</a></span></td>
+<td>System.SByte</td>
+<td>8</td>
+<td>-128 to 127</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/byte" href="wiki/C_Sharp_Programming/Keywords/byte">byte</a></span></td>
+<td>System.Byte</td>
+<td>8</td>
+<td>0 to 255</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/short" href="wiki/C_Sharp_Programming/Keywords/short">short</a></span></td>
+<td>System.Int16</td>
+<td>16</td>
+<td>-32,768 to 32,767</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/ushort" href="wiki/C_Sharp_Programming/Keywords/ushort">ushort</a></span></td>
+<td>System.UInt16</td>
+<td>16</td>
+<td>0 to 65,535</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/char" href="wiki/C_Sharp_Programming/Keywords/char">char</a></span></td>
+<td>System.Char</td>
+<td>16</td>
+<td>A unicode character of code 0 to 65,535</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/int" href="wiki/C_Sharp_Programming/Keywords/int">int</a></span></td>
+<td>System.Int32</td>
+<td>32</td>
+<td>-2,147,483,648 to 2,147,483,647</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/uint" href="wiki/C_Sharp_Programming/Keywords/uint">uint</a></span></td>
+<td>System.UInt32</td>
+<td>32</td>
+<td>0 to 4,294,967,295</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/long" href="wiki/C_Sharp_Programming/Keywords/long">long</a></span></td>
+<td>System.Int64</td>
+<td>64</td>
+<td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/ulong" href="wiki/C_Sharp_Programming/Keywords/ulong">ulong</a></span></td>
+<td>System.UInt64</td>
+<td>64</td>
+<td>0 to 18,446,744,073,709,551,615</td>
+</tr></tbody></table>
+
+<h4 id="floating-point">Floating-point</h4><table>
+<thead>
+<tr><th>C# Alias</th>
+<th>.NET Type</th>
+<th>Size (bits)</th>
+<th>Precision</th>
+<th>Range</th>
+</tr></thead><tbody>
+<tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/float" href="wiki/C_Sharp_Programming/Keywords/float">float</a></span></td>
+<td>System.Single</td>
+<td>32</td>
+<td>7 digits</td>
+<td>1.5 x 10<sup>-45</sup> to 3.4 x 10<sup>38</sup></td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/double" href="wiki/C_Sharp_Programming/Keywords/double">double</a></span></td>
+<td>System.Double</td>
+<td>64</td>
+<td>15-16 digits</td>
+<td>5.0 x 10<sup>-324</sup> to 1.7 x 10<sup>308</sup></td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/decimal" href="wiki/C_Sharp_Programming/Keywords/decimal">decimal</a></span></td>
+<td>System.Decimal</td>
+<td>128</td>
+<td>28-29 decimal places</td>
+<td>1.0 x 10<sup>-28</sup> to 7.9 x 10<sup>28</sup></td>
+</tr></tbody></table>
+
+<h4 id="other-predefined-types">Other predefined types</h4><table>
+<thead>
+<tr><th>C# Alias</th>
+<th>.NET Type</th>
+<th>Size (bits)</th>
+<th>Range</th>
+</tr></thead><tbody>
+<tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/bool" href="wiki/C_Sharp_Programming/Keywords/bool">bool</a></span></td>
+<td>System.Boolean</td>
+<td>32</td>
+<td>true or false, which aren&apos;t related to any integer in C#.</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/object" href="wiki/C_Sharp_Programming/Keywords/object">object</a></span></td>
+<td>System.Object</td>
+<td>32/64</td>
+<td>Platform dependent (a pointer to an object).</td>
+</tr><tr><td><span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/string" href="wiki/C_Sharp_Programming/Keywords/string">string</a></span></td>
+<td>System.String</td>
+<td>16*length</td>
+<td>A unicode string with no special upper bound.</td>
+</tr></tbody></table>
+
+<h3 id="custom-types">Custom types</h3><p>The predefined types can be aggregated and extended into custom types.</p><p>Custom value types are declared with the struct or enum keyword. Likewise, custom reference types are declared with the class keyword.</p><h4 id="arrays">Arrays</h4><p>Although the number of dimensions is included in array declarations, the size of each dimension is not:</p><pre><code class="lang-csharp"><span class="hljs-keyword">string</span>[] a_str;</code></pre>
+<p>Assignments to an array variable (prior to the variable&apos;s usage), however, specify the size of each dimension:</p><pre><code class="lang-csharp">a_str = <span class="hljs-keyword">new</span> <span class="hljs-keyword">string</span>[<span class="hljs-number">5</span>];</code></pre>
+<p>As with other variable types, the declaration and the initialization can be combined:</p><pre><code class="lang-csharp"><span class="hljs-keyword">string</span>[] a_str = <span class="hljs-keyword">new</span> <span class="hljs-keyword">string</span>[<span class="hljs-number">5</span>];</code></pre>
+<p>It is also important to note that like in Java, arrays are passed by reference, and not passed by value. For example, the following code snippet successfully swaps two elements in an integer array:</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">swap</span> (<span class="hljs-params"><span class="hljs-keyword">int</span>[] a_iArray, <span class="hljs-keyword">int</span> iI, <span class="hljs-keyword">int</span> iJ</span>)
+</span>{
+    <span class="hljs-keyword">int</span> iTemp = a_iArray[iI];
+
+    a_iArray[iI] = a_iArray[iJ];
+    a_iArray[iJ] = iTemp;
+}</code></pre>
+<p>It is possible to determine the array size during runtime. The following example assigns the loop counter to the unsigned short array elements:</p><pre><code class="lang-csharp">    <span class="hljs-keyword">ushort</span>[] a_usNumbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">ushort</span>[<span class="hljs-number">234</span>];
+    [...]
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">ushort</span> us = <span class="hljs-number">0</span>; us &lt; a_usNumbers.Length; us++)
+    {
+        a_usNumbers[us] = us;
+    }</code></pre>
+<p>Since C# 2.0, it is possible to have arrays also inside of structures.</p><h2 id="text--variable-example">Text &amp; variable example</h2><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">Login</span>
+{
+  <span class="hljs-keyword">class</span> <span class="hljs-title">Username_Password</span>
+  {
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+      <span class="hljs-keyword">string</span> username,password;
+      Console.Write(<span class="hljs-string">&quot;Enter username: &quot;</span>);
+      username = Console.ReadLine();
+      Console.Write(<span class="hljs-string">&quot;Enter password: &quot;</span>);
+      password = Console.ReadLine();
+
+      <span class="hljs-keyword">if</span> (username == <span class="hljs-string">&quot;SomePerson&quot;</span> &amp;&amp; password == <span class="hljs-string">&quot;SomePassword&quot;</span>)
+      {
+          Console.WriteLine(<span class="hljs-string">&quot;Access Granted.&quot;</span>);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">username != <span class="hljs-string">&quot;SomePerson&quot;</span> &amp;&amp; password == <span class="hljs-string">&quot;SomePassword&quot;</span></span>)
+      </span>{
+          Console.WriteLine(<span class="hljs-string">&quot;The username is wrong.&quot;</span>);
+      }
+      <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">username == <span class="hljs-string">&quot;SomePerson&quot;</span> &amp;&amp; password != <span class="hljs-string">&quot;SomePassword&quot;</span></span>)
+      </span>{
+          Console.WriteLine(<span class="hljs-string">&quot;The password is wrong.&quot;</span>);
+      }
+      <span class="hljs-keyword">else</span>
+      {
+          Console.WriteLine(<span class="hljs-string">&quot;Access Denied.&quot;</span>);
+      }
+    }
+  }
+}</code></pre>
+<h3 id="conversion">Conversion</h3><p>Values of a given type may or may not be explicitly or implicitly convertible to other types depending on predefined conversion rules, inheritance structure, and explicit cast definitions.</p><h4 id="predefined-conversions">Predefined conversions</h4><p>Many predefined value types have predefined conversions to other predefined value types. If the type conversion is guaranteed not to lose information, the conversion can be implicit (i.e. an explicit cast is not required).</p><h4 id="inheritance-polymorphism">Inheritance polymorphism</h4><p>A value can be implicitly converted to any class from which it inherits or interface that it implements. To convert a base class to a class that inherits from it, the conversion must be explicit in order for the conversion statement to compile. Similarly, to convert an interface instance to a class that implements it, the conversion must be explicit in order for the conversion statement to compile. In either case, the runtime environment throws a conversion exception if the value to convert is not an instance of the target type or any of its derived types.</p><h2 id="scope-and-extent">Scope and extent</h2><p>The scope and extent of variables is based on their declaration. The scope of parameters and local variables corresponds to the declaring method or statement block, while the scope of fields is associated with the instance or class and is potentially further restricted by the field&apos;s access modifiers.</p><p>The extent of variables is determined by the runtime environment using implicit reference counting and a complex garbage collection algorithm.</p><p>C# operators and their precedence closely resemble the operators in other languages of the C family.</p><p>Similar to C++, classes can overload most operators, defining or redefining the behavior of the operators in contexts where the first argument of that operator is an instance of that class, but doing so is often discouraged for clarity.</p><p>Operators can be grouped by their arity as unary, binary.</p><p>Following are the built-in behaviors of C# operators.</p><h2 id="arithmetic">Arithmetic</h2><p>The following arithmetic operators operate on numeric operands (arguments a and b in the &quot;sample usage&quot; below).</p><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Type</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>plus</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;+&lt;/span&gt;</code> returns the <a title="w:en:addition" href="en.wikipedia.org/wiki/en:addition">sum</a> of its arguments.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>minus</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;</code> returns the <a title="w:en:subtraction" href="en.wikipedia.org/wiki/en:subtraction">difference</a> between its arguments.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>times</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;</code> returns the <a title="w:en:multiplication" href="en.wikipedia.org/wiki/en:multiplication">multiplicative product</a> of its arguments.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>divided by</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;/&lt;/span&gt;</code> returns the <a href="en.wikipedia.org/wiki/en:division_(mathematics">quotient</a> &quot;w:en:division (mathematics)&quot;) of its arguments. If both of its operators are integers, it obtains that quotient using <em>integer division</em> (i.e. it drops any resulting remainder).</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>mod</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;%&lt;/span&gt;</code> operates only on integer arguments. It returns the <a title="w:en:remainder" href="en.wikipedia.org/wiki/en:remainder">remainder</a> of <em>integer division</em> of those arguments. <em>(See <a title="w:en:modular arithmetic" href="en.wikipedia.org/wiki/en:modular_arithmetic">modular arithmetic</a>.)</em></td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>plus plus</em> or <em>Postincrement</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;</code> operates only on arguments that have an <em>l-value</em>. When placed <strong>after</strong> its argument, it increments that argument by 1 and returns the value of that argument before it was incremented.</td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td><em>plus plus</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> or <em>Preincrement</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;++&lt;/span&gt;</code> operates only on arguments that have an <em>l-value</em>. When placed <strong>before</strong> its argument, it increments that argument by 1 and returns the resulting value.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;--&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>minus minus</em> or <em>Postdecrement</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;--&lt;/span&gt;</code> operates only on arguments that have an <em>l-value</em>. When placed <strong>after</strong> its argument, it decrements that argument by 1 and returns the value of that argument before it was decremented.</td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td><em>minus minus</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> or <em>Predecrement</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;--&lt;/span&gt;</code> operates only on arguments that have an <em>l-value</em>. When placed <strong>before</strong> its argument, it decrements that argument by 1 and returns the resulting value.</td>
+</tr></tbody></table>
+
+<h2 id="logical">Logical</h2><p>The following logical operators operate on boolean or integral operands, as noted.</p><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Type</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>bitwise and</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;&amp;&lt;/span&gt;</code> evaluates both of its operands and returns the <a title="w:en:Logical conjunction" href="en.wikipedia.org/wiki/en:Logical_conjunction">logical conjunction</a> (&quot;AND&quot;) of their results. If the operands are integral, the logical conjunction is performed bitwise.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;&amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>and</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;&amp;&amp;&lt;/span&gt;</code> operates on boolean operands only. It evaluates its first operand. If the result is <em>false</em>, it returns <em>false</em>. Otherwise, it evaluates and returns the results of the second operand. Note that, if evaluating the second operand would hypothetically have no side effects, the results are identical to the logical conjunction performed by the <code>&lt;span class=&quot;p&quot;&gt;&amp;&lt;/span&gt;</code> operator. This is an example of <a title="w:en:Short-circuit evaluation" href="en.wikipedia.org/wiki/en:Short-circuit_evaluation">Short Circuit Evaluation</a>.</td>
+</tr><tr><td>`a</td>
+<td>b`</td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>bitwise or</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td>`</td>
+<td>` evaluates both of its operands and returns the <a title="w:en:Logical disjunction" href="en.wikipedia.org/wiki/en:Logical_disjunction">logical disjunction</a> (&quot;OR&quot;) of their results. If the operands are integral, the logical disjunction is performed bitwise.</td>
+</tr><tr><td>`a</td>
+<td></td>
+<td>b`</td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>or</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td>`</td>
+<td></td>
+<td><code>operates on boolean operands only. It evaluates the first operand. If the result is _true_, it returns _true_. Otherwise, it evaluates and returns the results of the second operand. Note that, if evaluating the second operand would hypothetically have no side effects, the results are identical to the logical disjunction performed by the</code></td>
+<td>` operator. This is an example of <a title="w:en:Short-circuit evaluation" href="en.wikipedia.org/wiki/en:Short-circuit_evaluation">Short Circuit Evaluation</a>.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>x-or</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>^</code> returns the <a title="w:en:exclusive or" href="en.wikipedia.org/wiki/en:exclusive_or">exclusive or</a> (&quot;XOR&quot;) of their results. If the operands are integral, the exclusive or is performed bitwise.</td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td><em>not</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;</code> operates on a boolean operand only. It evaluates its operand and returns the <a title="w:en:negation" href="en.wikipedia.org/wiki/en:negation">negation</a> (&quot;NOT&quot;) of the result. That is, it returns <em>true</em> if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> evaluates to <em>false</em> and it returns <em>false</em> if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> evaluates to <em>true</em>.</td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td><em>bitwise not</em> <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>unary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;~&lt;/span&gt;</code> operates on integral operands only. It evaluates its operand and returns the bitwise negation of the result. That is, <code>&lt;span class=&quot;p&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> returns a value where each bit is the negation of the corresponding bit in the result of evaluating <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code>.</td>
+</tr></tbody></table>
+
+<h2 id="bitwise-shifting">Bitwise shifting</h2><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Type</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&lt;&lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>left shift</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;&lt;&lt;&lt;/span&gt;</code> evaluates its operands and returns the resulting first argument left-shifted by the number of bits specified by the second argument. It discards high-order bits that shift beyond the size of its first argument and sets new low-order bits to zero.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>right shift</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>binary</td>
+<td><code>&lt;span class=&quot;p&quot;&gt;&gt;&gt;&lt;/span&gt;</code> evaluates its operands and returns the resulting first argument right-shifted by the number of bits specified by the second argument. It discards low-order bits that are shifted beyond the size of its first argument and sets new high-order bits to the sign bit of the first argument, or to zero if the first argument is unsigned.</td>
+</tr></tbody></table>
+
+<h2 id="relational">Relational</h2><p>The binary relational operators ==, !=, &lt;, &gt;, &lt;=, and &gt;= are used for relational operations and for type comparisons.</p><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>a == b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is equal to</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>For arguments of <em>value</em> type, the operator <code>==</code> returns <em>true</em>, if its operands have the same value, false otherwise. For the <em>string</em> type, it returns <em>true</em>, if the strings&apos; character sequences match. For other <em>reference</em> types (types derived from <code>&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Object&lt;/span&gt;</code>), however, <code>a == b</code> returns <em>true</em> only if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> and <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> reference the same object.</td>
+</tr><tr><td><code>a != b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is not equal to</em> <code>b</code></td>
+<td>The operator <code>!=</code> returns the logical negation of the operator <code>==</code>. Thus, it returns <em>true</em>, if <code>a</code> is not equal to <code>b</code>, and <em>false</em>, if they are equal.</td>
+</tr><tr><td><code>a &lt; b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is less than</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>The operator <code>&lt;span class=&quot;p&quot;&gt;&lt;&lt;/span&gt;</code> operates on integral types. It returns <em>true</em>, if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is less than <code>b</code>, <em>false</em> otherwise.</td>
+</tr><tr><td><code>a &gt; b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is greater than</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>The operator <code>&lt;span class=&quot;p&quot;&gt;&gt;&lt;/span&gt;</code> operates on integral types. It returns <em>true</em>, if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is greater than <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>, <em>false</em> otherwise.</td>
+</tr><tr><td><code>a &lt;= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is less than or equal to</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>The operator <code>&lt;=</code> operates on integral types. It returns <em>true</em>, if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is less than or equal to <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>, <em>false</em> otherwise.</td>
+</tr><tr><td><code>a &gt;= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>is greater than or equal to</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>The operator <code>&gt;=</code> operates on integral types. It returns <em>true</em>, if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is greater than or equal to <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>, <em>false</em> otherwise.</td>
+</tr></tbody></table>
+
+<h2 id="assignment">Assignment</h2><p>The assignment operators are binary. The most basic is the operator =. Not surprisingly, it assigns the value (or reference) of its second argument to its first argument.</p><p>(More technically, the operator = requires for its first (left) argument an expression to which a value can be assigned (an l-value) and for its second (right) argument an expression that can be evaluated (an r-value). That requirement of an assignable expression to its left and a bound expression to its right is the origin of the terms l-value and r-value.)</p><p>The first argument of the assignment operator (=) is typically a variable. When that argument has a value type, the assignment operation changes the argument&apos;s underlying value. When the first argument is a reference type, the assignment operation changes the reference, so the first argument typically just refers to a different object, but the object that it originally referenced does not change (except that it may no longer be referenced and may thus be a candidate for garbage collection).</p><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>a = b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>equals</em> (or <em>set to</em>) <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>The operator <code>=</code> evaluates its second argument and then assigns the results to (the <em>l-value</em> indicated by) its first argument.</td>
+</tr><tr><td><code>a = b = c</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> <em>set to</em> <code>&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;</code>, and then <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>set to</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = (b = c)</code>. When there are consecutive assignments, the right-most assignment is evaluated first, proceeding from right to left. In this example, both variables <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> and <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> have the value of <code>&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;</code>.</td>
+</tr></tbody></table>
+
+<h2 id="short-hand-assignment">Short-hand Assignment</h2><p>The short-hand assignment operators shortens the common assignment operation of a = a operator b into a operator= b, resulting in less typing and neater syntax.</p><table>
+<thead>
+<tr><th>Sample usage</th>
+<th>Read</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>a += b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>plus equals</em> (or <em>increment by</em>) <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a + b</code>.</td>
+</tr><tr><td><code>a -= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>minus equals</em> (or <em>decrement by</em>) <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a - b</code>.</td>
+</tr><tr><td><code>a *= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>multiply equals</em> (or <em>multiplied by</em>) <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a*b</code>.</td>
+</tr><tr><td><code>a /= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>divide equals</em> (or <em>divided by</em>) <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a/b</code>.</td>
+</tr><tr><td><code>a %= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>mod equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a%b</code>.</td>
+</tr><tr><td><code>a &amp;= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>and equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a&amp;b</code>.</td>
+</tr><tr><td>`a</td>
+<td>= b`</td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>or equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to `a = a</td>
+<td>b`.</td>
+</tr><tr><td><code>a ^= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>xor equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a^b</code>.</td>
+</tr><tr><td><code>a &lt;&lt;= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>left-shift equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a &lt;&lt; b</code>.</td>
+</tr><tr><td><code>a &gt;&gt;= b</code></td>
+<td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> <em>right-shift equals</em> <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>Equivalent to <code>a = a &gt;&gt; b</code>.</td>
+</tr></tbody></table>
+
+<h2 id="type-information">Type information</h2><table>
+<thead>
+<tr><th>Expression</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code></td>
+<td>returns true, if the variable <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code> of base class type stores an object of derived class type T, or, if <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code> is of type <code>&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code>. Else returns false.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code></td>
+<td>returns <code>&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code> <em>(x cast to T)</em>, if the variable <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code> of base class type stores an object of derived class type <code>&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code>, or, if <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code> is of type <code>&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code>. Else returns null. Equivalent to <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;T&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;sizeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;</code></td>
+<td>returns the size of the value type <code>&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;</code>. Remarks: The sizeof operator can be applied only to value types, not reference types..</td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;typeof&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;</code></td>
+<td>returns a <code>&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Type&lt;/span&gt;</code> object describing the type. <code>&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;</code> must be the name of the type, and not a variable. Use the <code>&lt;span class=&quot;n&quot;&gt;GetType&lt;/span&gt;</code> method to retrieve run-time type information of variables.</td>
+</tr></tbody></table>
+
+<h2 id="pointer-manipulation">Pointer manipulation</h2><p>NOTE: Most C# developers agree that direct manipulation and use of pointers is not recommended in C#. The language has many built-in classes to allow you to do almost any operation you want. C# was built with memory-management in mind and the creation and use of pointers is greatly disruptive to this end. This speaks to the declaration of pointers and the use of pointer notation, not arrays. In fact, a program may only be compiled in &quot;unsafe mode&quot;, if it uses pointers.</p><table>
+<thead>
+<tr><th>Expression</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;p&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td><em>Indirection</em> operator. Allows access the object being pointed.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;-&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;member&lt;/span&gt;</code></td>
+<td>Similar to the <code>&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;</code> operator. Allows access to members of classes and structs being pointed.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;</code></td>
+<td>Used to <em>index</em> a pointer.</td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;&amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>References the <em>address</em> of the pointer.</td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;stackalloc&lt;/span&gt;</code></td>
+<td>allocates memory on the stack.</td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;fixed&lt;/span&gt;</code></td>
+<td>Temporarily fixes a variable in order that its address may be found.</td>
+</tr></tbody></table>
+
+<h2 id="overflow-exception-control">Overflow exception control</h2><table>
+<thead>
+<tr><th>Expression</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;k&quot;&gt;checked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;</code></td>
+<td>uses overflow checking on value <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;unchecked&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;</code></td>
+<td>avoids overflow checking on value <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr></tbody></table>
+
+<h2 id="others">Others</h2><table>
+<thead>
+<tr><th>Expression</th>
+<th>Explanation</th>
+</tr></thead><tbody>
+<tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>accesses member <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> of type or namespace <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;</code></td>
+<td>the value of index <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> in <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>casts the value <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> to type <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+<td>creates an object of type <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> and <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> are strings, concatenates <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> and <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>. If any addend is <code>&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;</code>, the empty string is used instead. If one addend is a string and the other one is a non-string object, <code>&lt;span class=&quot;n&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code> is called on that object before concatenation.</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> and <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code> are delegates, performs delegate concatenation</td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;</code></td>
+<td>if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is true, returns the value of <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>, otherwise <code>&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;??&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code></td>
+<td>if <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code> is <code>&lt;span class=&quot;k&quot;&gt;null&lt;/span&gt;</code>, returns <code>&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;</code>, otherwise returns <code>&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;</code></td>
+</tr><tr><td><code>&lt;span class=&quot;s&quot;&gt;@&quot;a&quot;&lt;/span&gt;</code></td>
+<td>verbatim text, i.e., escape characters are ignored</td>
+</tr></tbody></table>
+
+<p>There are various ways of grouping sets of data together in C#.</p><h2 id="enumerations">Enumerations</h2><p>An enumeration is a data type that enumerates a set of items by assigning to each of them an identifier (a name), while exposing an underlying base type for ordering the elements of the enumeration. The underlying type is int by default, but can be any one of the integral types except for char.</p><p>Enumerations are declared as follows:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">enum</span> Weekday { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday };</code></pre>
+<p>The elements in the above enumeration are then available as constants:</p><pre><code class="lang-csharp"> Weekday day = Weekday.Monday;
+
+ <span class="hljs-keyword">if</span> (day == Weekday.Tuesday)
+ {
+     Console.WriteLine(<span class="hljs-string">&quot;Time sure flies by when you program in C#!&quot;</span>);
+ }</code></pre>
+<p>If no explicit values are assigned to the enumerated items as the example above, the first element has the value 0, and the successive values are assigned to each subsequent element. However, specific values from the underlying integral type can be assigned to any of the enumerated elements (note that the variable must be type cast in order to access the base type):</p><pre><code class="lang-csharp"> <span class="hljs-keyword">enum</span> Age { Infant = <span class="hljs-number">0</span>, Teenager = <span class="hljs-number">13</span>, Adult = <span class="hljs-number">18</span> };
+
+ Age myAge = Age.Teenager;
+ Console.WriteLine(<span class="hljs-string">&quot;You become a teenager at an age of {0}.&quot;</span>, (<span class="hljs-keyword">int</span>)myAge);</code></pre>
+<p>The underlying values of enumerated elements may go unused when the purpose of an enumeration is simply to group a set of items together, e.g., to represent a nation, state, or geographical territory in a more meaningful way than an integer could. Rather than define a group of logically related constants, it is often more readable to use an enumeration.</p><p>It may be desirable to create an enumeration with a base type other than int. To do so, specify any integral type besides char as with base class extension syntax after the name of the enumeration, as follows:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">enum</span> CardSuit : <span class="hljs-keyword">byte</span> { Hearts, Diamonds, Spades, Clubs };</code></pre>
+<p>The enumeration type is also helpful, if you need to output the value. By calling the .ToString() method on the enumeration, will output the enumerations name (e.g. CardSuit.Hearts.ToString() will output &quot;Hearts&quot;).</p><h2 id="structs">Structs</h2><p>Structures (keyword struct) are light-weight objects. They are mostly used when only a data container is required for a collection of value type variables. Structs are similar to classes in that they can have constructors, methods, and even implement interfaces, but there are important differences.</p><ul><li><em>Structs</em> are value types while <em>classes</em> are reference types, which means they behave differently when passed into methods as parameters.
+</li>
+<li><em>Structs</em> cannot support inheritance. While <em>structs</em> may appear to be limited with their use, they require less memory and can be less expensive, if used in the proper way.
+</li>
+<li><em>Structs</em> always have a default constructor, even if you don&apos;t want one. Classes allow you to hide the constructor away by using the &quot;private&quot; modifier, whereas structures <em>must</em> have one.
+</li></ul>
+<p>A struct can, for example, be declared like this:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">struct</span> Person
+ {
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> name;
+     <span class="hljs-keyword">public</span> System.DateTime birthDate;
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> heightInCm;
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> weightInKg;
+ }</code></pre>
+<p>The Person struct can then be used like this:</p><pre><code class="lang-csharp"> Person dana = <span class="hljs-keyword">new</span> Person();
+ dana.name = <span class="hljs-string">&quot;Dana Developer&quot;</span>;
+ dana.birthDate = <span class="hljs-keyword">new</span> DateTime(<span class="hljs-number">1974</span>, <span class="hljs-number">7</span>, <span class="hljs-number">18</span>);
+ dana.heightInCm = <span class="hljs-number">178</span>;
+ dana.weightInKg = <span class="hljs-number">50</span>;
+
+ <span class="hljs-keyword">if</span> (dana.birthDate &lt; DateTime.Now)
+ {
+     Console.WriteLine(<span class="hljs-string">&quot;Thank goodness! Dana Developer isn&apos;t from the future!&quot;</span>);
+ }</code></pre>
+<p>It is also possible to provide constructors to structs to make it easier to initialize them:</p><pre><code class="lang-csharp"> <span class="hljs-keyword">using</span> System;
+ <span class="hljs-keyword">struct</span> Person
+ {
+     <span class="hljs-keyword">string</span> name;
+     DateTime birthDate;
+     <span class="hljs-keyword">int</span> heightInCm;
+     <span class="hljs-keyword">int</span> weightInKg;
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Person</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> name, DateTime birthDate, <span class="hljs-keyword">int</span> heightInCm, <span class="hljs-keyword">int</span> weightInKg</span>)
+     </span>{
+         <span class="hljs-keyword">this</span>.name = name;
+         <span class="hljs-keyword">this</span>.birthDate = birthDate;
+         <span class="hljs-keyword">this</span>.heightInCm = heightInCm;
+         <span class="hljs-keyword">this</span>.weightInKg = weightInKg;
+     }
+ }
+
+ <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">StructWikiBookSample</span>
+ {
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+     </span>{
+         Person dana = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Dana Developer&quot;</span>, <span class="hljs-keyword">new</span> DateTime(<span class="hljs-number">1974</span>, <span class="hljs-number">7</span>, <span class="hljs-number">18</span>), <span class="hljs-number">178</span>, <span class="hljs-number">50</span>);
+     }
+ }</code></pre>
+<p>There is also an alternative syntax for initializing structs:</p><pre><code class="lang-csharp"><span class="hljs-keyword">struct</span> Person
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Height;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Occupation;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">StructWikiBookSample2</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Person john = <span class="hljs-keyword">new</span> Person { Name = <span class="hljs-string">&quot;John&quot;</span>, Height = <span class="hljs-number">182</span>, Occupation = <span class="hljs-string">&quot;Programmer&quot;</span> };
+    }
+}</code></pre>
+<p>Structs are really only used for performance reasons or, if you intend to reference it by value. Structs work best when holding a total equal to or less than 16 bytes of data. If in doubt, use classes.</p><h2 id="arrays">Arrays</h2><p>Arrays represent a set of items all belonging to the same type. The declaration itself may use a variable or a constant to define the length of the array. However, an array has a set length and it cannot be changed after declaration.</p><pre><code class="lang-csharp"><span class="hljs-comment">// an array whose length is defined with a constant</span>
+<span class="hljs-keyword">int</span>[] integers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">20</span>];
+
+<span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;
+System.Console.Write(<span class="hljs-string">&quot;How long should the array be? &quot;</span>);
+length = <span class="hljs-keyword">int</span>.Parse(System.Console.ReadLine());
+<span class="hljs-comment">// an array whose length is defined with a variable</span>
+<span class="hljs-comment">// this array still can&apos;t change length after declaration</span>
+<span class="hljs-keyword">double</span>[] doubles = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[length];</code></pre>
+<p>Conditional, iteration, jump, and exception handling statements control a program&apos;s flow of execution.</p><p>A conditional statement can decide something using keywords such as if, switch.</p><p>An iteration statement can create a loop using keywords such as do, while, for, foreach, and in.</p><p>A jump statement can be used to transfer program control using keywords such as break, continue, return, and yield.</p><h2 id="conditional-statements">Conditional statements</h2><p>A conditional statement decides whether to execute code based on conditions. The if statement and the switch statement are the two types of conditional statements in C#.</p><h3 id="if-statement">if statement</h3><p>As with most of C#, the if statement has the same syntax as in C, C++, and Java. Thus, it is written in the following form:</p><pre><code class="lang-csharp"><span class="hljs-keyword">if</span> (condition)
+{
+  <span class="hljs-comment">// Do something</span>
+} 
+<span class="hljs-keyword">else</span>
+{
+  <span class="hljs-comment">// Do something else</span>
+}</code></pre>
+<p>The if statement evaluates its condition expression to determine whether to execute the if-body. Optionally, an else clause can immediately follow the if body, providing code to execute when the condition is false. Making the else-body another if statement creates the common cascade of if, else if, else if, else if, else statements:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">IfStatementSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">IfMyNumberIs</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> myNumber = <span class="hljs-number">5</span>;
+
+        <span class="hljs-keyword">if</span> ( myNumber == <span class="hljs-number">4</span> )
+            Console.WriteLine(<span class="hljs-string">&quot;This will not be shown because myNumber is not 4.&quot;</span>);
+        <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params"> myNumber &lt; <span class="hljs-number">0</span> </span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;This will not be shown because myNumber is not negative.&quot;</span>);
+        }
+        <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span>(<span class="hljs-params"> myNumber % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> </span>)
+            Console.<span class="hljs-title">WriteLine</span>(<span class="hljs-params"><span class="hljs-string">&quot;This will not be shown because myNumber is not even.&quot;</span></span>)</span>;
+        <span class="hljs-keyword">else</span>
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;myNumber does not match the coded conditions, so this sentence will be shown!&quot;</span>);
+        }
+    }
+}</code></pre>
+<h3 id="switch-statement">switch statement</h3><p>The switch statement is similar to the statement from C, C++ and Java.</p><p>Unlike C, each case statement must finish with a jump statement (that can be break or goto or return). In other words, C# does not support &quot;fall through&quot; from one case statement to the next (thereby eliminating a common source of unexpected behaviour in C programs). However &quot;stacking&quot; of cases is allowed, as in the example below. If goto is used, it may refer to a case label or the default case (e.g. goto case 0 or goto default).</p><p>The default label is optional. If no default case is defined, then the default behaviour is to do nothing.</p><p>A simple example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">switch</span> (nCPU)
+{
+    <span class="hljs-keyword">case</span> <span class="hljs-number">0</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;You don&apos;t have a CPU! :-)&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;Single processor computer&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;Dual processor computer&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+        <span class="hljs-comment">// Stacked cases</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:
+        <span class="hljs-comment">// falls through</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">4</span>:
+        <span class="hljs-comment">// falls through</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">5</span>:
+        <span class="hljs-comment">// falls through</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">6</span>:
+        <span class="hljs-comment">// falls through</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">7</span>:
+        <span class="hljs-comment">// falls through</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-number">8</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;A multi processor computer&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;A seriously parallel computer&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+}</code></pre>
+<p>A nice improvement over the C switch statement is that the switch variable can be a string. For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">switch</span> (aircraftIdent)
+{
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;C-FESO&quot;</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;Rans S6S Coyote&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;C-GJIS&quot;</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;Rans S12XL Airaile&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        Console.WriteLine(<span class="hljs-string">&quot;Unknown aircraft&quot;</span>);
+        <span class="hljs-keyword">break</span>;
+}</code></pre>
+<h2 id="iteration-statements">Iteration statements</h2><p>An iteration statement creates a loop of code to execute a variable number of times. The for loop, the do loop, the while loop, and the foreach loop are the iteration statements in C#.</p><h3 id="do--while-loop">do ... while loop</h3><p>The do...while loop likewise has the same syntax as in other languages derived from C. It is written in the following form:</p><dl>
+
+<dd>_do...while-loop_ ::= &quot;do&quot; _body_ &quot;while&quot; &quot;(&quot; _condition_ &quot;)&quot;</dd>
+
+<dd>_condition_ ::= _boolean-expression_</dd>
+
+<dd>_body_ ::= _statement-or-statement-block_</dd>
+
+</dl>
+
+
+
+<p>The do...while loop always runs its body once. After its first run, it evaluates its condition to determine whether to run its body again. If the condition is true, the body executes. If the condition evaluates to true again after the body has ran, the body executes again. When the condition evaluates to false, the do...while loop ends.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">DoWhileLoopSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">PrintValuesFromZeroToTen</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> number = <span class="hljs-number">0</span>;
+
+        <span class="hljs-keyword">do</span>
+        {
+            Console.WriteLine(number++.ToString());
+        } <span class="hljs-keyword">while</span>(number &lt;= <span class="hljs-number">10</span>);
+    }
+}</code></pre>
+<p>The above code writes the integers from 0 to 10 to the console.</p><h3 id="for-loop">for loop</h3><p>The for loop likewise has the same syntax as in other languages derived from C. It is written in the following form:</p><dl>
+
+<dd>_for-loop_ ::= &quot;for&quot; &quot;(&quot; _initialization_ &quot;;&quot; _condition_ &quot;;&quot; _iteration_ &quot;)&quot; _body_</dd>
+
+<dd>_initialization_ ::= _variable-declaration_ | _list-of-statements_</dd>
+
+<dd>_condition_ ::= _boolean-expression_</dd>
+
+<dd>_iteration_ ::= _list-of-statements_</dd>
+
+<dd>_body_ ::= _statement-or-statement-block_</dd>
+
+</dl>
+
+
+
+<p>The initialization variable declaration or statements are executed the first time through the for loop, typically to declare and initialize an index variable. The condition expression is evaluated before each pass through the body to determine whether to execute the body. It is often used to test an index variable against some limit. If the condition evaluates to true, the body is executed. The iteration statements are executed after each pass through the body, typically to increment or decrement an index variable.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ForLoopSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ForFirst100NaturalNumbers</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++)
+        {
+            System.Console.WriteLine(i.ToString());
+        }
+    }
+}</code></pre>
+<p>The above code writes the integers from 0 to 99 to the console.</p><h3 id="foreach-loop">foreach loop</h3><p>The foreach statement is similar to the for statement in that both allow code to iterate over the items of collections, but the foreach statement lacks an iteration index, so it works even with collections that lack indices altogether. It is written in the following form:</p><dl>
+
+<dd>_foreach-loop_ ::= &quot;foreach&quot; &quot;(&quot; _variable-declaration_ &quot;in&quot; _enumerable-expression_ &quot;)&quot; _body_</dd>
+
+<dd>_body_ ::= _statement-or-statement-block_</dd>
+
+</dl>
+
+
+
+<p>The enumerable-expression is an expression of a type that implements &apos;&apos;&apos;IEnumerable&apos;&apos;&apos;, so it can be an array or a collection. The variable-declaration declares a variable that will be set to the successive elements of the enumerable-expression for each pass through the body. The foreach loop exits when there are no more elements of the enumerable-expression to assign to the variable of the variable-declaration.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ForEachSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">DoSomethingForEachItem</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">string</span>[] itemsToWrite = {<span class="hljs-string">&quot;Alpha&quot;</span>, <span class="hljs-string">&quot;Bravo&quot;</span>, <span class="hljs-string">&quot;Charlie&quot;</span>};
+
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> item <span class="hljs-keyword">in</span> itemsToWrite)
+        System.Console.WriteLine(item);
+    }
+}</code></pre>
+<p>In the above code, the foreach statement iterates over the elements of the string array to write &quot;Alpha&quot;, &quot;Bravo&quot;, and &quot;Charlie&quot; to the console.</p><h3 id="while-loop">while loop</h3><p>The while loop has the same syntax as in other languages derived from C. It is written in the following form:</p><dl>
+
+<dd>_while-loop_ ::= &quot;while&quot; &quot;(&quot; _condition_ &quot;)&quot; _body_</dd>
+
+<dd>_condition_ ::= _boolean-expression_</dd>
+
+<dd>_body_ ::= _statement-or-statement-block_</dd>
+
+</dl>
+
+
+
+<p>The while loop evaluates its condition to determine whether to run its body. If the condition is true, the body executes. If the condition then evaluates to true again, the body executes again. When the condition evaluates to false, the while loop ends.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">WhileLoopSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">RunForAWhile</span>(<span class="hljs-params"></span>)
+    </span>{
+        TimeSpan durationToRun = <span class="hljs-keyword">new</span> TimeSpan(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">30</span>);
+        DateTime start = DateTime.Now;
+
+        <span class="hljs-keyword">while</span> (DateTime.Now - start &lt; durationToRun)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;not finished yet&quot;</span>);
+        }
+        Console.WriteLine(<span class="hljs-string">&quot;finished&quot;</span>);
+    }
+}</code></pre>
+<h2 id="jump-statements">Jump statements</h2><p>A jump statement can be used to transfer program control using keywords such as break, continue, return, yield, and throw.</p><h3 id="break">break</h3><p>A break statement is used to exit from a case in a switch statement and also used to exit from for, foreach, while, do .. while loops that will switch the control to the statement immediately after the end of the loop.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">JumpSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-keyword">int</span> i;
+
+            <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) <span class="hljs-comment">// see the comparison, i &lt; 10</span>
+            {
+                <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">3</span>)
+                {
+                    <span class="hljs-keyword">break</span>; 
+                    <span class="hljs-comment">// Not run over the code, and get out of loop.</span>
+                    <span class="hljs-comment">// Note: The rest of code will not be executed,</span>
+                    <span class="hljs-comment">//       &amp; it leaves the loop instantly</span>
+                }
+            }
+            <span class="hljs-comment">// Here check the value of i, it will be 3, not 10.</span>
+            Console.WriteLine(<span class="hljs-string">&quot;The value of OneExternCounter: {0}&quot;</span>, i);
+        }
+    }
+}</code></pre>
+<h3 id="continue">continue</h3><p>The continue keyword transfers program control just before the end of a loop. The condition for the loop is then checked, and if it is met, the loop performs another iteration.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">JumpSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-keyword">int</span> OneExternCounter = <span class="hljs-number">0</span>;
+
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++)
+            {
+                <span class="hljs-keyword">if</span> (i &gt;= <span class="hljs-number">5</span>)
+                {
+                    <span class="hljs-keyword">continue</span>;   <span class="hljs-comment">// Not run over the code, and return to the beginning </span>
+                                <span class="hljs-comment">// of the scope as if it had completed the loop</span>
+                }
+                OneExternCounter += <span class="hljs-number">1</span>;
+            }
+            <span class="hljs-comment">// Here check the value of OneExternCounter, it will be 5, not 10.</span>
+            Console.WriteLine(<span class="hljs-string">&quot;The value of OneExternCounter: {0}&quot;</span>, OneExternCounter);
+        }
+    }
+}</code></pre>
+<h3 id="return">return</h3><p>The return keyword identifies the return value for the function or method (if any), and transfers control to the end of the function.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">JumpSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Fun</span>(<span class="hljs-params"></span>)
+        </span>{
+            <span class="hljs-keyword">int</span> a = <span class="hljs-number">3</span>;
+            <span class="hljs-keyword">return</span> a; <span class="hljs-comment">// the code terminates here from this function</span>
+            a = <span class="hljs-number">9</span>;    <span class="hljs-comment">// here is a block that will not be executed</span>
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-keyword">int</span> OnNumber = Fun();
+            <span class="hljs-comment">// the value of OnNumber is 3, not 9...</span>
+        }
+    }
+}</code></pre>
+<h3 id="yield">yield</h3><p>The yield keyword is used to define an iterator block that produces values for an enumerator. It is typically used within a method implementation of the IEnumerable interface as an easy way to create an iterator. It is written in the following forms:</p><dl>
+
+<dd>_yield_ ::= &quot;yield&quot; &quot;return&quot; _expression_</dd>
+
+<dd>_yield_ ::= &quot;yield&quot; &quot;break&quot;</dd>
+
+</dl>
+
+
+
+<p>The following example shows the usage of the yield keyword inside the method MyCounter. This method defines an iterator block, and will return an enumerator object that generates the value of a counter from zero to stop, incrementing by step for each value generated.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">YieldSample</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> IEnumerable <span class="hljs-title">MyCounter</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> stop, <span class="hljs-keyword">int</span> step</span>)
+    </span>{
+        <span class="hljs-keyword">int</span> i;
+
+        <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; stop; i += step)
+        {
+            <span class="hljs-keyword">yield</span> <span class="hljs-keyword">return</span> i;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-function"><span class="hljs-keyword">int</span> j <span class="hljs-keyword">in</span> <span class="hljs-title">MyCounter</span>(<span class="hljs-params"><span class="hljs-number">10</span>, <span class="hljs-number">2</span></span>))
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;{0} &quot;</span>, j);
+        }
+        <span class="hljs-comment">// Will display 0 2 4 6 8</span>
+    }
+}</code></pre>
+<h3 id="throw">throw</h3><p>The throw keyword throws an exception. If it is located within a try block, it will transfer the control to a catch block that matches the exception - otherwise, it will check if any calling functions are contained within the matching catch block and transfer execution there. If no functions contain a catch block, the program may terminate because of an unhandled exception.</p><pre><code class="lang-csharp"><span class="hljs-keyword">namespace</span> <span class="hljs-title">ExceptionSample</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Warrior</span>
+    {
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> Name { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Warrior</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> name</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (name == <span class="hljs-string">&quot;Piccolo&quot;</span>)
+            {
+                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">&quot;Piccolo can&apos;t battle!&quot;</span>);
+            }
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Entry</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-keyword">try</span>
+            {
+                Warrior a = <span class="hljs-keyword">new</span> Warrior(<span class="hljs-string">&quot;Goku&quot;</span>);
+                Warrior b = <span class="hljs-keyword">new</span> Warrior(<span class="hljs-string">&quot;Vegeta&quot;</span>);
+                Warrior c = <span class="hljs-keyword">new</span> Warrior(<span class="hljs-string">&quot;Piccolo&quot;</span>); <span class="hljs-comment">// exception here!</span>
+            }
+            <span class="hljs-keyword">catch</span>(Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}</code></pre>
+<p>Exceptions and the throw statement are described in greater detail in the Exceptions chapter.</p><h2 id="introduction">Introduction</h2><p>Software Programmers write code to perform some desired actions. But every software may fail to perform its desired actions under some of its internal or external failures. The exception handling system in the C# language allows the programmer to handle errors or anomalous situations in a structured manner that allows the programmer to separate the normal flow of the code from error-handling logic.</p><p>An exception can represent a variety of abnormal conditions that arise from several possible external or internal conditions of software application. External conditions of execution failures includes, for example, network failures in connecting to a remote component, inadequate rights in using a file/system resource, out of memory exception or exception thrown by a web service etc. These are mainly due to failures thrown by environment components on which our application depends on e.g. operating system, .net runtime or external application or components. Internal failures may be due to software defects, designed functional failures (failures required as per business rules), propagated external failures e.g. a null object reference detected by the runtime, or an invalid input string entered by a user and detected by application code, user requesting to withdraw more amount than the account balance(business rule).</p><p>Code that detects an error condition is said to throw an exception and code that handles the error is said to catch the exception. An exception in C# is an object that encapsulates various information about the error that occurred, such as the stack trace at the point of the exception and a descriptive error message. All exception objects are instantiations of the System.Exception or a child class of it. There are many exception classes defined in the .NET Framework used for various purposes. Programmers may also define their own class inheriting from System.Exception or some other appropriate exception class from the .NET Framework.</p><p>Microsoft recommendations prior to version 2.0 recommended that a developer inherit from the ApplicationException exception class. After 2.0 was released, this recommendation was made obsolete and users should inherit from the Exception class[1].</p><h2 id="overview">Overview</h2><p>There are three code definitions for exception handling. These are:</p><ul><li><code>&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;</code>/<code>&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;</code> - Do something and catch an error, if it should occur.
+</li>
+<li><code>&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;</code>/<code>&lt;span class=&quot;k&quot;&gt;catch&lt;/span&gt;</code>/<code>&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;</code> - Do something and catch an error if it should occur, but <u>always</u> do the <code>&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;</code>.
+</li>
+<li><code>&lt;span class=&quot;k&quot;&gt;try&lt;/span&gt;</code>/<code>&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;</code> - Do something, but <u>always</u> do the <code>&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;</code>. Any exception that occurs, will be thrown <u>after</u> <code>&lt;span class=&quot;k&quot;&gt;finally&lt;/span&gt;</code>.
+</li></ul>
+<p>Exceptions are caught from most specific, to least specific. So for example, if you try and access a file that does not exist, the CLR would look for exceptions in the following order:</p><ul><li><code>&lt;span class=&quot;n&quot;&gt;FileNotFoundException&lt;/span&gt;</code>
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;</code> (base class of <code>&lt;span class=&quot;n&quot;&gt;FileNotFoundException&lt;/span&gt;</code>)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;SystemException&lt;/span&gt;</code> (base class of <code>&lt;span class=&quot;n&quot;&gt;IOException&lt;/span&gt;</code>)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;Exception&lt;/span&gt;</code> (base class of <code>&lt;span class=&quot;n&quot;&gt;SystemException&lt;/span&gt;</code>)
+</li></ul>
+<p>If the exception being thrown does not derive or is not in the list of exceptions to catch, it is thrown up the call stack.</p><p>Below are some examples of the different types of exceptions</p><h2 id="examples">Examples</h2><h3 id="trycatch">try/catch</h3><p>The try/catch performs an operation and should an error occur, will transfer control to the catch block, should there be a valid section to be caught by:</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">ExceptionTest</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+     </span>{
+          <span class="hljs-keyword">try</span>
+          {
+               Console.WriteLine(args[<span class="hljs-number">0</span>]);
+               Console.WriteLine(args[<span class="hljs-number">1</span>]);
+               Console.WriteLine(args[<span class="hljs-number">2</span>]);
+               Console.WriteLine(args[<span class="hljs-number">3</span>]);
+               Console.WriteLine(args[<span class="hljs-number">4</span>]);
+          }
+          <span class="hljs-keyword">catch</span> (ArgumentOutOfRangeException e)
+          {
+               Console.WriteLine(e.Message);
+          }
+     }
+}</code></pre>
+<p>Here is an example with multiple catches:</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">ExceptionTest</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+     </span>{
+          <span class="hljs-keyword">try</span>
+          {
+               <span class="hljs-keyword">string</span> fileContents = <span class="hljs-keyword">new</span> StreamReader(<span class="hljs-string">@&quot;C:\log.txt&quot;</span>).ReadToEnd();
+          }
+          <span class="hljs-keyword">catch</span> (UnauthorizedAccessException e) <span class="hljs-comment">// Access problems</span>
+          {
+               Console.WriteLine(e.Message);
+          }
+          <span class="hljs-keyword">catch</span> (FileNotFoundException e)       <span class="hljs-comment">// File does not exist</span>
+          {
+               Console.WriteLine(e.Message);
+          }
+          <span class="hljs-keyword">catch</span> (IOException e)                <span class="hljs-comment">// Some other IO problem.</span>
+          {
+               Console.WriteLine(e.Message);
+          }
+     }
+}</code></pre>
+<p>In all catch statements you may omit the type of exception and the exception variable name:</p><pre><code class="lang-csharp"><span class="hljs-keyword">try</span>
+{
+    <span class="hljs-keyword">int</span> number = <span class="hljs-number">1</span>/<span class="hljs-number">0</span>;
+}
+<span class="hljs-keyword">catch</span> (DivideByZeroException)
+{
+    <span class="hljs-comment">// DivideByZeroException</span>
+}
+<span class="hljs-keyword">catch</span>
+{
+    <span class="hljs-comment">// some other exception</span>
+}</code></pre>
+<h3 id="trycatchfinally">try/catch/finally</h3><p>Catching the problem is a good idea, but it can sometimes leave your program in an invalid state. For example, if you open a connection to a database, an error occurs and you throw an exception. Where would you close the connection? In both the try AND exception blocks? Well, problems may occur before the close is carried out.</p><p>Therefore, the finally statement allows you to cater for the &quot;in all cases do this&quot; circumstance. See the example below:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">class</span> <span class="hljs-title">ExceptionTest</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+     </span>{
+          SqlConnection sqlConn = <span class="hljs-keyword">null</span>;
+
+          <span class="hljs-keyword">try</span>
+          {
+              sqlConn = <span class="hljs-keyword">new</span> SqlConnection ( <span class="hljs-comment">/*Connection here*/</span> );
+              sqlConn.Open();
+
+              <span class="hljs-comment">// Various DB things</span>
+
+              <span class="hljs-comment">// Notice you do not need to explicitly close the connection, as .Dispose() does this for you.</span>
+          }
+          <span class="hljs-keyword">catch</span> (SqlException e)
+          {
+               Console.WriteLine(e.Message);
+          }
+          <span class="hljs-keyword">finally</span>
+          {
+               <span class="hljs-keyword">if</span> (sqlConn != <span class="hljs-keyword">null</span> &amp;&amp; sqlConn.State != ConnectionState.Closed)
+               {
+                   sqlConn.Dispose();
+               }
+          }
+     }
+}</code></pre>
+<p>Second Example</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">excepation</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> num1, num2,result;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">add</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">try</span>
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;enter your number&quot;</span>);
+            num1 = Convert.ToInt32(Console.ReadLine());
+            num2 = Convert.ToInt32(Console.ReadLine());
+            result = num1/num2;
+        }
+        <span class="hljs-keyword">catch</span>(DivideByZeroException  e) <span class="hljs-comment">//FormatException</span>
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;{0}&quot;</span>,e.Message);
+        }
+        <span class="hljs-keyword">catch</span>(FormatException ex)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;{0}&quot;</span>,ex.Message);
+        }
+        <span class="hljs-keyword">finally</span>
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;turn over&quot;</span>);
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">display</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;The Result is: {0}&quot;</span>,result);
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        excepation ex = <span class="hljs-keyword">new</span> excepation();
+        ex.add();
+        ex.display();
+    }    
+}</code></pre>
+<p>Notice that the SqlConnection object is declared outside of the try/catch/finally. The reason is that anything declared in the try/catch cannot be seen by the finally. By declaring it in the previous scope, the finally block is able to access it.</p><h3 id="tryfinally">try/finally</h3><p>The try/finally block allows you to do the same as above, but instead errors that are thrown are dealt with by the catch (if possible) and then thrown up the call stack.</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">ExceptionTest</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+     </span>{
+          SqlConnection sqlConn = <span class="hljs-keyword">null</span>;
+
+          <span class="hljs-keyword">try</span>
+          {
+              SqlConnection sqlConn = <span class="hljs-keyword">new</span> SqlConnection ( <span class="hljs-comment">/*Connection here*/</span> );
+              sqlConn.Open();
+
+              <span class="hljs-comment">// Various DB bits</span>
+          }
+          <span class="hljs-keyword">finally</span>
+          {
+               <span class="hljs-keyword">if</span> (sqlConn != <span class="hljs-keyword">null</span> &amp;&amp; sqlConn.State != ConnectionState.Closed)
+               {
+                   sqlConn.Dispose();
+               }
+          }
+     }
+}</code></pre>
+<h2 id="re-throwing-exceptions">Re-throwing exceptions</h2><p>Sometimes it is better to throw the error up the call stack for two reasons.</p><ol><li>It is not something you would expect to happen.
+</li>
+<li>You are placing extra information into the exception, to help diagnosis.
+</li></ol>
+<h3 id="how-not-to-throw-exceptions">How not to throw exceptions</h3><p>Some developers write empty try/catch statements like this:</p><pre><code class="lang-csharp"><span class="hljs-keyword">try</span>
+{
+      <span class="hljs-comment">// Do something</span>
+}
+<span class="hljs-keyword">catch</span> (Exception ex)
+{
+      <span class="hljs-comment">// Ignore this here</span>
+}</code></pre>
+<p>This approach is not recommended. You are swallowing the error and continuing on. If this exception was an OutOfMemoryException or a NullReferenceException, it would not be wise to continue. Therefore you should always catch what you would expect to occur, and throw everything else.</p><p>Below is another example of how exceptions are caught incorrectly</p><pre><code class="lang-csharp"><span class="hljs-comment">/* Read the config file, and return the integer value. If it does not exist, then this is a problem! */</span>
+
+<span class="hljs-keyword">try</span>
+{
+     <span class="hljs-keyword">string</span> <span class="hljs-keyword">value</span> = ConfigurationManager.AppSettings[<span class="hljs-string">&quot;Timeout&quot;</span>];
+
+     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span> == <span class="hljs-keyword">null</span>)
+         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ConfigurationErrorsException(<span class="hljs-string">&quot;Timeout value is not in the configuration file.&quot;</span>);
+}
+<span class="hljs-keyword">catch</span> (Exception ex)
+{
+     <span class="hljs-comment">// Do nothing!</span>
+}</code></pre>
+<p>As you can see, the ConfigurationErrorsException will be caught by the catch (Exception) block, but it is being ignored completely! This is bad programming as you are ignoring the error.</p><p>The following is also bad practice:</p><pre><code class="lang-csharp"><span class="hljs-keyword">try</span>
+{
+   ..
+}
+<span class="hljs-keyword">catch</span> (Exception ex)
+{
+     <span class="hljs-keyword">throw</span> ex;
+}</code></pre>
+<p>The CLR will now think the throw ex; statement is the source of the problem, when the problem is actually in the try section. Therefore never re-throw in this way.</p><h3 id="how-to-catch-exceptions">How to catch exceptions</h3><p>A better approach would be:</p><pre><code class="lang-csharp"><span class="hljs-comment">/* Read the config file, and return the integer value. If it does not exist, then this is a problem! */</span>
+
+<span class="hljs-keyword">try</span>
+{
+     <span class="hljs-keyword">string</span> <span class="hljs-keyword">value</span> = ConfigurationManager.AppSettings[<span class="hljs-string">&quot;Timeout&quot;</span>];
+
+     <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span> == <span class="hljs-keyword">null</span>)
+         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ConfigurationErrorsException(<span class="hljs-string">&quot;Timeout value is not in the configuration file.&quot;</span>);
+}
+<span class="hljs-keyword">catch</span> (Exception ex )
+{
+     <span class="hljs-keyword">throw</span>; <span class="hljs-comment">// &lt;-- Throw the existing problem!</span>
+}</code></pre>
+<p>The throw; keyword means preserve the exception information and throw it up the call stack.</p><h3 id="extra-information-within-exceptions">Extra information within exceptions</h3><p>An alternative is to give extra information (maybe local variable information) in addition to the exception. In this case, you wrap the exception within another. You usually use an exception that is as specific to the problem as possible, or create your own, if you cannot find out that is not specific enough (or if there is extra information you would wish to include).</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> OrderItem <span class="hljs-title">LoadItem</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> itemNumber</span>)
+</span>{
+    DataTable dt = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-keyword">try</span>
+    {
+         <span class="hljs-keyword">if</span> (itemNumber == <span class="hljs-keyword">null</span>)
+              <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ArgumentNullException(<span class="hljs-string">&quot;Item Number cannot be null&quot;</span>,<span class="hljs-string">&quot;itemNumber&quot;</span>);
+
+         DataTable dt = DataAccess.OrderItem.Load(itemNumber);
+
+         <span class="hljs-keyword">if</span> (dt.Rows == <span class="hljs-number">0</span>)
+              <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+         <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">dt.Rows &gt; <span class="hljs-number">1</span></span>)
+              throw new <span class="hljs-title">DuplicateDataException</span>(<span class="hljs-params"> <span class="hljs-string">&quot;Multiple items map to this item.&quot;</span>,itemNumber, dt</span>)</span>;
+
+         OrderItem item = OrderItem.CreateInstanceFromDataRow(dt.Rows[<span class="hljs-number">0</span>]);
+
+         <span class="hljs-keyword">if</span> (item == <span class="hljs-keyword">null</span>)
+              <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ErrorLoadingException(<span class="hljs-string">&quot;Error loading Item &quot;</span> + itemNumber, itemNumber, dt.Rows[<span class="hljs-number">0</span>]);
+    }
+    <span class="hljs-keyword">catch</span> (DuplicateDataException dde)
+    {
+         <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> ErrorLoadingException(<span class="hljs-string">&quot;OrderItem.LoadItem failed with Item &quot;</span> + 
+                                                            itemNumber, dde); <span class="hljs-comment">// &lt;-- Include dde (as the InnerException) parameter</span>
+    }
+    <span class="hljs-keyword">catch</span> (Exception ex)
+    {
+         <span class="hljs-keyword">throw</span>; <span class="hljs-comment">// &lt;-- We aren&apos;t expecting any other problems, so throw them if they occur.</span>
+    }
+}</code></pre>
+<h3 id="references">References</h3><ol><li><span class="mw-cite-backlink"><a href="#cite_ref-4">&#x2191;</a></span> <span class="reference-text">[<a href="http://blogs.msdn.com/fxcop/archive/2006/04/05/569569.aspx" target="_blank">ApplicationException made obsolete</a>]</span>
+</li></ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lesson2.html" class="navigation navigation-next " aria-label="Next page: Classes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Language Basics","level":"1.2","depth":1,"next":{"title":"Classes","level":"1.3","depth":1,"path":"Lesson2.md","ref":"Lesson2.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lesson1.md","mtime":"2016-08-04T18:05:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-04T18:05:25.850Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

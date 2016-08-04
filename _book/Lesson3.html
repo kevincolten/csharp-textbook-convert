@@ -1,0 +1,1229 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Advanced Concepts · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lesson4.html" />
+    
+    
+    <link rel="prev" href="Lesson2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lesson1.html">
+            
+                <a href="Lesson1.html">
+            
+                    
+                    Language Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lesson2.html">
+            
+                <a href="Lesson2.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="Lesson3.html">
+            
+                <a href="Lesson3.html">
+            
+                    
+                    Advanced Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Lesson4.html">
+            
+                <a href="Lesson4.html">
+            
+                    
+                    The .NET Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Lesson5.html">
+            
+                <a href="Lesson5.html">
+            
+                    
+                    Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Advanced Concepts</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="advanced-concepts">Advanced Concepts</h1><h2 id="explanation-by-analogy">Explanation By Analogy</h2><p>What is the benefit of inheritance?</p><ol><li>It saves you a lot of typing
+</li>
+<li>It saves you from repeating yourself.
+</li></ol>
+<p>Inheritance explained by analogy</p><p>Suppose you want to create an Eagle, a Falcon and a vulture. In order to create these flying creatures you notice that each of these creatures:</p><ol><li>Fly
+</li>
+<li>Breed
+</li>
+<li>Eat
+</li></ol>
+<p>Let us assume for the the sake of argument that all three types of birds: fly, breed and eat in exactly the same way.</p><p>Without inheritance, you would be forced to copy code. i.e. the same code which causes an eagle to fly would also be copied to make the vulture fly. And it is axiomatic in programming - who are a lazy bunch, not wanting to repeat themselves - that repetition is almost always a bad thing.</p><p>Note the eagle, falcon and vultures are all in fact birds. Accordingly, you could say that a bird, generally speaking, always has the characteristics of eating, breeding and flying. So using &quot;inheritance&quot; you could create generic &apos;bird&apos; prototype, which eats, breeds and flies, and then once that is defined, you can have all other specific breeds of birds inherit those characteristics. In other words, using the prototype, you can design other specific birds off that prototyped design.</p><p>This means that the falcon automatically knows how to fly because it inherits that behaviour from the general Bird class. You basically don&apos;t have to repeat yourself.</p><h2 id="inheritance">Inheritance</h2><p>Inheritance is the ability to create a class from another class, the &quot;parent&quot; class, extending the functionality and state of the parent in the derived, or &quot;child&quot; class. It allows derived classes to overload methods from their parent class.</p><p>Inheritance is one of the pillars of object-orientation. It is the mechanism of designing one class from another and is one of the ideas for code reusability, supporting the concept of hierarchical classification. C# programs consist of classes, where new classes can either be created from scratch or by using some or all properties of an existing class.</p><p>Another feature related to inheritance and reusability of code is polymorphism, which permits the same method name to be used for different operations on different data types. Thus, C# supports code reusability by both features.</p><p>Important characteristics of inheritance include:</p><ol><li>A derived class extends its base class. That is, it contains the methods and data of its parent class, and it can also contain its own data members and methods.
+</li>
+<li>The derived class cannot change the definition of an inherited member.
+</li>
+<li>Constructors and destructors are not inherited. All other members of the base class are inherited.
+</li>
+<li>The accessibility of a member in the derived class depends upon its declared accessibility in the base class.
+</li>
+<li>A derived class can override an inherited member.
+</li></ol>
+<p>An example of inheritance:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Text;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ContainmentInheritance</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Room</span>
+    {
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> length;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> width;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> height;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> name;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Room</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> l, <span class="hljs-keyword">int</span> w, <span class="hljs-keyword">int</span> h</span>)
+        </span>{
+            length = l;
+            width = w;
+            height = h;
+        }
+    }
+
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Home</span>
+    {
+        <span class="hljs-keyword">int</span> numberOfRooms;
+        <span class="hljs-keyword">int</span> plotSize;
+        <span class="hljs-keyword">string</span> locality;
+
+        <span class="hljs-comment">// create an object of class Room inside class Home</span>
+        Room studyRoom = <span class="hljs-keyword">new</span> Room(<span class="hljs-number">10</span>, <span class="hljs-number">12</span>, <span class="hljs-number">12</span>);
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Home</span>(<span class="hljs-params"></span>)
+        </span>{
+            numberOfRooms = <span class="hljs-number">1</span>;
+            plotSize = <span class="hljs-number">1000</span>;
+            locality = <span class="hljs-string">&quot;Versova&quot;</span>;
+            name = <span class="hljs-string">&quot;study room&quot;</span>;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Display</span>(<span class="hljs-params"></span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;MyHome has {0} rooms&quot;</span>, numberOfRooms);
+            Console.WriteLine(<span class="hljs-string">&quot;Plot size is {0}&quot;</span>, plotSize);
+            Console.WriteLine(<span class="hljs-string">&quot;Locality is {0}&quot;</span>, locality);
+
+            <span class="hljs-keyword">int</span> area = studyRoom.length*studyRoom.width;
+            Console.WriteLine(<span class="hljs-string">&quot;Area of the {0} room is {1}&quot;</span>, name, area);
+        }
+    }
+
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Home myhome = <span class="hljs-keyword">new</span> Home();
+            myhome.Display();
+
+            Console.ReadLine();
+        }
+    }
+}</code></pre>
+<h2 id="subtyping-inheritance">Subtyping Inheritance</h2><p>The code sample below shows two classes, Employee and Executive. Employee has the methods GetPayCheck and Work.</p><p>We want the Executive class to have the same methods, but differently implemented and one extra method, AdministerEmployee.</p><p>Below is the creation of the first class to be derived from.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-comment">// We declare one method virtual so that the Executive class can</span>
+    <span class="hljs-comment">// override it.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GetPayCheck</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-comment">// Get paycheck logic here.</span>
+    }
+
+    <span class="hljs-comment">//Employee&apos;s and Executives both work, so no virtual here needed.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Work</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-comment">// Do work logic here.</span>
+    }
+}</code></pre>
+<p>Now, we create an Executive class that will override the GetPayCheck method:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Executive</span> : <span class="hljs-title">Employee</span>
+{
+    <span class="hljs-comment">// The override keyword indicates we want new logic behind the GetPayCheck method.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">GetPayCheck</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-comment">// New getpaycheck logic here.</span>
+    }
+
+    <span class="hljs-comment">// The extra method is implemented.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AdministerEmployee</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-comment">// Manage employee logic here</span>
+    }
+}</code></pre>
+<p>You&apos;ll notice that there is no Work method in the Executive class, as it is inherited from Employee.</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+</span>{
+    Employee emp = <span class="hljs-keyword">new</span> Employee();
+    Executive exec = <span class="hljs-keyword">new</span> Executive();
+
+    emp.Work();
+    exec.Work();
+    emp.GetPayCheck();
+    exec.GetPayCheck();
+    exec.AdministerEmployee();
+}</code></pre>
+<h2 id="virtual-methods">Virtual Methods</h2><p>If a base class contains a virtual method that it calls elsewhere and a derived class overrides that virtual method, the base class will actually call the derived class&apos; method:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Resource</span> : <span class="hljs-title">IDisposable</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">bool</span> _isClosed = <span class="hljs-keyword">false</span>;    <span class="hljs-comment">// good programming practice initialise, although default</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Close</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Base resource closer called!&quot;</span>);
+    }
+
+    ~Resource()
+    {
+        Dispose();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">if</span> (!_isClosed)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;Disposing resource and calling the Close() method...&quot;</span>);
+            _isClosed = <span class="hljs-keyword">true</span>;
+            Close();
+        }
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AnotherTypeOfResource</span> : <span class="hljs-title">Resource</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Close</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Another type of resource closer called!&quot;</span>);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">VirtualMethodDemo</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Resource res = <span class="hljs-keyword">new</span> Resource();
+        AnotherTypeOfResource res2 = <span class="hljs-keyword">new</span> AnotherTypeOfResource();
+
+        res.Dispose();  <span class="hljs-comment">// Resource.Close() will be called.</span>
+        res2.Dispose(); <span class="hljs-comment">// Even though Dispose() is part of the Resource class, </span>
+                        <span class="hljs-comment">// the Resource class will call AnotherTypeOfResource.Close()!</span>
+    }
+}</code></pre>
+<h2 id="constructors">Constructors</h2><p>A derived class does not automatically inherit the base class&apos; constructors, and it cannot be instantiated unless it provides its own. A derived class must call one of its base class&apos; constructors by using the base keyword:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyBaseClass</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyBaseClass</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> text</span>)
+    </span>{
+        console.WriteLine(test);
+    }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyDerivedClass</span> : <span class="hljs-title">MyBaseClass</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyDerivedClass</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> number</span>)
+        : <span class="hljs-title">base</span>(<span class="hljs-params">number.ToString(</span>))
+    </span>{ }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyDerivedClass</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> text</span>) <span class="hljs-comment">// even though this is exactly the same as MyBaseClass&apos;  </span>
+    <span class="hljs-comment">// only constructor, this is still necessary as constructors are not inherited.</span>
+        : <span class="hljs-title">base</span>(<span class="hljs-params">text</span>)
+    </span>{ }
+}</code></pre>
+<h2 id="inheritance-keywords">Inheritance keywords</h2><p>The way C# inherits from another class syntactically is by using the : operator.</p><p>Example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Executive</span> : <span class="hljs-title">Employee</span></code></pre>
+<p>To indicate a method that can be overridden, you mark the method with virtual.</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Write</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> text</span>)
+</span>{
+    System.Console.WriteLine(<span class="hljs-string">&quot;Text:{0}&quot;</span>, text);
+}</code></pre>
+<p>To override a method, use the override keyword:</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Write</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>  text</span>)
+</span>{
+    System.Console.WriteLine(text);
+}</code></pre>
+<p>A missing new or override keyword for a derived method may result in errors or warnings during compilation.:[1] Here an example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ShapesA</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">abstract</span> <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Area</span>(<span class="hljs-params"></span>)</span>; <span class="hljs-comment">// abstract!</span>
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> : <span class="hljs-title">ShapesA</span>
+{
+    <span class="hljs-keyword">int</span> x, y;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Area</span>(<span class="hljs-params"></span>) <span class="hljs-comment">// Error: missing &apos;override&apos; or &apos;new&apos;</span>
+    </span>{
+        <span class="hljs-keyword">return</span> x * y;
+    }
+} 
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Shapes</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Area</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>; } <span class="hljs-comment">// it is virtual now!</span>
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> : <span class="hljs-title">Shapes</span>
+{
+    <span class="hljs-keyword">int</span> x, y;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">Area</span>(<span class="hljs-params"></span>) <span class="hljs-comment">// no explicit &apos;override&apos; or &apos;new&apos; required</span>
+    </span>{ <span class="hljs-keyword">return</span> x * y; }
+}</code></pre>
+<p>The Square class method Area() will result in a compilation error, if it is derived from the ShapesA class:</p><pre><code>error CS0534: &apos;ConsoleApplication3.Square&apos; does not implement inherited abstract member
+&apos;ConsoleApplication3.Shapes.Area()&apos;</code></pre>
+<p>The same method will result in a compilation warning, if derived from the normal Shapes class:</p><pre><code>warning CS0114: &apos;ConsoleApplication3.Square.Area()&apos; hides inherited member &apos;ConsoleApplication3.Shapes.Area()&apos;.
+To make the current member override that implementation, add the override keyword. Otherwise add the new
+keyword.</code></pre>
+<h2 id="references">References</h2><pre><code class="lang-csharp">&#x2191; <span class="hljs-function">Greg <span class="hljs-title">Beech</span> (<span class="hljs-params"><span class="hljs-number">2010</span><span class="hljs-number">-03</span><span class="hljs-number">-09</span></span>). &quot;C# design: Why <span class="hljs-keyword">is</span> new/<span class="hljs-keyword">override</span> required on <span class="hljs-keyword">abstract</span> methods but not on <span class="hljs-keyword">virtual</span> methods? / Answer&quot;. http:<span class="hljs-comment">//efreedom.com/: eFreedom. http://efreedom.com/Question/1-3634529/CSharp-Design-New-Override-Required-Abstract-Methods-Virtual-Methods. Retrieved 2011-08-11. &quot;Using either the C# 3.0 compiler as shipped in .NET 3.5 SP1, or the C# 4.0 compiler as shipped in .NET 4.0, I get the following error for your first example: [...] And the following warning for the second one: [...] In the first case it&apos;s an error because you aren&apos;t actually overriding the base method, which means there is no implementation for the abstract method in a concrete class. In the second case it&apos;s a warning because the code is technically correct, but the compiler suspects that it isn&apos;t what you meant. This is one of the reasons it&apos;s generally a good idea to enable the &quot;treat warnings as errors&quot; compilation setting.&quot; </span></span></code></pre>
+<p>An INTERFACE in C# is a type definition similar to a class, except that it purely represents a contract between an object and its user. It can neither be directly instantiated as an object, nor can data members be defined. So, an interface is nothing but a collection of method and property declarations. The following defines a simple interface:</p><pre><code class="lang-csharp"><span class="hljs-keyword">interface</span> <span class="hljs-title">IShape</span>
+{
+    <span class="hljs-keyword">double</span> X { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-keyword">double</span> Y { <span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>; }
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params"></span>)</span>;
+}</code></pre>
+<p>A CONVENTION used in the .NET Framework (and likewise by many C# programmers) is to place an &quot;I&quot; at the beginning of an interface name to distinguish it from a class name. Another common interface naming convention is used when an interface declares only one key method, such as Draw() in the above example. The interface name is then formed as an adjective by adding the &quot;...able&quot; suffix. So, the interface name above could also be IDrawable. This convention is used throughout the .NET Framework.</p><p>Implementing an interface is simply done by inheriting off it and defining all the methods and properties declared by the interface after that. For instance,</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Square</span> : <span class="hljs-title">IShape</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _mX, _mY;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params"></span>) </span>{ ... }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> X 
+    { 
+        <span class="hljs-keyword">set</span> { _mX = <span class="hljs-keyword">value</span>; }
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _mX; }  
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Y 
+    {
+        <span class="hljs-keyword">set</span> { _mY = <span class="hljs-keyword">value</span>; }
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _mY; }
+    }
+}</code></pre>
+<p>Although a class can inherit from one class only, it can inherit from any number of interfaces. This is a simplified form of multiple inheritance supported by C#. When inheriting from a class and one or more interfaces, the base class should be provided first in the inheritance list, followed by any interfaces to be implemented. For example:</p><pre><code class="lang-csharp">class MyClass : Class1, Interface1, Interface2 { ... }</code></pre>
+<p>Object references can be declared using an interface type. For instance, using the previous examples,</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span> 
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        IShape shape = <span class="hljs-keyword">new</span> Square();
+        shape.Draw();
+    }
+}</code></pre>
+<p>Interfaces can inherit off of any number of other interfaces, but cannot inherit from classes. For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">interface</span> <span class="hljs-title">IRotateable</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Rotate</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> theta</span>)</span>;
+}
+
+<span class="hljs-keyword">interface</span> <span class="hljs-title">IDrawable</span> : <span class="hljs-title">IRotateable</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params"></span>)</span>;
+}</code></pre>
+<h2 id="additional-details">Additional details</h2><p>Access specifiers (i.e. private, internal, etc.) cannot be provided for interface members, as all members are public by default. A class implementing an interface must define all the members declared by the interface. The implementing class has the option of making an implemented method virtual, if it is expected to be overridden in a child class.</p><p>There are no static methods within an interface, but any static methods can be implemented in a class that manages objects using it.</p><p>In addition to methods and properties, interfaces can declare events and indexers as well.</p><p>For those familiar with Java, C#&apos;s interfaces are extremely similar to Java&apos;s.</p><h2 id="introduction">Introduction</h2><p>Delegates and events are fundamental to any Windows or Web Application, allowing the developer to &quot;subscribe&quot; to particular actions carried out by the user. Therefore, instead of expecting everything and filtering out what you want, you choose what you want to be notified of and react to that action.</p><p>A delegate is a way of telling C# which method to call when an event is triggered. For example, if you click a Button on a form, the program would call a specific method. It is this pointer that is a delegate. Delegates are good, as you can notify several methods that an event has occurred, if you wish so.</p><p>An event is a notification by the .NET framework that an action has occurred. Each event contains information about the specific event, e.g., a mouse click would say which mouse button was clicked where on the form.</p><p>Let&apos;s say you write a program reacting only to a Button click. Here is the sequence of events that occurs:</p><ul><li><p>User presses the mouse button down over a button</p><ul><li>The .NET framework raises a <code>&lt;span class=&quot;n&quot;&gt;MouseDown&lt;/span&gt;</code> event
+</li></ul>
+</li>
+<li><p>User releases the mouse button</p><ul><li>The .NET framework raises a <code>&lt;span class=&quot;n&quot;&gt;MouseUp&lt;/span&gt;</code> event
+</li>
+<li>The .NET framework raises a <code>&lt;span class=&quot;n&quot;&gt;MouseClick&lt;/span&gt;</code> event
+</li>
+<li>The .NET framework raises a <code>&lt;span class=&quot;n&quot;&gt;Clicked&lt;/span&gt;</code> event on the <code>&lt;span class=&quot;n&quot;&gt;Button&lt;/span&gt;</code>
+</li></ul>
+</li></ul>
+<p>Since the button&apos;s click event has been subscribed, the rest of the events are ignored by the program and your delegate tells the .NET framework which method to call, now that the event has been raised.</p><h2 id="delegates">Delegates</h2><p>Delegates form the basis of event handling in C#. They are a construct for abstracting and creating objects that reference methods and can be used to call those methods. A delegate declaration specifies a particular method signature. References to one or more methods can be added to a delegate instance. The delegate instance can then be &quot;called&quot;, which effectively calls all the methods that have been added to the delegate instance. A simple example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-function"><span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Procedure</span>(<span class="hljs-params"></span>)</span>;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">DelegateDemo</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Method1</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Method 1&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Method2</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Method 2&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Method3</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Method 3&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Procedure someProcs = <span class="hljs-keyword">null</span>;
+
+        someProcs += <span class="hljs-keyword">new</span> Procedure(DelegateDemo.Method1);
+        someProcs += <span class="hljs-keyword">new</span> Procedure(Method2);  <span class="hljs-comment">// Example with omitted class name</span>
+
+        DelegateDemo demo = <span class="hljs-keyword">new</span> DelegateDemo();
+
+        someProcs += <span class="hljs-keyword">new</span> Procedure(demo.Method3);
+        someProcs();
+    }
+}</code></pre>
+<p>In this example, the delegate is declared by the line delegate voidProcedure(). This statement is a complete abstraction. It does not result in executable code that does any work, but merely declares a delegate type called Procedure that takes no arguments and returns nothing. Next, in the Main() method, the statement Procedure someProcs = null; instantiates a delegate. The assignment means that the delegate is not initially referencing any methods. The statements someProcs += newProcedure(DelegateDemo.Method1) and someProcs += newProcedure(Method2) add two static methods to the delegate instance. Note that the class name can also be left off, as the statement is occurring inside DelegateDemo. The statement someProcs += newProcedure(demo.Method3) adds a non-static method to the delegate instance. For a non-static method, the method name is preceded by an object reference. When the delegate instance is called, Method3() is called on the object that was supplied when the method was added to the delegate instance. Finally, the statement someProcs() calls the delegate instance. All the methods that were added to the delegate instance are now called in the order that they were added.</p><p>Methods that have been added to a delegate instance can be removed with the -= operator:</p><pre><code class="lang-csharp">someProcs -= <span class="hljs-keyword">new</span> Procedure(DelegateDemo.Method1);</code></pre>
+<p>In C# 2.0, adding or removing a method reference to a delegate instance can be shortened as follows:</p><pre><code class="lang-csharp">someProcs += DelegateDemo.Method1;
+someProcs -= DelegateDemo.Method1;</code></pre>
+<p>Invoking a delegate instance that presently contains no method references results in a NullReferenceException.</p><p>Note that, if a delegate declaration specifies a return type and multiple methods are added to a delegate instance, an invocation of the delegate instance returns the return value of the last method referenced. The return values of the other methods cannot be retrieved (unless explicitly stored somewhere in addition to being returned).</p><h2 id="anonymous-delegates">Anonymous delegates</h2><p>Anonymous delegates are a short way to write delegate code, specified using the delegate keyword. The delegate code can also reference local variables of the function in which they are declared. Anonymous delegates are automatically converted into methods by the compiler. For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-function"><span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Procedure</span>(<span class="hljs-params"></span>)</span>;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">DelegateDemo2</span>
+{
+    <span class="hljs-keyword">static</span> Procedure someProcs = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddProc</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> variable = <span class="hljs-number">100</span>;
+
+        someProcs += <span class="hljs-keyword">new</span> Procedure(<span class="hljs-keyword">delegate</span>
+            {
+                Console.WriteLine(variable);
+            });
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        someProcs += <span class="hljs-keyword">new</span> Procedure(<span class="hljs-keyword">delegate</span> { Console.WriteLine(<span class="hljs-string">&quot;test&quot;</span>); });
+        AddProc();
+        someProcs();
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>They can accept arguments just as normal methods can:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-function"><span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Procedure</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> text</span>)</span>;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">DelegateDemo3</span>
+{
+    <span class="hljs-keyword">static</span> Procedure someProcs = <span class="hljs-keyword">null</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddProc</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> variable = <span class="hljs-number">100</span>;
+
+        someProcs += <span class="hljs-keyword">new</span> Procedure(<span class="hljs-keyword">delegate</span>(<span class="hljs-keyword">string</span> text)
+            {
+                Console.WriteLine(text + <span class="hljs-string">&quot;, &quot;</span> + variable.ToString());
+            });
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        someProcs += <span class="hljs-keyword">new</span> Procedure(<span class="hljs-keyword">delegate</span>(<span class="hljs-keyword">string</span> text) { Console.WriteLine(text); });
+        AddProc();
+        someProcs(<span class="hljs-string">&quot;testing&quot;</span>);
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>The output is:</p><pre><code>testing
+testing, 100</code></pre>
+<h3 id="lambda-expressions">Lambda expressions</h3><p>Lambda expressions are a clearer way to achieve the same thing as an anonymous delegate. Its form is:</p><pre><code>(type1 arg1, type2 arg2, ...) =&gt; expression</code></pre>
+<p>This is equivalent to:</p><pre><code class="lang-csharp"><span class="hljs-keyword">delegate</span>(type1 arg1, type2 arg2, ...)
+{
+    <span class="hljs-keyword">return</span> expression;
+}</code></pre>
+<p>If there is only one argument, the parentheses can be omitted. The type names can also be omitted to let the compiler infer the types from the context. In the following example, str is a string, and the return type is an int:</p><pre><code class="lang-csharp">Func&lt;<span class="hljs-keyword">string</span>, <span class="hljs-keyword">int</span>&gt; myFunc = str =&gt; <span class="hljs-keyword">int</span>.Parse(str);</code></pre>
+<p>This is equivalent to:</p><pre><code class="lang-csharp">Func&lt;<span class="hljs-keyword">string</span>, <span class="hljs-keyword">int</span>&gt; myFunc = <span class="hljs-keyword">delegate</span>(<span class="hljs-keyword">string</span> str)
+{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">int</span>.Parse(str);
+};</code></pre>
+<h2 id="events">Events</h2><p>An event is a special kind of delegate that facilitates event-driven programming. Events are class members that cannot be called outside of the class regardless of its access specifier. So, for example, an event declared to be public would allow other classes the use of += and -= on the event, but firing the event (i.e. invoking the delegate) is only allowed in the class containing the event. A simple example:</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">delegate</span> <span class="hljs-keyword">void</span> <span class="hljs-title">ButtonClickedHandler</span>(<span class="hljs-params"></span>)</span>;
+<span class="hljs-keyword">class</span> <span class="hljs-title">Button</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">event</span> ButtonClickedHandler ButtonClicked;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SimulateClick</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">if</span> (ButtonClicked != <span class="hljs-keyword">null</span>)
+        {
+            ButtonClicked();
+        }
+    }
+    ...
+}</code></pre>
+<p>A method in another class can then subscribe to the event by adding one of its methods to the event delegate:</p><pre><code class="lang-csharp">Button b = <span class="hljs-keyword">new</span> Button();
+b.ButtonClicked += MyHandler;</code></pre>
+<p>Even though the event is declared public, it cannot be directly fired anywhere except in the class containing it.</p><p>In general terms, an interface is the set of public members of a component. Of course, this is also true for C# interface. A C# class also defines an interface, as it has a set of public members. A non-abstract C# class defines the implementation of each member.</p><p>In C#, it is possible to have a type that is intermediate between a pure interface that does not define any implementation, and a type that defines a complete implementation. This is called an abstract class and is defined by including the abstract keyword in the class definition.</p><p>An abstract class is somewhere between a C# interface and a non-abstract class. Of the public members defined by an abstract class, any number of those members may include an implementation.</p><p>For example, an abstract class might provide an implementation for none of its members.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AbstractShape</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params">Graphics g</span>)</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">double</span> X {<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;}
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">double</span> Y {<span class="hljs-keyword">get</span>; <span class="hljs-keyword">set</span>;}
+}</code></pre>
+<p>This class is equivalent to an interface in many respects. (One difference is that a class that derives from this class cannot derive from any other class.)</p><p>An abstract class may also define all of its members.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AbstractShape</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _x;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _y;
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// ... (other members)</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params">Graphics g</span>) </span>{g.DrawRectangle(Pens.Black, g_rect);}
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> X {<span class="hljs-keyword">get</span>{<span class="hljs-keyword">return</span> _x;}}
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Y {<span class="hljs-keyword">get</span>{<span class="hljs-keyword">return</span> _y;}}
+}</code></pre>
+<p>And an abstract class may define some of its members, but leave others undefined.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">AbstractShape</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _x;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _y;
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// ... (other members)</span>
+    <span class="hljs-comment">//</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params">Graphics g</span>)</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> X {<span class="hljs-keyword">get</span>{<span class="hljs-keyword">return</span> _x;}}
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> Y {<span class="hljs-keyword">get</span>{<span class="hljs-keyword">return</span> _y;}}
+}</code></pre>
+<p>Although an abstract class is similar to a non-abstract class, some important differences exist. For one thing, you cannot create an instance of an abstract class with the new keyword. For example, the following statement will raise a compiler error:</p><pre><code class="lang-csharp">AbstractShape shape = <span class="hljs-keyword">new</span> AbstractShape();</code></pre>
+<p>Of course, assuming the concrete class Square derives from AbstractShape, the following would be correct:</p><pre><code class="lang-csharp">AbstractShape shape = <span class="hljs-keyword">new</span> Square();</code></pre>
+<p>A second difference is that an abstract class may have abstract members. As was shown above, this is not a must. To create a class with at least one abstract member, the abstract keyword must be added before the class keyword.</p><p>The third difference is that a class cannot be both abstract and sealed.</p><h2 id="implementing-methods">Implementing methods</h2><p>As with virtual methods, you can implement abstract methods or properties with the override keyword:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> : <span class="hljs-title">AbstractShape</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _x;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> _y;
+    <span class="hljs-comment">// ...</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Draw</span>(<span class="hljs-params">Graphics g</span>)
+    </span>{
+        g.DrawRectangle(Pens.Black, g_rect);
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">double</span> X {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _x; }
+        <span class="hljs-keyword">set</span> { _x = <span class="hljs-keyword">value</span>; }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">double</span> Y {
+        <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _y; }
+        <span class="hljs-keyword">set</span> { _y = <span class="hljs-keyword">value</span>; }
+    }
+}</code></pre>
+<p>Overriding an abstract method is effectively the same as overriding a virtual method - you cannot change the access specifiers (i.e. you can&apos;t convert a protected abstract method into public), and you cannot add a missing get or set to an abstract property. The only difference is that &quot;forgetting&quot; the new or override keyword results in an error, if the class this method is belonging to was derived from an abstract class, and it will result in a warning, if the class tries to override a virtual method.</p><h2 id="partial-classes">Partial Classes</h2><p>As the name indicates, partial class definitions can be split up across multiple physical files. To the compiler, this does not make a difference, as all the fragments of the partial class are grouped and the compiler treats it as a single class. One common usage of partial classes is the separation of automatically-generated code from programmer-written code.</p><p>Below is an example of a partial class.</p><p>Listing 1: Entire class definition in one file (file1.cs)</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Node</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Delete</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Create</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+}</code></pre>
+<p>Listing 2: Class split across multiple files</p><p>(file1.cs)</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">partial</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Node</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Delete</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+}</code></pre>
+<p>(file2.cs)</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">partial</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Node</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Create</span>(<span class="hljs-params"></span>)
+    </span>{
+    }
+}</code></pre>
+<p>Generics are a new feature available since version 2.0 of the C# language and the common language runtime (CLR). Generics introduce to the .NET Framework the concept of type parameters, which make it possible to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code. The most common use of generics is to create collection classes. Generic types were introduced to maximize code reuse, type safety, and performance.[1]</p><h2 id="generic-classes">Generic classes</h2><p>There are cases when you need to create a class to manage objects of some type, without modifying them. Without generics, the usual approach (highly simplified) to make such class would be like this:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">SomeObjectContainer</span>
+{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">object</span> _obj;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">SomeObjectContainer</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> obj</span>)
+    </span>{
+        <span class="hljs-keyword">this</span>._obj = obj;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">object</span> <span class="hljs-title">GetObject</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._obj;
+    }
+}</code></pre>
+<p>And its usage would be:</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        SomeObjectContainer container = <span class="hljs-keyword">new</span> SomeObjectContainer(<span class="hljs-number">25</span>);
+        SomeObjectContainer container2 = <span class="hljs-keyword">new</span> SomeObjectContainer(<span class="hljs-number">5</span>);
+
+        Console.WriteLine((<span class="hljs-keyword">int</span>) container.GetObject() + (<span class="hljs-keyword">int</span>) container2.GetObject());
+        Console.ReadKey(); <span class="hljs-comment">// wait for user to press any key, so we could see results</span>
+    }
+}</code></pre>
+<p>Note that we have to cast back to original data type we have chosen (in this case - int) every time we want to get an object from such a container. In such small programs like this, everything is clear. But in more complicated cases with more containers in different parts of the program, we would have to take care that the container is supposed to have int type in it and no other data type, as in such a case, a InvalidCastException is thrown.</p><p>Additionally, if the original data type we have chosen is a value type, such as int, we will incur a performance penalty every time we access the elements of the collection due to the autoboxing feature of C#.</p><p>However, we could surround every unsafe area with a try - catch block, or we could create a separate &quot;container&quot; for every data type we need just to avoid casting. While both ways could work (and worked for many years), it is unnecessary now, because generics offers a much more elegant solution.</p><p>To make our &quot;container&quot; class to support any object and avoid casting, we replace every previous object type with some new name, in this case T, and add <t> mark immediately after the class name to indicate that this T type is generic/any type.</t></p><dl>
+
+<dd>Note: You can choose any name and use more than one generic type for class, i.e `<span class="p">&lt;</span><span class="n">genKey</span><span class="p">,</span> <span class="n">genVal</span><span class="p">&gt;</span>`.</dd>
+
+</dl>
+
+
+
+<pre><code class="lang-csharp">public class GenericObjectContainer&lt;T&gt;
+{
+    private T _obj;
+
+    public GenericObjectContainer(T obj)
+    {
+        this._obj = obj;
+    }
+
+    public T getObject()
+    {
+        return this._obj;
+    }
+}</code></pre>
+<p>Not a big difference, which results in simple and safe usage:</p><pre><code class="lang-csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        GenericObjectContainer&lt;<span class="hljs-keyword">int</span>&gt; container = <span class="hljs-keyword">new</span> GenericObjectContainer&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-number">25</span>);
+        GenericObjectContainer&lt;<span class="hljs-keyword">int</span>&gt; container2 = <span class="hljs-keyword">new</span> GenericObjectContainer&lt;<span class="hljs-keyword">int</span>&gt;(<span class="hljs-number">5</span>);
+        Console.WriteLine(container.getObject() + container2.getObject());
+
+        Console.ReadKey(); <span class="hljs-comment">// wait for user to press any key, so we could see results</span>
+    }
+}</code></pre>
+<p>Generics ensures that you specify the type for a &quot;container&quot; once, avoiding previously mentioned problems and autoboxing for structs.</p><p>While this example is far from practical, it does illustrate some situations where generics are useful:</p><ul><li>You need to keep objects of a single type in a class
+</li>
+<li>You do not need to modify objects
+</li>
+<li>You need to manipulate objects in some way
+</li>
+<li>You wish to store a &quot;<a title="C Sharp Programming/Variables" href="wiki/C_Sharp_Programming/Variables#Types">value type</a>&quot; (such as <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/int" href="wiki/C_Sharp_Programming/Keywords/int">int</a></span>, <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/short" href="wiki/C_Sharp_Programming/Keywords/short">short</a></span>, <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/string" href="wiki/C_Sharp_Programming/Keywords/string">string</a></span>, or any custom <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/struct" href="wiki/C_Sharp_Programming/Keywords/struct">struct</a></span>) in a collection class without incurring the performance penalty of autoboxing every time you manipulate the stored elements.
+</li></ul>
+<h2 id="generic-interfaces">Generic interfaces</h2><p>A generic interface accepts one or more type parameters, similar to a generic class:</p><pre><code class="lang-csharp">public interface IContainer&lt;T&gt;
+{
+    T GetObject();
+    void SetObject(T value);
+}
+
+public class StringContainer : IContainer&lt;string&gt;
+{
+    private string _str;
+
+    public string GetObject()
+    {
+        return _str;
+    }
+
+    public void SetObject(string value)
+    {
+        _str = value;
+    }
+}
+
+public class FileWithString : IContainer&lt;string&gt;
+{
+    ...
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        IContainer&lt;string&gt; container = new StringContainer();
+
+        container.SetObject(&quot;test&quot;);
+
+        Console.WriteLine(container.GetObject());
+        container = new FileWithString();
+
+        container.SetObject(&quot;another test&quot;);
+
+        Console.WriteLine(container.GetObject());
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>Generic interfaces are useful when multiple implementations of a particular class are possible. For example, both the List<t> class (discussed below) and the LinkedList<t> class, both from the System.Collections.Generic namespace, implement the IEnumerable<t> interface. List<t> has a constructor that creates a new list based on an existing object that implements IEnumerable<t>, and so we can write the following:</t></t></t></t></t></p><pre><code class="lang-csharp">LinkedList&lt;<span class="hljs-keyword">int</span>&gt; linkedList = <span class="hljs-keyword">new</span> LinkedList&lt;<span class="hljs-keyword">int</span>&gt;();
+
+linkedList.AddLast(<span class="hljs-number">1</span>);
+linkedList.AddLast(<span class="hljs-number">2</span>);
+linkedList.AddLast(<span class="hljs-number">3</span>);
+<span class="hljs-comment">// linkedList now contains 1, 2 and 3.</span>
+
+List&lt;<span class="hljs-keyword">int</span>&gt; list = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">int</span>&gt;(linkedList);
+
+<span class="hljs-comment">// now list contains 1, 2 and 3 as well!</span></code></pre>
+<h2 id="generic-methods">Generic methods</h2><p>Generic methods are very similar to generic classes and interfaces:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> ArrayContains&lt;T&gt;(T[] array, T element)
+{
+    <span class="hljs-keyword">foreach</span> (T e <span class="hljs-keyword">in</span> array)
+    {
+        <span class="hljs-keyword">if</span> (e.Equals(element))
+        {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+}</code></pre>
+<p>This method can be used to search any type of array:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        <span class="hljs-keyword">string</span>[] strArray = { <span class="hljs-string">&quot;string one&quot;</span>, <span class="hljs-string">&quot;string two&quot;</span>, <span class="hljs-string">&quot;string three&quot;</span> };
+        <span class="hljs-keyword">int</span>[] intArray = { <span class="hljs-number">123</span>, <span class="hljs-number">456</span>, <span class="hljs-number">789</span> };
+
+        Console.WriteLine(ArrayContains&lt;<span class="hljs-keyword">string</span>&gt;(strArray, <span class="hljs-string">&quot;string one&quot;</span>)); <span class="hljs-comment">// True</span>
+        Console.WriteLine(ArrayContains&lt;<span class="hljs-keyword">int</span>&gt;(intArray, <span class="hljs-number">135</span>)); <span class="hljs-comment">// False</span>
+    }
+}</code></pre>
+<h2 id="type-constraints">Type constraints</h2><p>One may specify one or more type constraints in any generic class, interface or method using the where keyword. The following example shows all of the possible type constraints:</p><pre><code class="lang-csharp">public class MyClass&lt;T, U, V, W&gt;
+    where T : class,        // T should be a reference type (array, class, delegate, interface)
+        new()               // T should have a public constructor with no parameters
+    where U : struct        // U should be a value type (byte, double, float, int, long, struct, uint, etc.)
+    where V : MyOtherClass, // V should be derived from MyOtherClass
+        IEnumerable&lt;U&gt;      // V should implement IEnumerable&lt;U&gt;
+    where W : T,            // W should be derived from T
+        IDisposable         // W should implement IDisposable
+{
+    ...
+}</code></pre>
+<p>These type constraints are often necessary to</p><ol><li>create a new instance of a generic type (the <code>&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code>) constraint
+</li>
+<li>use <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/foreach" href="wiki/C_Sharp_Programming/Keywords/foreach">foreach</a></span> on a variable of a generic type (the <code>&lt;span class=&quot;n&quot;&gt;IEnumerable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&gt;&lt;/span&gt;</code> constraint)
+</li>
+<li>use <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/using" href="wiki/C_Sharp_Programming/Keywords/using">using</a></span> on a variable of a generic type (the <code>&lt;span class=&quot;n&quot;&gt;IDisposable&lt;/span&gt;</code> constraint)
+</li></ol>
+<h2 id="notes">Notes</h2><pre><code class="lang-csharp">&#x2191; <span class="hljs-string">&quot;Generics (C# Programming Guide)&quot;</span>. http:<span class="hljs-comment">//msdn.microsoft.com/en-us/: msdn. http://msdn.microsoft.com/en-us/library/512aeb7t(VS.80).aspx. Retrieved 2011-08-09. </span></code></pre>
+<p>Extension methods are a feature new to C# 3.0 and allow you to extend existing types with your own methods. While they are static, they are used as if they are normal methods of the class being extended. Thus, new functionality can be added to an existing class without a need to change or recompile the class itself. However, since they are not directly part of the class, extensions cannot access private or protected methods, properties, or fields.</p><p>Extension methods should be created inside a static class. They themselves should be static and should contain at least one parameter, the first preceeded by the this keyword:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyExtensions</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span>[] ToStringArray&lt;T&gt;(<span class="hljs-keyword">this</span> List&lt;T&gt; list)
+    {
+        <span class="hljs-keyword">string</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">string</span>[list.Count];
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; list.Count; i++)
+            array[i] = list[i].ToString();
+
+        <span class="hljs-keyword">return</span> array;
+    }
+
+    <span class="hljs-comment">// to be continued...</span>
+}</code></pre>
+<p>The type of the first parameter (in this case List<t>) specifies the type with which the extension method will be available. You can now call the extension method like this:</t></p><pre><code class="lang-csharp">List&lt;<span class="hljs-keyword">int</span>&gt; list = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">int</span>&gt;();
+
+list.Add(<span class="hljs-number">1</span>);
+list.Add(<span class="hljs-number">2</span>);
+list.Add(<span class="hljs-number">3</span>);
+
+<span class="hljs-keyword">string</span>[] strArray = list.ToStringArray(); <span class="hljs-comment">// strArray will now contain &quot;1&quot;, &quot;2&quot; and &quot;3&quot;.</span></code></pre>
+<p>Here is the rest of the program:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyExtensions</span>
+{
+    ... <span class="hljs-comment">// continued from above</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">WriteToConsole</span>(<span class="hljs-params"><span class="hljs-keyword">this</span> <span class="hljs-keyword">string</span> str</span>)
+    </span>{
+        Console.WriteLine(str);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">string</span> <span class="hljs-title">Repeat</span>(<span class="hljs-params"><span class="hljs-keyword">this</span> <span class="hljs-keyword">string</span> str, <span class="hljs-keyword">int</span> times</span>)
+    </span>{
+        System.Text.StringBuilder sb = <span class="hljs-keyword">new</span> System.Text.StringBuilder();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; times; i++)
+            sb.Append(str);
+
+        <span class="hljs-keyword">return</span> sb.ToString();
+    }
+}
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">ExtensionMethodsDemo</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        List&lt;<span class="hljs-keyword">int</span>&gt; myList = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">int</span>&gt;();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">10</span>; i++)
+            myList.Add(i);
+
+        <span class="hljs-keyword">string</span>[] myStringArray = myList.ToStringArray();
+
+        <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> s <span class="hljs-keyword">in</span> myStringArray)
+            s.Repeat(<span class="hljs-number">4</span>).WriteToConsole(); <span class="hljs-comment">// string is extended by WriteToConsole()</span>
+
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>Note that extension methods can take parameters simply by defining more than one parameter without the this keyword.</p><h2 id="introduction">Introduction</h2><p>All computer programs use up memory, whether that is a variable in memory, opening a file or connecting to a database. The question is how can the runtime environment reclaim any memory when it is not being used? There are three answers to this question:</p><ul><li>If you are using a <em>managed</em> resource, this is automatically released by the Garbage Collector
+</li>
+<li>If you are using an <em>unmanaged</em> resource, you must use the IDisposable interface to assist with the cleanup
+</li>
+<li>If you are calling the Garbage Collector directly, by using <code>&lt;span class=&quot;n&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GC&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;</code> method, it will be forced to tidy up resources immediately.
+</li></ul>
+<p>Before discussing managed and unmanaged resources, it would be interesting to know what the garbage collector actually does.</p><h3 id="garbage-collector">Garbage Collector</h3><p>The garbage collector is a background process running within your program. It is always present within all .NET applications. Its job is to look for objects (i.e. reference types) which are no longer being used by your program. If the object is assigned to null, or the object goes out of scope, the garbage collector will mark the object be cleaned up at some point in the future, and not necessarily have its resources released immediately!</p><p>Why? The garbage collector will have a hard time keeping up with every de-allocation you make, especially at the speed the program runs and therefore only runs when resources become limited. Therefore, the garbage collector has three &quot;generations&quot;.</p><ul><li>Generation 0 - the most recently created objects
+</li>
+<li>Generation 1 - the mid-life objects
+</li>
+<li>Generation 2 - the long term objects.
+</li></ul>
+<p>All reference types will exist in one of these three generations. They will firstly be allocated to Gen 0, then moved to Gen 1 and Gen 2 depending on their lifetime. The garbage collector works by removing only what is needed and so will only scan Gen 0 for a quick-fix solution. This is because most, if not all, local variables are placed in this area.</p><p>For more in-depth information, visit the MSDN Article for a better explanation.</p><p>Now you know about the garbage collector, let&apos;s discuss the resources that it is managing.</p><h3 id="managed-resources">Managed Resources</h3><p>Managed resources are objects which run totally within the .NET framework. All memory is reclaimed for you automatically, all resources closed and you are in most cases guaranteed to have all the memory released after the application closes, or when the garbage collector runs.</p><p>You do not have to do anything with them with regards to closing connections or anything, it is a self-tidying object.</p><h3 id="unmanaged-resources">Unmanaged Resources</h3><p>There are circumstances where the .NET framework world will not release resources. This may be because the object references resources outside of the .NET framework, like the operating system, or internally references another unmanaged component, or that the resources accesses a component that uses COM, COM+ or DCOM.</p><p>Whatever the reason, if you are using an object that implements the IDisposable interface at a class level, then you too need to implement the IDisposable interface too.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title">IDisposable</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"></span>)</span>;
+}</code></pre>
+<p>This interface exposes a method called Dispose(). This alone will not help tidy up resources, as it is only an interface, so the developer must use it correctly in order to ensure the resources are released. The two steps are:</p><ol><li>Always call Dispose() on any object that implements IDisposable as soon as you are finished using it. (This can be made easier with the <span style="color:#153e7e; text-decoration:none; font-weight:bold;"><a title="C Sharp Programming/Keywords/using" href="wiki/C_Sharp_Programming/Keywords/using">using</a></span> keyword)
+</li>
+<li>Use the finalizer method to call Dispose(), so that if anyone has not closed your resources, your code will do it for them.
+</li></ol>
+<h4 id="dispose-pattern">Dispose pattern</h4><p>Often, what you want to clean up varies depending on whether your object is being finalized. For example, you would not want to clean up managed resources in a finalizer since the managed resources could have been reclaimed by the garbage collector already. The dispose pattern can help you implement resource management properly in this situation:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyResource</span> : <span class="hljs-title">IDisposable</span>
+{
+    <span class="hljs-keyword">private</span> IntPtr _someUnmanagedResource;
+    <span class="hljs-keyword">private</span> List&lt;<span class="hljs-keyword">long</span>&gt; _someManagedResource = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">long</span>&gt;();
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyResource</span>(<span class="hljs-params"></span>)
+    </span>{
+        _someUnmanagedResource = AllocateSomeMemory();
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">long</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000000</span>; i++)
+            _someManagedResource.Add(i);
+        ...
+    }
+
+    <span class="hljs-comment">// The finalizer will call the internal dispose method, telling it not to free managed resources.</span>
+    ~MyResource()
+    {
+        <span class="hljs-keyword">this</span>.Dispose(<span class="hljs-keyword">false</span>);
+    }
+
+    <span class="hljs-comment">// The internal dispose method.</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"><span class="hljs-keyword">bool</span> disposing</span>)
+    </span>{
+        <span class="hljs-keyword">if</span> (disposing)
+        {
+            <span class="hljs-comment">// Clean up managed resources</span>
+            _someManagedResource.Clear();
+        }
+
+        <span class="hljs-comment">// Clean up unmanaged resources</span>
+        FreeSomeMemory(_someUnmanagedResource);
+    }
+
+    <span class="hljs-comment">// The public dispose method will call the internal dispose method, telling it to free managed resources.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Dispose</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">this</span>.Dispose(<span class="hljs-keyword">true</span>);
+        <span class="hljs-comment">// Tell the garbage collector to not call the finalizer because we have already freed resources.</span>
+        GC.SuppressFinalize(<span class="hljs-keyword">this</span>);
+    }
+}</code></pre>
+<h3 id="applications">Applications</h3><p>If you are coming to C# from Visual Basic Classic you will have seen code like this:</p><pre><code class="lang-csharp"><span class="hljs-function">Public Function <span class="hljs-title">Read</span>(<span class="hljs-params">ByRef FileName</span>) As String
+
+    Dim oFSO As FileSystemObject
+    Set oFSO </span>= New FileSystemObject
+
+    Dim oFile As TextStream
+    Set oFile = oFSO.OpenTextFile(FileName, ForReading, False)
+    Read = oFile.ReadLine
+
+End Function</code></pre>
+<p>Note that neither oFSO nor oFile are explicitly disposed of. In Visual Basic Classic this is not necessary because both objects are declared locally. This means that the reference count goes to zero as soon as the function ends which results in calls to the Terminate event handlers of both objects. Those event handlers close the file and release the associated resources.</p><p>In C# this doesn&apos;t happen because the objects are not reference counted. The finalizers will not be called until the garbage collector decides to dispose of the objects. If the program uses very little memory this could be a long time.</p><p>This causes a problem because the file is held open which might prevent other processes from accessing it.</p><p>In many languages the solution is to explicitly close the file and dispose of the objects and many C# programmers do just that. However, there is a better way: use the using statement:</p><pre><code class="lang-csharp"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">read</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> fileName</span>)
+</span>{
+    <span class="hljs-keyword">using</span> (TextReader textReader = <span class="hljs-keyword">new</span> StreamReader(filename))
+    {
+        <span class="hljs-keyword">return</span> textReader.ReadLine();
+    }
+}</code></pre>
+<p>Behind the scenes the compiler turns the using statement into try ... finally and produces this intermediate language (IL) code:</p><pre><code class="lang-csharp">.method public hidebysig static string  Read(string FileName) cil managed
+{
+    // Code size       39 (0x27)
+    .maxstack  5
+    .locals init (class [mscorlib]System.IO.TextReader V_0, string V_1)
+    IL_0000:  ldarg.0
+    IL_0001:  newobj     instance void [mscorlib]System.IO.StreamReader::.ctor(string)
+    IL_0006:  stloc.0
+    .try
+    {
+        IL_0007:  ldloc.0
+        IL_0008:  callvirt   instance string [mscorlib]System.IO.TextReader::ReadLine()
+        IL_000d:  stloc.1
+        IL_000e:  leave      IL_0025
+        IL_0013:  leave      IL_0025
+    }  // end .try
+    finally
+    {
+        IL_0018:  ldloc.0
+        IL_0019:  brfalse    IL_0024
+        IL_001e:  ldloc.0
+        IL_001f:  callvirt   instance void [mscorlib]System.IDisposable::Dispose()
+        IL_0024:  endfinally
+    }  // end handler
+    IL_0025:  ldloc.1
+    IL_0026:  ret
+} // end of method Using::Read</code></pre>
+<p>Notice that the body of the Read function has been split into three parts: initialisation, try, and finally. The finally block includes code that was never explicitly specified in the original C# source code, namely a call to the destructor of the Streamreader instance.</p><p>See Understanding the &apos;using&apos; statement in C# By TiNgZ aBrAhAm.</p><p>See the following sections for more applications of this technique.</p><h3 id="resource-acquisition-is-initialisation">Resource Acquisition Is Initialisation</h3><p>The application of the using statement in the introduction is an example of an idiom called Resource Acquisition Is Initialisation (RAII).</p><p>RAII is a natural technique in languages like Visual Basic Classic and C++ that have deterministic finalization, but usually requires extra work to include in programs written in garbage collected languages like C# and VB.NET. The using statement makes it just as easy. Of course you could write the try..finally code out explicitly and in some cases that will still be necessary. For a thorough discussion of the RAII technique see HackCraft: The RAII Programming Idiom. Wikipedia has a brief note on the subject as well: Resource Acquisition Is Initialization.</p><p>Work in progress: add C# versions showing incorrect and correct methods with and without using. Add notes on RAII, memoization and cacheing (see OOP wikibook).</p><p>Design Patterns are common building blocks designed to solve everyday software issues. Some basic terms and example of such patterns include what we see in everyday life. Key patterns are the singleton pattern, the factory pattern, and chain of responsibility patterns.</p><h2 id="factory-pattern">Factory Pattern</h2><p>The factory pattern is a method call that uses abstract classes and its implementations, to give the developer the most appropriate class for the job.</p><p>Lets create a couple of classes first to demonstrate how this can be used. Here we take the example of a bank system.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span>
+{
+     <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> _sourceAccount;
+
+     <span class="hljs-comment">// May not be needed in most cases, but may on transfers, closures and corrections.</span>
+     <span class="hljs-keyword">private</span> <span class="hljs-keyword">string</span> _destinationAccount;
+
+     <span class="hljs-keyword">private</span> <span class="hljs-keyword">decimal</span> _amount;
+     <span class="hljs-keyword">public</span> <span class="hljs-keyword">decimal</span> Amount { <span class="hljs-keyword">get</span> { <span class="hljs-keyword">return</span> _amount; } }
+
+     <span class="hljs-keyword">private</span> DateTime _transactionDate;
+     <span class="hljs-keyword">private</span> DateTime _effectiveDate;
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Transaction</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> source, <span class="hljs-keyword">string</span> destination, <span class="hljs-keyword">decimal</span> amount</span>)
+     </span>{
+          _sourceAccount = source;
+          _destinationAccount = destination;
+          _amount = amount;
+          _transactionDate = DateTime.Now;
+     }
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Transaction</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> source, <span class="hljs-keyword">string</span> destination, <span class="hljs-keyword">decimal</span> amount, DateTime effectiveDate</span>) : <span class="hljs-title">this</span>(<span class="hljs-params">source, destination, amount</span>)
+     </span>{
+          _effectiveDate = effectiveDate;
+     }
+
+     <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">decimal</span> <span class="hljs-title">AdjustBalance</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> accountNumber, <span class="hljs-keyword">decimal</span> amount</span>)
+     </span>{
+          <span class="hljs-keyword">decimal</span> newBalance = <span class="hljs-keyword">decimal</span>.MinValue;
+
+          <span class="hljs-keyword">using</span>(Mainframe.ICOMInterface mf = <span class="hljs-keyword">new</span> Mainframe.COMInterfaceClass())
+          {
+               <span class="hljs-keyword">string</span> dateFormat = DateTime.Now.ToString(<span class="hljs-string">&quot;yyyyMMdd HH:mm:ss&quot;</span>);
+               mf.Credit(dateFormat, accountNumber, amount);
+               newBalance = mf.GetBalance( DateTime.Now.AddSeconds(<span class="hljs-number">1</span>), accountNumber);
+          }
+
+          <span class="hljs-keyword">return</span> newBalance;
+     }
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Complete</span>(<span class="hljs-params"></span>)</span>;
+}</code></pre>
+<p>This Transaction class is incomplete, as there are many types of transactions:</p><ul><li>Opening
+</li>
+<li>Credits
+</li>
+<li>Withdrawals
+</li>
+<li>Transfers
+</li>
+<li>Penalty
+</li>
+<li>Correction
+</li>
+<li>Closure
+</li></ul>
+<p>For this example, we will take credit and withdrawal portions, and create classes for them.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Credit</span> : <span class="hljs-title">Transaction</span>
+{
+     <span class="hljs-comment">// Implementations hidden for simplicity</span>
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Complete</span>(<span class="hljs-params"></span>)
+     </span>{
+          <span class="hljs-keyword">this</span>.AdjustBalance( _sourceAccount, amount);
+     }
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Withdrawal</span> : <span class="hljs-title">Transaction</span>
+{
+     <span class="hljs-comment">// Implementations hidden for simplicity</span>
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">override</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">Complete</span>(<span class="hljs-params"></span>)
+     </span>{
+          <span class="hljs-keyword">this</span>.AdjustBalance( _sourceAccount, -amount);
+     }
+}</code></pre>
+<p>The problem is that these classes do much of the same thing, so it would be helpful, if we could just give it the values, and it will work out what class type we require. Therefore, we could come up with some ways to distinguish between the different types of transactions:</p><ul><li>Positive values indicate a credit.
+</li>
+<li>Negative values indicate a withdrawal.
+</li>
+<li>Having two account numbers and a positive value would indicate a transfer.
+</li>
+<li>Having two account numbers and a negative value would indicate a closure.
+</li>
+<li>etc.
+</li></ul>
+<p>So, let us write a new class with a static method that will do this logic for us, ending the name Factory:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TransactionFactory</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Transaction <span class="hljs-title">Create</span>(<span class="hljs-params"> <span class="hljs-keyword">string</span> source, <span class="hljs-keyword">string</span> destination, <span class="hljs-keyword">decimal</span> amount </span>)
+     </span>{
+          <span class="hljs-keyword">if</span>( <span class="hljs-keyword">string</span>.IsNullOrEmpty(destination) )
+          {
+               <span class="hljs-keyword">if</span>(amount &gt;= <span class="hljs-number">0</span>)
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Credit( source, <span class="hljs-keyword">null</span>, amount);
+               <span class="hljs-function"><span class="hljs-keyword">else</span>
+                    return new <span class="hljs-title">Withdrawal</span>(<span class="hljs-params"> source, <span class="hljs-keyword">null</span>, amount</span>)</span>;
+          }
+          <span class="hljs-keyword">else</span>
+          {
+               <span class="hljs-comment">// Other implementations here</span>
+          }
+     }
+}</code></pre>
+<p>Now, you can use this class to do all of the logic and processing, and be assured that the type you are returned is correct.</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MyProgram</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+     </span>{
+          <span class="hljs-keyword">decimal</span> randomAmount = <span class="hljs-keyword">new</span> Random().Next()*<span class="hljs-number">1000000</span>;
+          Transaction t = TransactionFactory.Create(<span class="hljs-string">&quot;123456&quot;</span>,<span class="hljs-string">&quot;&quot;</span>,randomAmount);
+          <span class="hljs-comment">// t.Complete(); &lt;-- This would carry out the requested transaction.</span>
+
+          Console.WriteLine(<span class="hljs-string">&quot;{0}: {1:C}&quot;</span>,t.GetType().Name, t.Amount);
+     }
+}</code></pre>
+<h2 id="singleton">Singleton</h2><p>The singleton pattern instantiates only 1 object, and reuses this object for the entire lifetime of the process. This is useful, if you wish the object to maintain state, or if it takes lots of resources to set the object up. Below is a basic implementation:</p><pre><code class="lang-csharp"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">MySingletonExample</span>
+{
+   <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Hashtable sharedHt = <span class="hljs-keyword">new</span> Hashtable();
+
+   <span class="hljs-keyword">public</span> Hashtable Singleton
+   {
+     <span class="hljs-keyword">get</span> 
+      {
+         <span class="hljs-keyword">return</span> sharedHt;
+      }
+      <span class="hljs-comment">// set { ; }</span>
+     <span class="hljs-comment">// Not implemented for a true singleton</span>
+   }
+
+   <span class="hljs-comment">// Class implementation here..</span>
+}</code></pre>
+<p>The Singleton property will expose the same instance to all callers. Upon the first call, the object is initialised and on subsequent calls this is used.</p><p>Examples of this pattern include:</p><ul><li><code>&lt;span class=&quot;n&quot;&gt;ConfigurationSettings&lt;/span&gt;</code> (Generic settings reader)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;HttpApplication&lt;/span&gt;</code> (Application object in ASP .NET)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;HttpCacheUtility&lt;/span&gt;</code> (Cache object in ASP .NET)
+</li>
+<li><code>&lt;span class=&quot;n&quot;&gt;HttpServerUtility&lt;/span&gt;</code> (Server object in ASP .NET)
+</li></ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lesson2.html" class="navigation navigation-prev " aria-label="Previous page: Classes">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lesson4.html" class="navigation navigation-next " aria-label="Next page: The .NET Framework">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Advanced Concepts","level":"1.4","depth":1,"next":{"title":"The .NET Framework","level":"1.5","depth":1,"path":"Lesson4.md","ref":"Lesson4.md","articles":[]},"previous":{"title":"Classes","level":"1.3","depth":1,"path":"Lesson2.md","ref":"Lesson2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lesson3.md","mtime":"2016-08-04T18:05:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-04T18:05:25.850Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

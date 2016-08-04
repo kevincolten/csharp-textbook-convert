@@ -1,0 +1,1576 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>The .NET Framework · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Lesson5.html" />
+    
+    
+    <link rel="prev" href="Lesson3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Lesson1.html">
+            
+                <a href="Lesson1.html">
+            
+                    
+                    Language Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Lesson2.html">
+            
+                <a href="Lesson2.html">
+            
+                    
+                    Classes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Lesson3.html">
+            
+                <a href="Lesson3.html">
+            
+                    
+                    Advanced Concepts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Lesson4.html">
+            
+                <a href="Lesson4.html">
+            
+                    
+                    The .NET Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Lesson5.html">
+            
+                <a href="Lesson5.html">
+            
+                    
+                    Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >The .NET Framework</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="the-net-framework">The .NET Framework</h1><p>.NET Framework is a common environment for building, deploying, and running Web Services, Web Applications, Windows Services and Windows Applications. The .NET Framework contains common class libraries - like ADO.NET, ASP.NET and Windows Forms - to provide advanced standard services that can be integrated into a variety of computer systems.</p><h2 id="introduction">Introduction</h2><p>In June 2000 Microsoft released both the .NET platform and a new program language called C#. C# is a general-purpose OOP language designed to give optimum simplicity, expansiveness, and performance. Its syntax is very similar to Java, with the major difference being that all variable types are derived from a common ancestor class.</p><p>C# is a language in itself. It can perform mathematical and logical operations, variable assignment and other expected traits of a programming language. This in itself is not flexible enough for more complex applications. At some stage, the developer will want to interact with the host system whether it be reading files or downloading content from the Internet.</p><p>The .NET framework is a toolset developed for the Windows platform to allow the developer to interact with the host system or any external entity whether it be another process, or another computer. The .NET platform is a Windows platform-specific implementation. Other operating systems have their own implementations due to the differences in the operating systems I/O management, security models and interfaces.</p><h2 id="background">Background</h2><ul><li>Originally called NGWS (Next Generation Windows Services).
+</li>
+<li>.NET does not run <em>in</em> any browser. It is a <em>runtime</em> language (<a title="w:Common Language Runtime" href="en.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a>) like the Java runtime. By contrast, <a title="w:Microsoft Silverlight" href="en.wikipedia.org/wiki/Microsoft_Silverlight">Microsoft Silverlight</a> <em>does</em> run in a browser.
+</li>
+<li>.NET is based on the newest Web standards.
+</li>
+<li>.NET is built on the following Internet standards:
+<ul><li>HTTP, the communication protocol between Internet Applications
+</li>
+<li>SOAP, the standard format for requesting Web Services
+</li>
+<li>UDDI, the standard to search and discover Web Services
+</li>
+<li>XML, the format for exchanging data between Internet Applications
+</li></ul>
+</li></ul>
+<h2 id="console-programming">Console Programming</h2><h3 id="input">Input</h3><p>Input can be gathered in a similar method to outputing data using the Read() and ReadLine methods of that same System.Console class:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleClass</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Greetings!  What is your name?&quot;</span>);
+        Console.Write(<span class="hljs-string">&quot;My name is: &quot;</span>);
+        <span class="hljs-keyword">string</span> name = Console.ReadLine();
+
+        Console.WriteLine(<span class="hljs-string">&quot;Nice to meet you, &quot;</span> + name);
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>The above program requests the user&apos;s name and displays it back. The final Console.ReadKey() waits for the user to enter a key before exiting the program.</p><h3 id="output">Output</h3><p>The example program below shows a couple of ways to output text:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">HelloWorld</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Console.WriteLine(<span class="hljs-string">&quot;Hello World!&quot;</span>);             <span class="hljs-comment">// relies on &quot;using System;&quot;</span>
+        Console.Write(<span class="hljs-string">&quot;This is...&quot;</span>);
+        Console.Write(<span class="hljs-string">&quot; my first program!\n&quot;</span>);
+        System.Console.WriteLine(<span class="hljs-string">&quot;Goodbye World!&quot;</span>);    <span class="hljs-comment">// no &quot;using&quot; statement required</span>
+    }
+}</code></pre>
+<p>The above code displays the following text:</p><pre><code>Hello World!
+This is... my first program!
+Goodbye World!</code></pre>
+<p>That text is output using the System.Console class. The using statement at the top allows the compiler to find the Console class without specifying the System namespace each time it is used.</p><p>The middle lines use the Write() method, which does not automatically create a new line. To specify a new line, we can use the sequence backslash-n (\n). If for whatever reason we wanted to really show the \n character instead, we add a second backslash (\n). The backslash is known as the escape character in C# because it is not treated as a normal character, but allows us to encode certain special characters (like a new line character).</p><h3 id="error">Error</h3><p>The Error output is used to divert error specific messages to the console. To a novice user this may seem fairly pointless, as this achieves the same as Output (as above). If you decide to write an application that runs another application (for example a scheduler), you may wish to monitor the output of that program - more specifically, you may only wish to be notified only of the errors that occur. If you coded your program to write to the Console.Error stream whenever an error occurred, you can tell your scheduler program to monitor this stream, and feedback any information that is sent to it. Instead of the Console appearing with the Error messages, your program may wish to log these to a file.</p><p>You may wish to revisit this after studying Streams and after learning about the Process class.</p><h3 id="command-line-arguments">Command line arguments</h3><p>Command line arguments are values that are passed to a console program before execution. For example, the Windows command prompt includes a copy command that takes two command line arguments. The first argument is the original file and the second is the location or name for the new copy. Custom console applications can have arguments as well. c sharp is object based programming language. .net framework is a Microsoft programming language is used to create web application,console application, mobile application.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> Sys
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    Console.<span class="hljs-title">WriteLine</span>(<span class="hljs-params"><span class="hljs-string">&quot;Last Name: &quot;</span> + args[<span class="hljs-number">1</span>]</span>)</span>;
+    Console.Read();
+}</code></pre>
+<p>If the above code is compiled to a program called username.exe, it can be executed from the command line using two arguments, e.g. &quot;Bill&quot; and &quot;Gates&quot;:</p><pre><code>C:\&gt;username.exe Bill Gates</code></pre>
+<p>Notice how the Main() method above has a string array parameter. The program assumes that there will be two arguments. That assumption makes the program unsafe. If it is run without the expected number of command line arguments, it will crash when it attempts to access the missing argument. To make the program more robust, we can check to see if the user entered all the required arguments.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Test</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+    </span>{
+        <span class="hljs-keyword">if</span>(args.Length &gt;= <span class="hljs-number">1</span>)
+        Console.WriteLine(args[<span class="hljs-number">0</span>]);
+        <span class="hljs-keyword">if</span>(args.Length &gt;= <span class="hljs-number">2</span>)
+        Console.WriteLine(args[<span class="hljs-number">1</span>]);
+    }
+}</code></pre>
+<p>Try running the program with only entering your first name or no name at all. The args.Length property returns the total number of arguments. If no arguments are given, it will return zero.</p><p>You are also able to group a single argument together by using the quote marks (&quot;&quot;). This is particularly useful if you are expecting many parameters, but there is a requirement for including spaces (e.g. file locations, file names, full names etc.)</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">class</span> <span class="hljs-title">Test</span>
+{
+   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+   </span>{
+      <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>; index &lt; args.Length; index++)
+      {
+         Console.WriteLine((index + <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;: &quot;</span> + args[index]);
+      }
+   }
+}</code></pre>
+<pre><code>C:\&gt; Test.exe Separate words &quot;grouped together&quot;
+1: Separate
+2: words
+3: grouped together</code></pre>
+<h3 id="formatted-output">Formatted output</h3><p>|</p><div style="width: 52px;">![](//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/40px-Book_important2.svg.png)</div>
+
+
+
+<p>| <strong>This section is a stub.</strong>
+You can help Wikibooks by <a href="en.wikibooks.org/w/index.php">expanding it</a>. |</p><p>Console.Write() and Console.WriteLine() allow you to output a text string, but also allows writing a string with variable substitution.</p><p>These two functions normally have a string as the first parameter. When additional objects are added, either as parameters or as an array, the function will scan the string to substitute objects in place of tokens.</p><p>For example:</p><pre><code class="lang-csharp">{
+  <span class="hljs-keyword">int</span> i = <span class="hljs-number">10</span>;
+  Console.WriteLine(<span class="hljs-string">&quot;i = {0}&quot;</span>, i);
+}</code></pre>
+<p>The {0} is identified by braces, and refers to the parameter index that needs to be substituted. You may also find a format specifier within the braces, which is preceded by a colon and the specifier in question (e.g. {0:G}).</p><h3 id="rounding-number-example">Rounding number example</h3><p>This is a small example that rounds a number to a string. It is an augmentation for the Math class of C#. The result of the Round method has to be rounded to a string, as significant figures may be trailing zeros that would disappear, if a number format would be used. Here is the code and its call. You are invited to write a shorter version that gives the same result, or to correct errors!</p><p>The constant class contains repeating constants that should exist only once in the code so that to avoid inadvertant changes. (If the one constant is changed inadvertantly, it is most likely to be seen, as it is used at several locations.)</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ConsoleApplicationCommons</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">Common</span>
+    {
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span>Constant of comma or decimal point in German<span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> COMMA = <span class="hljs-string">&apos;,&apos;</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span>Dash or minus constant<span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> DASH = <span class="hljs-string">&apos;-&apos;</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> The exponent sign in a scientific number, or the capital letter E</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> EXPONENT = <span class="hljs-string">&apos;E&apos;</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span>The full stop or period<span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> PERIOD = <span class="hljs-string">&apos;.&apos;</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span>The zero string constant used at several places<span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">const</span> String ZERO = <span class="hljs-string">&quot;0&quot;</span>;
+    } <span class="hljs-comment">// class Common</span>
+}</code></pre>
+<p>The Math class is an enhancement to the <math.h> library and contains the rounding calculations.</math.h></p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Globalization;
+<span class="hljs-keyword">using</span> System.IO;
+<span class="hljs-keyword">using</span> System.Text;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ConsoleApplicationCommons</span>
+{
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> Class for special mathematical calculations.</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> ATTENTION: Should not depend on any other class except Java libraries!</span>
+    <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Maths</span>
+    {
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> CultureInfo invC = CultureInfo.InvariantCulture;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Value after which the language switches from scientific to double</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">double</span> E_TO_DOUBLE = <span class="hljs-number">1E-4</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Maximal digits after which Convert.ToString(&#x2026;) becomes inaccurate.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">short</span> MAX_CHARACTERS = <span class="hljs-number">16</span>;
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span>The string of zeros<span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String strZeros = <span class="hljs-string">&quot;000000000000000000000000000000000&quot;</span>;
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Determines language-independently whether or not the character</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> can be a decimal separator or not</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;character&quot;&gt;</span>Character to be checked<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> true, if it can be a decimal separator in a language, and false</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> otherwise.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">IsDecimalSeparator</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> c</span>)
+        </span>{
+            <span class="hljs-keyword">return</span> ((c == Common.COMMA) || (c == Common.PERIOD));
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Determines how many zeros are to be appended after the decimal</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> digits.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Rounded number<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantsAfter&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Significant digits after decimal</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Requested value<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">CalculateMissingSignificantZeros</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d,
+            <span class="hljs-keyword">short</span> significantsAfter</span>)
+        </span>{
+            <span class="hljs-keyword">short</span> after = FindSignificantsAfterDecimal(separator, d);
+
+            <span class="hljs-keyword">short</span> zeros = (<span class="hljs-keyword">short</span>)(significantsAfter
+                - ((after == <span class="hljs-number">0</span>) ? <span class="hljs-number">1</span> : after));
+
+            <span class="hljs-keyword">return</span> (<span class="hljs-keyword">short</span>)((zeros &gt;= <span class="hljs-number">0</span>) ? zeros : <span class="hljs-number">0</span>);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Finds the decimal position language-independently.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Value to be searched for the decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>The position of the decimal separator<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindDecimalSeparatorPosition</span>(<span class="hljs-params">String <span class="hljs-keyword">value</span></span>)
+        </span>{
+            <span class="hljs-keyword">short</span> separatorAt = (<span class="hljs-keyword">short</span>)<span class="hljs-keyword">value</span>.IndexOf(Common.COMMA);
+
+            <span class="hljs-keyword">return</span> (separatorAt &gt; <span class="hljs-number">-1</span>)
+                ? separatorAt : (<span class="hljs-keyword">short</span>)<span class="hljs-keyword">value</span>.IndexOf(Common.PERIOD);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Calculates the number of significant digits (without the sign and</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> the decimal separator).</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Value where the digits are to be counted<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantsAfter&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of decimal places after the separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Number of significant digits<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindSignificantDigits</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d,
+            <span class="hljs-keyword">short</span> significantsAfter</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (d == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                String mantissa = FindMantissa(separator, 
+                    Convert.ToString(d, invC));
+
+                <span class="hljs-keyword">if</span> (d == (<span class="hljs-keyword">long</span>)d)
+                {
+                    mantissa = mantissa.Substring(<span class="hljs-number">0</span>, mantissa.Length - <span class="hljs-number">1</span>);
+                }
+
+                mantissa = RetrieveDigits(mantissa);
+                <span class="hljs-comment">// Find the position of the first non-zero digit:</span>
+                <span class="hljs-keyword">short</span> nonZeroAt = <span class="hljs-number">0</span>;
+
+                <span class="hljs-keyword">for</span> (; (nonZeroAt &lt; mantissa.Length)
+                        &amp;&amp; (mantissa[nonZeroAt] == <span class="hljs-string">&apos;0&apos;</span>); nonZeroAt++) ;
+
+                <span class="hljs-keyword">return</span> (<span class="hljs-keyword">short</span>)mantissa.Substring(nonZeroAt).Length;
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Finds the significant digits after the decimal separator of a</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> mantissa.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span>Language-specific decimal separator<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Value to be scrutinised<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Number of insignificant zeros after decimal separator.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindSignificantsAfterDecimal</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (d == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                String <span class="hljs-keyword">value</span> = ConvertToString(d);
+
+                <span class="hljs-keyword">short</span> separatorAt = FindDecimalSeparatorPosition(<span class="hljs-keyword">value</span>);
+
+                <span class="hljs-keyword">if</span> (separatorAt &gt; <span class="hljs-number">-1</span>) <span class="hljs-keyword">value</span> = <span class="hljs-keyword">value</span>.Substring(separatorAt + <span class="hljs-number">1</span>);
+
+                <span class="hljs-keyword">short</span> eAt = (<span class="hljs-keyword">short</span>) <span class="hljs-keyword">value</span>.IndexOf(Common.EXPONENT);
+
+                <span class="hljs-keyword">if</span> ((separatorAt == <span class="hljs-number">-1</span>) &amp;&amp; (eAt == <span class="hljs-number">-1</span>)) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">eAt &gt; <span class="hljs-number">0</span></span>) <span class="hljs-keyword">value</span> </span>= <span class="hljs-keyword">value</span>.Substring(<span class="hljs-number">0</span>, eAt);
+
+                <span class="hljs-keyword">long</span> longValue = Convert.ToInt64(<span class="hljs-keyword">value</span>, invC);
+
+                <span class="hljs-keyword">if</span> (longValue == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+                <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">Math.Abs(d</span>) &lt; 1)
+                </span>{
+                    <span class="hljs-keyword">value</span> = Convert.ToString(longValue, invC);
+
+                    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span>.Length &gt;= <span class="hljs-number">15</span>)
+                    {
+                        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">byte</span>)Convert.ToString(longValue, invC).Length;
+                    }
+                    <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">return</span> (<span class="hljs-params"><span class="hljs-keyword">byte</span></span>)(<span class="hljs-params"><span class="hljs-keyword">value</span>.Length</span>)</span>;
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span>.Length &gt;= <span class="hljs-number">15</span>) <span class="hljs-keyword">return</span> (<span class="hljs-keyword">byte</span>)(<span class="hljs-keyword">value</span>.Length - <span class="hljs-number">1</span>);
+                    <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">return</span> (<span class="hljs-params"><span class="hljs-keyword">byte</span></span>)(<span class="hljs-params"><span class="hljs-keyword">value</span>.Length</span>)</span>;
+                }
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Determines the number of significant digits after the decimal</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> separator knowing the total number of significant digits and</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> the number before the decimal separator.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantsBefore&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of significant digits before separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantDigits&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of all significant digits</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of significant decimals after the separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindSignificantsAfterDecimal</span>(<span class="hljs-params">
+            <span class="hljs-keyword">short</span> significantsBefore,
+            <span class="hljs-keyword">short</span> significantDigits</span>)
+        </span>{
+            <span class="hljs-keyword">short</span> significantsAfter =
+                (<span class="hljs-keyword">short</span>)(significantDigits - significantsBefore);
+
+            <span class="hljs-keyword">return</span> (<span class="hljs-keyword">short</span>)((significantsAfter &gt; <span class="hljs-number">0</span>) ? significantsAfter : <span class="hljs-number">0</span>);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Determines the number of digits before the decimal point.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span>Value to be scrutinised<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of digits before the decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindSignificantsBeforeDecimal</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            String <span class="hljs-keyword">value</span> = Convert.ToString(d, invC);
+
+            <span class="hljs-comment">// Return immediately, if result is clear: Special handling at</span>
+            <span class="hljs-comment">// crossroads of floating point and exponential numbers:</span>
+            <span class="hljs-keyword">if</span> ((d == <span class="hljs-number">0</span>) || (Math.Abs(d) &gt;= E_TO_DOUBLE) &amp;&amp; (Math.Abs(d) &lt; <span class="hljs-number">1</span>))
+            {
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            }
+            <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">(Math.Abs(d</span>) &gt; 0) &amp;&amp; (<span class="hljs-params">Math.Abs(d</span>) &lt; E_TO_DOUBLE)) return 1</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">short</span> significants = <span class="hljs-number">0</span>;
+
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">short</span> s = <span class="hljs-number">0</span>; s &lt; <span class="hljs-keyword">value</span>.Length; s++)
+                {
+                    <span class="hljs-keyword">if</span> (IsDecimalSeparator(<span class="hljs-keyword">value</span>[s])) <span class="hljs-keyword">break</span>;
+                    <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params"><span class="hljs-keyword">value</span>[s] != Common.DASH</span>) significants++</span>;
+                }
+
+                <span class="hljs-keyword">return</span> significants;
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Returns the exponent part of the double number.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Value of which the exponent is of interest<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Exponent of the number or zero.<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">short</span> <span class="hljs-title">FindExponent</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">short</span>.Parse(FindExponent(Convert.ToString(d, invC)), invC);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Finds the exponent of a number.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Value where an exponent is to be searched</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Exponent, if it exists, or &quot;0&quot;.<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">FindExponent</span>(<span class="hljs-params">String <span class="hljs-keyword">value</span></span>)
+        </span>{
+            <span class="hljs-keyword">short</span> eAt = (<span class="hljs-keyword">short</span>)(<span class="hljs-keyword">value</span>.IndexOf(Common.EXPONENT));
+
+            <span class="hljs-keyword">if</span> (eAt &lt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> Common.ZERO;
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">return</span> Convert.ToString
+                    (<span class="hljs-keyword">short</span>.Parse(<span class="hljs-keyword">value</span>.Substring(eAt + <span class="hljs-number">1</span>)), invC);
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Finds the mantissa of a number.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span>Value where the mantissa is to be found<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Mantissa of the number<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">FindMantissa</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            String <span class="hljs-keyword">value</span></span>)
+        </span>{
+            <span class="hljs-keyword">short</span> eAt = (<span class="hljs-keyword">short</span>)(<span class="hljs-keyword">value</span>.IndexOf(Common.EXPONENT));
+
+            <span class="hljs-keyword">if</span> (eAt &gt; <span class="hljs-number">-1</span>) <span class="hljs-keyword">value</span> = <span class="hljs-keyword">value</span>.Substring(<span class="hljs-number">0</span>, eAt);
+
+            <span class="hljs-keyword">if</span> (FindDecimalSeparatorPosition(<span class="hljs-keyword">value</span>) == <span class="hljs-number">-1</span>) <span class="hljs-keyword">value</span> += <span class="hljs-string">&quot;.0&quot;</span>;
+
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">value</span>;
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Retrieves the digits of the value only</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Number<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>The digits only<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">RetrieveDigits</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            <span class="hljs-keyword">double</span> dValue = d;
+            <span class="hljs-keyword">short</span> exponent = FindExponent(d);
+            StringBuilder <span class="hljs-keyword">value</span> = <span class="hljs-keyword">new</span> StringBuilder();
+
+            <span class="hljs-keyword">if</span> (exponent == <span class="hljs-number">0</span>)
+            {
+                <span class="hljs-keyword">value</span>.Append(dValue);
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span>.Length &gt;= MAX_CHARACTERS)
+                {
+                    <span class="hljs-keyword">value</span>.Clear();
+
+                    <span class="hljs-keyword">if</span> (Math.Abs(dValue) &lt; <span class="hljs-number">1</span>) <span class="hljs-keyword">value</span>.Append(<span class="hljs-string">&quot;0&quot;</span>);
+
+                    <span class="hljs-comment">// Determine the exponent for a scientific form:</span>
+                    exponent = <span class="hljs-number">0</span>;
+
+                    <span class="hljs-keyword">while</span> (((<span class="hljs-keyword">long</span>)dValue != dValue) &amp;&amp; (dValue &lt; <span class="hljs-number">1E11</span>))
+                    {
+                        dValue *= <span class="hljs-number">10</span>;
+                        exponent++;
+                    }
+
+                    <span class="hljs-keyword">value</span>.Append((<span class="hljs-keyword">long</span>)dValue);
+
+                    <span class="hljs-keyword">while</span> ((<span class="hljs-keyword">long</span>)dValue != dValue)
+                    {
+                        dValue -= (<span class="hljs-keyword">long</span>)dValue;
+
+                        dValue *= <span class="hljs-number">10</span>;
+
+                        <span class="hljs-keyword">value</span>.Append((<span class="hljs-keyword">long</span>)dValue);
+                    }
+                }
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">double</span> multiplier = Math.Pow(<span class="hljs-number">10</span>, -exponent);
+
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">short</span> s = <span class="hljs-number">0</span>; (s &lt;= <span class="hljs-number">16</span>) &amp;&amp; (exponent != <span class="hljs-number">0</span>); s++)
+                {
+                    dValue *= multiplier;
+
+                    <span class="hljs-keyword">value</span>.Append((<span class="hljs-keyword">long</span>)dValue);
+                    dValue -= (<span class="hljs-keyword">long</span>)dValue;
+                    exponent++;
+                    multiplier = <span class="hljs-number">10</span>;
+                }
+            }
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span>.Length &gt;= MAX_CHARACTERS + <span class="hljs-number">2</span>)
+                <span class="hljs-keyword">value</span>.Length = MAX_CHARACTERS + <span class="hljs-number">2</span>;
+
+            <span class="hljs-keyword">return</span> RetrieveDigits(<span class="hljs-keyword">value</span>.ToString());
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Retrieves the digits of the value only</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;number&quot;&gt;</span>Value to be scrutinised<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>The digits only<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">RetrieveDigits</span>(<span class="hljs-params">String number</span>)
+        </span>{
+            <span class="hljs-comment">// Strip off exponent part, if it exists:</span>
+            <span class="hljs-keyword">short</span> eAt = (<span class="hljs-keyword">short</span>)number.IndexOf(Common.EXPONENT);
+
+            <span class="hljs-keyword">if</span> (eAt &gt; <span class="hljs-number">-1</span>) number = number.Substring(<span class="hljs-number">0</span>, eAt);
+
+            <span class="hljs-keyword">return</span> number.Replace(Convert.ToString(Common.DASH), <span class="hljs-string">&quot;&quot;</span>).Replace(
+                Convert.ToString(Common.COMMA), <span class="hljs-string">&quot;&quot;</span>).Replace(
+                Convert.ToString(Common.PERIOD), <span class="hljs-string">&quot;&quot;</span>);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Inserts the decimal separator at the right place</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;dValue&quot;&gt;</span>Number<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> String variable, where the separator is to be added.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">InsertSeparator</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> dValue, StringBuilder <span class="hljs-keyword">value</span></span>)
+        </span>{
+            <span class="hljs-keyword">short</span> separatorAt = (<span class="hljs-keyword">short</span>)Convert.ToString((<span class="hljs-keyword">long</span>)dValue).Length;
+
+            <span class="hljs-keyword">if</span> (separatorAt &lt; <span class="hljs-keyword">value</span>.Length)
+                <span class="hljs-keyword">value</span>.Insert(separatorAt, Common.PERIOD);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Calculates the power of the base to the exponent without changing</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> the least-significant digits of a number.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;basis&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;exponent&quot;&gt;</span>basis to power of exponent<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span><span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Power</span>(<span class="hljs-params"><span class="hljs-keyword">int</span> basis, <span class="hljs-keyword">short</span> exponent</span>)
+        </span>{
+            <span class="hljs-keyword">return</span> Power((<span class="hljs-keyword">short</span>)basis, exponent);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Calculates the power of the base to the exponent without changing</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> the least-significant digits of a number.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;basis&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;exponent&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>basis to power of exponent<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Power</span>(<span class="hljs-params"><span class="hljs-keyword">short</span> basis, <span class="hljs-keyword">short</span> exponent</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (basis == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> (exponent != <span class="hljs-number">0</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>;   
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">if</span> (exponent == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">else</span>
+                {
+                    <span class="hljs-comment">// The Math method power does change the least significant</span>
+                    <span class="hljs-comment">// digits after the decimal separator and is therefore</span>
+                    <span class="hljs-comment">// useless.</span>
+                    <span class="hljs-keyword">long</span> result = <span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">short</span> s = <span class="hljs-number">0</span>;
+
+                    <span class="hljs-keyword">if</span> (exponent &gt; <span class="hljs-number">0</span>)
+                    {
+                        <span class="hljs-keyword">for</span> (; s &lt; exponent; s++) result *= basis;
+                    }
+                    <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">exponent &lt; <span class="hljs-number">0</span></span>)
+                    </span>{
+                        <span class="hljs-keyword">for</span> (s = exponent; s &lt; <span class="hljs-number">0</span>; s++) result /= basis;
+                    }
+
+                    <span class="hljs-keyword">return</span> result;
+                }
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Rounds a number to the decimal places.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Number to be rounded<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantsAfter&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Number of decimal places after the separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Rounded number to the requested decimal places<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Round</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d,
+            <span class="hljs-keyword">short</span> significantsAfter</span>)
+        </span>{
+            <span class="hljs-keyword">if</span> (d == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">double</span> constant = Power(<span class="hljs-number">10</span>, significantsAfter);
+                <span class="hljs-keyword">short</span> dsExponent = FindExponent(d);
+
+                <span class="hljs-keyword">short</span> exponent = dsExponent;
+
+                <span class="hljs-keyword">double</span> <span class="hljs-keyword">value</span> = d*constant*Math.Pow(<span class="hljs-number">10</span>, -exponent);
+                String exponentSign = (exponent &lt; <span class="hljs-number">0</span>)
+                    ? Convert.ToString(Common.DASH) : <span class="hljs-string">&quot;&quot;</span>;
+
+                <span class="hljs-keyword">if</span> (exponent != <span class="hljs-number">0</span>)
+                {
+                    exponent = (<span class="hljs-keyword">short</span>)Math.Abs(exponent);
+
+                    <span class="hljs-keyword">value</span> = Round(<span class="hljs-keyword">value</span>);
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    <span class="hljs-keyword">while</span> (FindSignificantsBeforeDecimal(separator, <span class="hljs-keyword">value</span>)
+                        &lt; significantsAfter)
+                    {
+                        constant *= <span class="hljs-number">10</span>;
+                        <span class="hljs-keyword">value</span> *= <span class="hljs-number">10</span>;
+                    }
+
+                    <span class="hljs-keyword">value</span> = Round(<span class="hljs-keyword">value</span>)/constant;
+                }
+
+                <span class="hljs-comment">// Power method cannot be used, as the exponentiated number may</span>
+                <span class="hljs-comment">// exceed the maximal long value.</span>
+                exponent -= (<span class="hljs-keyword">short</span>)(Math.Sign(dsExponent)*
+                    (FindSignificantDigits(separator, <span class="hljs-keyword">value</span>, significantsAfter)
+                    - <span class="hljs-number">1</span>));
+
+                <span class="hljs-keyword">if</span> (dsExponent != <span class="hljs-number">0</span>)
+                {
+                    String strValue = Convert.ToString(<span class="hljs-keyword">value</span>, invC);
+
+                    <span class="hljs-keyword">short</span> separatorAt = FindDecimalSeparatorPosition(strValue);
+
+                    <span class="hljs-keyword">if</span> (separatorAt &gt; <span class="hljs-number">-1</span>)
+                    {
+                        strValue = strValue.Substring(<span class="hljs-number">0</span>, separatorAt);
+                    }
+
+                    strValue += Common.EXPONENT + exponentSign
+                        + Convert.ToString(exponent);
+
+                    <span class="hljs-keyword">value</span> = <span class="hljs-keyword">double</span>.Parse(strValue, invC);
+                }
+
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">value</span>;
+            }
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Rounds a number according to mathematical rules.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Number to be rounded<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Rounded number<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">Round</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            <span class="hljs-keyword">return</span> (<span class="hljs-keyword">long</span>)(d + <span class="hljs-number">.5</span>);
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Converts a double value to a string such that it reflects the double</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> format (without converting it to a scientific format by itself, as</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> it is the case with Convert.ToString(double, invC)).</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Value to be converted<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Same format value as a string<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">ConvertToString</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> d</span>)
+        </span>{
+            <span class="hljs-keyword">double</span> dValue = d;
+            StringBuilder <span class="hljs-keyword">value</span> = <span class="hljs-keyword">new</span> StringBuilder();
+
+            <span class="hljs-keyword">if</span> (Math.Sign(dValue) == <span class="hljs-number">-1</span>) <span class="hljs-keyword">value</span>.Append(Common.DASH);
+
+            <span class="hljs-keyword">if</span> ((dValue &gt; <span class="hljs-number">1E-5</span>) &amp;&amp; (dValue &lt; <span class="hljs-number">1E-4</span>))
+            {
+                <span class="hljs-keyword">value</span>.Append(<span class="hljs-string">&quot;0&quot;</span>);
+
+                <span class="hljs-keyword">while</span> ((<span class="hljs-keyword">long</span>)dValue == <span class="hljs-number">0</span>)
+                {
+                    dValue *= <span class="hljs-number">10</span>;
+
+                    <span class="hljs-keyword">if</span> (dValue &gt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">break</span>;
+
+                    <span class="hljs-keyword">value</span>.Append(Convert.ToString((<span class="hljs-keyword">long</span>)dValue));
+                }
+            }
+
+            <span class="hljs-keyword">short</span> exponent = FindExponent(d);
+
+            <span class="hljs-keyword">if</span> (exponent != <span class="hljs-number">0</span>)
+            {
+                <span class="hljs-keyword">value</span>.Append(RetrieveDigits(dValue));
+                InsertSeparator(dValue, <span class="hljs-keyword">value</span>);
+                <span class="hljs-keyword">value</span>.Append(Common.EXPONENT);
+                <span class="hljs-keyword">value</span>.Append(exponent);
+            }
+            <span class="hljs-keyword">else</span>
+            {
+                <span class="hljs-keyword">value</span>.Append(RetrieveDigits(dValue));
+
+                InsertSeparator(dValue, <span class="hljs-keyword">value</span>);
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-keyword">value</span>.Length &gt; MAX_CHARACTERS + <span class="hljs-number">3</span>)
+                {
+                    <span class="hljs-keyword">value</span>.Length = MAX_CHARACTERS + <span class="hljs-number">3</span>;
+                }
+            }
+
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">value</span>.ToString();
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Rounds to a fixed number of significant digits.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span>Number to be rounded<span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantDigits&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Requested number of significant digits</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span>Rounded number<span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">RoundToString</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+            <span class="hljs-keyword">double</span> d,
+            <span class="hljs-keyword">short</span> significantDigits</span>)
+        </span>{
+            <span class="hljs-comment">// Number of significants that *are* before the decimal separator:</span>
+            <span class="hljs-keyword">short</span> significantsBefore =
+                FindSignificantsBeforeDecimal(separator, d);
+            <span class="hljs-comment">// Number of decimals that *should* be after the decimal separator:</span>
+            <span class="hljs-keyword">short</span> significantsAfter = FindSignificantsAfterDecimal(
+                    significantsBefore, significantDigits);
+            <span class="hljs-comment">// Round to the specified number of digits after decimal separator:</span>
+            <span class="hljs-keyword">double</span> rounded = Maths.Round(separator, d, significantsAfter);
+
+            String exponent = FindExponent(Convert.ToString(rounded, invC));
+            String mantissa = FindMantissa(separator, 
+                            Convert.ToString(rounded, invC));
+
+            <span class="hljs-keyword">double</span> dMantissa = <span class="hljs-keyword">double</span>.Parse(mantissa, invC);
+            StringBuilder result = <span class="hljs-keyword">new</span> StringBuilder(mantissa);
+            <span class="hljs-comment">// Determine the significant digits in this number:</span>
+            <span class="hljs-keyword">short</span> significants = FindSignificantDigits(separator, dMantissa,
+                significantsAfter);
+            <span class="hljs-comment">// Add lagging zeros, if necessary:</span>
+            <span class="hljs-keyword">if</span> (significants &lt;= significantDigits)
+            {
+                <span class="hljs-keyword">if</span> (significantsAfter != <span class="hljs-number">0</span>)
+                {
+                    result.Append(strZeros.Substring(<span class="hljs-number">0</span>,
+                        CalculateMissingSignificantZeros(separator,
+                            dMantissa, significantsAfter)));
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    <span class="hljs-comment">// Cut off the decimal separator &amp; after decimal digits:</span>
+                    <span class="hljs-keyword">short</span> decimalValue = (<span class="hljs-keyword">short</span>) result.ToString().IndexOf(
+                            Convert.ToString(separator));
+
+                    <span class="hljs-keyword">if</span> (decimalValue &gt; <span class="hljs-number">-1</span>) result.Length = decimalValue;
+                }
+            }
+            <span class="hljs-function"><span class="hljs-keyword">else</span> <span class="hljs-title">if</span> (<span class="hljs-params">significantsBefore &gt; significantDigits</span>)
+            </span>{
+                d /= Power(<span class="hljs-number">10</span>, (<span class="hljs-keyword">short</span>)(significantsBefore - significantDigits));
+
+                d = Round(d);
+
+                <span class="hljs-keyword">short</span> digits = (<span class="hljs-keyword">short</span>)(significantDigits + ((d &lt; <span class="hljs-number">0</span>) ? <span class="hljs-number">1</span> : <span class="hljs-number">0</span>));
+
+                String strD = d.ToString().Substring(<span class="hljs-number">0</span>, digits);
+
+                result.Length = <span class="hljs-number">0</span>;
+                result.Append(strD + strZeros.Substring(<span class="hljs-number">0</span>,
+                        significantsBefore - significantDigits));
+            }
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-keyword">short</span>.Parse(exponent, invC) != <span class="hljs-number">0</span>)
+            {
+                result.Append(Common.EXPONENT + exponent);
+            }
+
+            <span class="hljs-keyword">return</span> result.ToString();
+        } <span class="hljs-comment">// public static String RoundToString(&#x2026;)</span>
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Rounds to a fixed number of significant digits.</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;separator&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Language-specific decimal separator</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;significantDigits&quot;&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Requested number of significant digits</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;value&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;returns&gt;</span><span class="hljs-doctag">&lt;/returns&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String <span class="hljs-title">RoundToString</span>(<span class="hljs-params"><span class="hljs-keyword">char</span> separator,
+                <span class="hljs-keyword">float</span> <span class="hljs-keyword">value</span>,
+                <span class="hljs-keyword">int</span> significantDigits</span>)
+        </span>{
+            <span class="hljs-keyword">return</span> RoundToString(separator, (<span class="hljs-keyword">double</span>)<span class="hljs-keyword">value</span>,
+                (<span class="hljs-keyword">short</span>)significantDigits);
+        }
+    }   <span class="hljs-comment">// public class Maths</span>
+}</code></pre>
+<p>Extensive testing of a software is crucial for qualitative code. To say that the code is tested does not give much information. The question is what is tested. Not in this case, but often it is also important to know where (in which environment) it was tested, and how - i.e. the test succession. Here is the code used to test the Maths class.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">ConsoleApplicationCommons</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">TestCommon</span>
+    {
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Test for the common functionality</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;args&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            <span class="hljs-comment">// Test rounding</span>
+            List&lt;<span class="hljs-keyword">double</span>&gt; values = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">double</span>&gt;();
+
+            values.Add(<span class="hljs-number">0.0</span>);
+            AddValue(<span class="hljs-number">1.4012984643248202e-45</span>, values);
+            AddValue(<span class="hljs-number">1.999999757e-5</span>, values);
+            AddValue(<span class="hljs-number">1.999999757e-4</span>, values);
+            AddValue(<span class="hljs-number">1.999999757e-3</span>, values);
+            AddValue(<span class="hljs-number">0.000640589</span>, values);
+            AddValue(<span class="hljs-number">0.3396899998188019</span>, values);
+            AddValue(<span class="hljs-number">0.34</span>, values);
+            AddValue(<span class="hljs-number">7.07</span>, values);
+            AddValue(<span class="hljs-number">118.188</span>, values);
+            AddValue(<span class="hljs-number">118.2</span>, values);
+            AddValue(<span class="hljs-number">123.405009</span>, values);
+            AddValue(<span class="hljs-number">30.76994323730469</span>, values);
+            AddValue(<span class="hljs-number">130.76994323730469</span>, values);
+            AddValue(<span class="hljs-number">540</span>, values);
+            AddValue(<span class="hljs-number">12345</span>, values);
+            AddValue(<span class="hljs-number">123456</span>, values);
+            AddValue(<span class="hljs-number">540911</span>, values);
+            AddValue(<span class="hljs-number">9.223372036854776e56</span>, values);
+
+            <span class="hljs-keyword">const</span> <span class="hljs-keyword">short</span> SIGNIFICANTS = <span class="hljs-number">5</span>;
+
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">double</span> element <span class="hljs-keyword">in</span> values)
+            {
+                Console.Out.WriteLine(<span class="hljs-string">&quot;Maths.Round(&apos;&quot;</span> + Common.PERIOD + <span class="hljs-string">&quot;&apos;, &quot;</span>
+                    + Convert.ToString(element, Maths.invC) + <span class="hljs-string">&quot;, &quot;</span>
+                    + SIGNIFICANTS + <span class="hljs-string">&quot;) = &quot;</span> + Maths.RoundToString
+                        (Common.PERIOD, element, SIGNIFICANTS));
+            }
+
+            Console.In.Read();
+        }
+
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> Method that adds a negative and a positive value</span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;/summary&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;d&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-comment"><span class="hljs-doctag">///</span> <span class="hljs-doctag">&lt;param name=&quot;values&quot;&gt;</span><span class="hljs-doctag">&lt;/param&gt;</span></span>
+        <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddValue</span>(<span class="hljs-params"><span class="hljs-keyword">double</span> d, List&lt;<span class="hljs-keyword">double</span>&gt; values</span>)
+        </span>{
+            values.Add(-d);
+            values.Add(d);
+        }
+    } <span class="hljs-comment">// class TestCommon</span>
+}</code></pre>
+<p>The results of your better code should comply with the result I got:</p><pre><code>Maths.Round(&apos;.&apos;, 0, 5) = 0.00000
+Maths.Round(&apos;.&apos;, -1.40129846432482E-45, 5) = -1.4012E-45
+Maths.Round(&apos;.&apos;, 1.40129846432482E-45, 5) = 1.4013E-45
+Maths.Round(&apos;.&apos;, -1.999999757E-05, 5) = -1.9999E-5
+Maths.Round(&apos;.&apos;, 1.999999757E-05, 5) = 2.0000E-5
+Maths.Round(&apos;.&apos;, -0.0001999999757, 5) = -0.00019999
+Maths.Round(&apos;.&apos;, 0.0001999999757, 5) = 0.00020000
+Maths.Round(&apos;.&apos;, -0.001999999757, 5) = -0.0019999
+Maths.Round(&apos;.&apos;, 0.001999999757, 5) = 0.0020000
+Maths.Round(&apos;.&apos;, -0.000640589, 5) = -0.00064058
+Maths.Round(&apos;.&apos;, 0.000640589, 5) = 0.00064059
+Maths.Round(&apos;.&apos;, -0.339689999818802, 5) = -0.33968
+Maths.Round(&apos;.&apos;, 0.339689999818802, 5) = 0.33969
+Maths.Round(&apos;.&apos;, -0.34, 5) = -0.33999
+Maths.Round(&apos;.&apos;, 0.34, 5) = 0.34000
+Maths.Round(&apos;.&apos;, -7.07, 5) = -7.0699
+Maths.Round(&apos;.&apos;, 7.07, 5) = 7.0700
+Maths.Round(&apos;.&apos;, -118.188, 5) = -118.18
+Maths.Round(&apos;.&apos;, 118.188, 5) = 118.19
+Maths.Round(&apos;.&apos;, -118.2, 5) = -118.19
+Maths.Round(&apos;.&apos;, 118.2, 5) = 118.20
+Maths.Round(&apos;.&apos;, -123.405009, 5) = -123.40
+Maths.Round(&apos;.&apos;, 123.405009, 5) = 123.41
+Maths.Round(&apos;.&apos;, -30.7699432373047, 5) = -30.769
+Maths.Round(&apos;.&apos;, 30.7699432373047, 5) = 30.770
+Maths.Round(&apos;.&apos;, -130.769943237305, 5) = -130.76
+Maths.Round(&apos;.&apos;, 130.769943237305, 5) = 130.77
+Maths.Round(&apos;.&apos;, -540, 5) = -539.99
+Maths.Round(&apos;.&apos;, 540, 5) = 540.00
+Maths.Round(&apos;.&apos;, -12345, 5) = -12344
+Maths.Round(&apos;.&apos;, 12345, 5) = 12345
+Maths.Round(&apos;.&apos;, -123456, 5) = -123450
+Maths.Round(&apos;.&apos;, 123456, 5) = 123460
+Maths.Round(&apos;.&apos;, -540911, 5) = -540900
+Maths.Round(&apos;.&apos;, 540911, 5) = 540910
+Maths.Round(&apos;.&apos;, -9.22337203685478E+56, 5) = -9.2233E56
+Maths.Round(&apos;.&apos;, 9.22337203685478E+56, 5) = 9.2234E56</code></pre>
+<p>If you are interested in a comparison with C++, please compare it with the same example there. If you want to compare C# with Java, take a look at the rounding number example there.</p><p><code>csharpC# Programming</code></p><h2 id="systemwindowsforms">System.Windows.Forms</h2><p>To create a Windows desktop application we use the library represented by System.Windows.Forms namespace. Some commonly used classes in this namespace include:</p><ul><li><a title="C Sharp Programming/Control" href="wiki/C_Sharp_Programming/Control">Control</a> - generic class from which other useful classes, like <code>&lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt;</code>, <code>&lt;span class=&quot;n&quot;&gt;TextBox&lt;/span&gt;</code> and others listed below are derived
+</li>
+<li><a title="C Sharp Programming/Control/Form" href="wiki/C_Sharp_Programming/Control/Form">Form</a> - this is the base class for the program window. All other controls are placed directly onto a <code>&lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt;</code> or indirectly on another container (like <code>&lt;span class=&quot;n&quot;&gt;TabPage&lt;/span&gt;</code> or <code>&lt;span class=&quot;n&quot;&gt;TabControl&lt;/span&gt;</code>) that ultimately resides on the <code>&lt;span class=&quot;n&quot;&gt;Form&lt;/span&gt;</code>. When automatically created in Visual Studio, it is usually subclassed as <code>&lt;span class=&quot;n&quot;&gt;Form1&lt;/span&gt;</code>.
+</li>
+<li><a title="C Sharp Programming/Control/Button (does not exist)" href="w/index.php">Button</a> - a clickable button
+</li>
+<li><a title="C Sharp Programming/Control/TextBox (does not exist)" href="w/index.php">TextBox</a> - a singleline or multiline textbox that can be used for displaying or inputting text
+</li>
+<li><a title="C Sharp Programming/Control/RichTextBox (does not exist)" href="w/index.php">RichTextBox</a> - an extended <code>&lt;span class=&quot;n&quot;&gt;TextBox&lt;/span&gt;</code> that can display styled text, e.g. with parts of the text colored or with a specified font. RichTextBox can also display generalized RTF document, including embedded images.
+</li>
+<li><a title="C Sharp Programming/Control/Label (does not exist)" href="w/index.php">Label</a> - simple control allowing display of a single line of unstyled text, often used for various captions and titles
+</li>
+<li><a title="C Sharp Programming/Control/ListBox (does not exist)" href="w/index.php">ListBox</a> - control displaying multiple items (lines of text) with ability to select an item and to scroll through it
+</li>
+<li><a title="C Sharp Programming/Control/ComboBox (does not exist)" href="w/index.php">ComboBox</a> - similar to <code>&lt;span class=&quot;n&quot;&gt;ListBox&lt;/span&gt;</code>, but resembling a dropdown menu
+</li>
+<li><a title="C Sharp Programming/Control/TabControl (does not exist)" href="w/index.php">TabControl</a> and <a title="C Sharp Programming/Controls/TabPage (does not exist)" href="w/index.php">TabPage</a> - used to group controls in a tabbed interface (much like tabbed interface in Visual Studio or Mozilla Firefox). A <code>&lt;span class=&quot;n&quot;&gt;TabControl&lt;/span&gt;</code> contains a collection of <code>&lt;span class=&quot;n&quot;&gt;TabPage&lt;/span&gt;</code> objects.
+</li>
+<li><a title="C Sharp Programming/Control/DataGrid (does not exist)" href="w/index.php">DataGrid</a> - data grid/table view
+</li></ul>
+<h2 id="form-class">Form class</h2><p>The Form class (System.Windows.Forms.Form) is a particularly important part of that namespace because the form is the key graphical building block of Windows applications. It provides the visual frame that holds buttons, menus, icons, and title bars together. Integrated development environments (IDEs) like Visual C# and SharpDevelop can help create graphical applications, but it is important to know how to do so manually:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.Windows.Forms;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleForm</span> : <span class="hljs-title">Form</span>    <span class="hljs-comment">// inherits from System.Windows.Forms.Form</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        ExampleForm wikibooksForm = <span class="hljs-keyword">new</span> ExampleForm();
+
+        wikibooksForm.Text = <span class="hljs-string">&quot;I Love Wikibooks&quot;</span>;  <span class="hljs-comment">// specify title of the form</span>
+        wikibooksForm.Width = <span class="hljs-number">400</span>;                <span class="hljs-comment">// width of the window in pixels</span>
+        wikibooksForm.Height = <span class="hljs-number">300</span>;               <span class="hljs-comment">// height in pixels</span>
+        Application.Run(wikibooksForm);           <span class="hljs-comment">// display the form</span>
+    }
+}</code></pre>
+<p>The example above creates a simple Window with the text &quot;I Love Wikibooks&quot; in the title bar. Custom form classes like the example above inherit from the System.Windows.Forms.Form class. Setting any of the properties Text, Width, and Height is optional. Your program will compile and run successfully, if you comment these lines out, but they allow us to add extra control to our form.</p><h2 id="events">Events</h2><p>|</p><div style="width: 52px;">![](//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/40px-Book_important2.svg.png)</div>
+
+
+
+<p>| <strong>This section is a stub.</strong>
+You can help Wikibooks by <a href="en.wikibooks.org/w/index.php">expanding it</a>. |</p><p>An event is an action being taken by the program when a user or the computer makes an action (for example, a button is clicked, a mouse rolls over an image, etc.). An event handler is an object that determines what action should be taken when an event is triggered.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.Windows.Forms;
+<span class="hljs-keyword">using</span> System.Drawing;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleForm</span> : <span class="hljs-title">Form</span>    <span class="hljs-comment">// inherits from System.Windows.Forms.Form</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ExampleForm</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">this</span>.Text = <span class="hljs-string">&quot;I Love Wikibooks&quot;</span>;           <span class="hljs-comment">// specify title of the form</span>
+        <span class="hljs-keyword">this</span>.Width = <span class="hljs-number">300</span>;                         <span class="hljs-comment">// width of the window in pixels</span>
+        <span class="hljs-keyword">this</span>.Height = <span class="hljs-number">300</span>;                        <span class="hljs-comment">// height in pixels</span>
+
+        Button HelloButton = <span class="hljs-keyword">new</span> Button();
+        HelloButton.Location = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>); <span class="hljs-comment">// the location of button in pixels</span>
+        HelloButton.Size = <span class="hljs-keyword">new</span> Size(<span class="hljs-number">100</span>, <span class="hljs-number">30</span>);     <span class="hljs-comment">// the size of button in pixels</span>
+        HelloButton.Text = <span class="hljs-string">&quot;Click me!&quot;</span>;           <span class="hljs-comment">// the text of button</span>
+
+        <span class="hljs-comment">// When click in the button, this event fire</span>
+        HelloButton.Click += <span class="hljs-keyword">new</span> System.EventHandler(WhenHelloButtonClick);
+
+        <span class="hljs-keyword">this</span>.Controls.Add(HelloButton);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">WhenHelloButtonClick</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> sender, System.EventArgs e</span>)
+    </span>{
+        MessageBox.Show(<span class="hljs-string">&quot;You clicked! Press OK to exit of this message&quot;</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Application.Run(<span class="hljs-keyword">new</span> ExampleForm());       <span class="hljs-comment">// display the form</span>
+    }
+}</code></pre>
+<h2 id="controls">Controls</h2><p>|</p><div style="width: 52px;">![](//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Book_important2.svg/40px-Book_important2.svg.png)</div>
+
+
+
+<p>| <strong>This section is a stub.</strong>
+You can help Wikibooks by <a href="en.wikibooks.org/w/index.php">expanding it</a>. |</p><p><code>csharpC# Windows Controls
+Control class | Form | Button | Label | TextBox | RichTextBox ListBox | ComboBox | TabControl and TabPage</code></p><p>The Windows Forms namespace has a lot of very interesting classes. One of the simplest and important is the Form class. A form is the key building block of any Windows application. It provides the visual frame that holds buttons, menus, icons and title bars together. Forms can be modal and modalless, owners and owned, parents and children. While forms could be created with a notepad, using a form editor like VS.NET, C# Builder or Sharp Develop makes development much faster. In this lesson, we will not be using an IDE. Instead, save the code below into a text file and compile with command line compiler.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System.Windows.Forms;
+<span class="hljs-keyword">using</span> System.Drawing;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">ExampleForm</span> : <span class="hljs-title">Form</span>    <span class="hljs-comment">// inherits from System.Windows.Forms.Form</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">ExampleForm</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">this</span>.Text = <span class="hljs-string">&quot;I Love Wikibooks&quot;</span>;         <span class="hljs-comment">// specify title of the form</span>
+        <span class="hljs-keyword">this</span>.BackColor = Color.White;
+        <span class="hljs-keyword">this</span>.Width = <span class="hljs-number">300</span>;                       <span class="hljs-comment">// width of the window in pixels</span>
+        <span class="hljs-keyword">this</span>.Height = <span class="hljs-number">300</span>;                      <span class="hljs-comment">// height in pixels</span>
+
+        <span class="hljs-comment">// A Label</span>
+        Label TextLabel = <span class="hljs-keyword">new</span> Label();
+        TextLabel.Text = <span class="hljs-string">&quot;One Label here!&quot;</span>;
+        TextLabel.Location = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">20</span>, <span class="hljs-number">20</span>);
+        TextLabel.Size = <span class="hljs-keyword">new</span> Size(<span class="hljs-number">150</span>, <span class="hljs-number">30</span>);
+        TextLabel.Font = <span class="hljs-keyword">new</span> Font(<span class="hljs-string">&quot;Arial&quot;</span>, <span class="hljs-number">12</span>); <span class="hljs-comment">// See! we can modify the font of text</span>
+        <span class="hljs-keyword">this</span>.Controls.Add(TextLabel);           <span class="hljs-comment">// adding the control to the form</span>
+
+        <span class="hljs-comment">// A input text field</span>
+        TextBox Box = <span class="hljs-keyword">new</span> TextBox();            <span class="hljs-comment">// inherits from Control</span>
+        Box.Location = <span class="hljs-keyword">new</span> Point(<span class="hljs-number">20</span>, <span class="hljs-number">60</span>);       <span class="hljs-comment">// then, it have Size and Location properties</span>
+        Box.Size = <span class="hljs-keyword">new</span> Size(<span class="hljs-number">100</span>, <span class="hljs-number">30</span>);
+        <span class="hljs-keyword">this</span>.Controls.Add(Box);                 <span class="hljs-comment">// all class that inherit from Control can be added in a form</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Application.EnableVisualStyles();
+        Application.Run(<span class="hljs-keyword">new</span> ExampleForm());     <span class="hljs-comment">// display the form</span>
+    }
+}</code></pre>
+<p><code>csharpC# Programming</code></p><h2 id="lists">Lists</h2><p>A list is a dynamic array that resizes itself as needed, if more data is inserted than it can hold at the time of insertion. Items can be inserted at any index, deleted at any index and accessed at any index. The C# non-generic list class is the ArrayList, while the generic one is List<t>.</t></p><p>Many of the List class&apos; methods and properties are demonstrated in the following example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Collections;
+<span class="hljs-keyword">using</span> System.Collections.Generic;
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">csharp_generic_list</span>
+{
+    <span class="hljs-keyword">class</span> <span class="hljs-title">MainClass</span>
+    {
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)
+        </span>{
+            Console.WriteLine(<span class="hljs-string">&quot;List&lt;T&gt; demo&quot;</span>);
+            <span class="hljs-comment">// Creating an instance that accepts strings</span>
+            List&lt;<span class="hljs-keyword">string</span>&gt; foods = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">string</span>&gt;();
+
+            <span class="hljs-comment">// Adding some items one by one with Add()</span>
+            foods.Add(<span class="hljs-string">&quot;bread&quot;</span>);
+            foods.Add(<span class="hljs-string">&quot;butter&quot;</span>);
+            foods.Add(<span class="hljs-string">&quot;chocolate&quot;</span>);
+
+            <span class="hljs-comment">// Adding a simple string array with AddRange()</span>
+            <span class="hljs-keyword">string</span>[] subList1 = {<span class="hljs-string">&quot;orange&quot;</span>, <span class="hljs-string">&quot;apple&quot;</span>, <span class="hljs-string">&quot;strawberry&quot;</span>, <span class="hljs-string">&quot;grapes&quot;</span>, <span class="hljs-string">&quot;kiwi&quot;</span>, <span class="hljs-string">&quot;banana&quot;</span>};
+            foods.AddRange(subList1);
+
+            <span class="hljs-comment">// Adding another List&lt;string&gt; with AddRange()</span>
+            List&lt;<span class="hljs-keyword">string</span>&gt; anotherFoodList = <span class="hljs-keyword">new</span> List&lt;<span class="hljs-keyword">string</span>&gt;();
+            anotherFoodList.Add(<span class="hljs-string">&quot;yoghurt&quot;</span>);
+            anotherFoodList.Add(<span class="hljs-string">&quot;tomato&quot;</span>);
+            anotherFoodList.Add(<span class="hljs-string">&quot;roast beef&quot;</span>);
+            anotherFoodList.Add(<span class="hljs-string">&quot;vanilla cake&quot;</span>);
+            foods.AddRange(anotherFoodList);
+
+            <span class="hljs-comment">// Removing &quot;orange&quot; with Remove()</span>
+            foods.Remove(<span class="hljs-string">&quot;orange&quot;</span>);
+
+            <span class="hljs-comment">// Removing the 5th (index = 4) item (&quot;strawberry&quot;) with RemoveAt()</span>
+            foods.RemoveAt(<span class="hljs-number">4</span>);
+
+            <span class="hljs-comment">// Removing a range (4-7: all fruits) with RemoveRange(int index, int count)</span>
+            foods.RemoveRange(<span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+
+            <span class="hljs-comment">// sorting the list</span>
+            foods.Sort();
+
+            <span class="hljs-comment">// Printing the sorted foods</span>
+            <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">string</span> item <span class="hljs-keyword">in</span> foods)
+            {
+                Console.Write(<span class="hljs-string">&quot;| &quot;</span> + item + <span class="hljs-string">&quot; &quot;</span>);
+            }
+            Console.WriteLine(<span class="hljs-string">&quot;|&quot;</span>);
+
+            <span class="hljs-comment">// Removing all items from foods</span>
+            foods.Clear();
+
+            <span class="hljs-comment">// Printing the current item count in foods</span>
+            Console.WriteLine(<span class="hljs-string">&quot;The list now has {0} items.&quot;</span>, foods.Count);
+        }
+    }
+}</code></pre>
+<p>The terminal output is:</p><pre><code>List&lt;T&gt; demo
+| bread | butter | chocolate | roast beef | tomato | vanilla cake | yoghurt |
+The list now has 0 items.</code></pre>
+<h2 id="linkedlists">LinkedLists</h2><p>Items in a linked list can be accessed directly only one after the other. Of course an item at any index can be accessed, but the list must iterate to the item from the first one, which is much slower than accessing items by index in an array or a list. There is no non-generic linked list in C#, while the generic one is LinkedList<t>.</t></p><h2 id="queues">Queues</h2><p>A queue is a FIFO (first in - first out) collection. The item first pushed in the queue gets taken first with the pop function. Only the first item is accessible at any time, and items can only be put to the end. The non-generic queue class is called Queue, while the generic one is Queue<t>.</t></p><h2 id="stacks">Stacks</h2><p>A stack is a LIFO (last in - first out) collection. The item pushed in first will be the last to be taken by pop. Only the last item is accessible at any time, and items can only be put at the top. The non-generic stack class is Stack, while the generic one is Stack<t>.</t></p><h2 id="hashtables-and-dictionaries">Hashtables and dictionaries</h2><p>A dictionary is a collection of values with keys. The values can be very complex, yet searching the keys is still fast. The non-generic class is Hashtable, while the generic one is Dictionary<tkey, tvalue="">.</tkey,></p><p><code>csharpC# Programming</code></p><p>Threads are tasks that can run concurrently to other threads and can share data. When your program starts, it creates a thread for the entry point of your program, usually a Main function. So, you can think of a &quot;program&quot; as being made up of threads. The .NET Framework allows you to use threading in your programs to run code in parallel to each other. This is often done for two reasons:</p><ol><li>If the thread running your graphical user interface performs time-consuming work, your program may appear to be unresponsive. Using threading, you can create a new thread to perform tasks and report its progress to the GUI thread.
+</li>
+<li>On computers with more than one CPU or CPUs with more than one core, threads can maximize the use of computational resources, speeding up tasks.
+</li></ol>
+<h2 id="the-thread-class">The Thread class</h2><p>The System.Threading.Thread class exposes basic functionality for using threads. To create a thread, you simply create an instance of the Thread class with a ThreadStart or ParameterizedThreadStart delegate pointing to the code the thread should start running. For example:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SecondThreadFunction</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;Second thread says hello.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">1000</span>); <span class="hljs-comment">// pause execution of the current thread for 1 second (1000 ms)</span>
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Thread newThread = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> ThreadStart(SecondThreadFunction));
+
+        newThread.Start();
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;First thread says hello.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">500</span>); <span class="hljs-comment">// pause execution of the current thread for half a second (500 ms)</span>
+        }
+    }
+}</code></pre>
+<p>You should see the following output:</p><pre><code>First thread says hello.
+Second thread says hello.
+First thread says hello.
+First thread says hello.
+Second thread says hello.
+...</code></pre>
+<p>Notice that the while keyword is needed because as soon as the function returns, the thread exits, or terminates.</p><h3 id="parameterizedthreadstart">ParameterizedThreadStart</h3><p>The void ParameterizedThreadStart(object obj) delegate allows you to pass a parameter to the new thread:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">SecondThreadFunction</span>(<span class="hljs-params"><span class="hljs-keyword">object</span> param</span>)
+    </span>{
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;Second thread says &quot;</span> + param.ToString() + <span class="hljs-string">&quot;.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">500</span>); <span class="hljs-comment">// pause execution of the current thread for half a second (500 ms)</span>
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Thread newThread = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> ParameterizedThreadStart(SecondThreadFunction));
+
+        newThread.Start(<span class="hljs-number">1234</span>); <span class="hljs-comment">// here you pass a parameter to the new thread</span>
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;First thread says hello.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">1000</span>); <span class="hljs-comment">// pause execution of the current thread for a second (1000 ms)</span>
+        }
+    }
+}</code></pre>
+<p>The output is:</p><pre><code>First thread says hello.
+Second thread says 1234.
+Second thread says 1234.
+First thread says hello.
+...</code></pre>
+<h2 id="sharing-data">Sharing Data</h2><p>Although we could use ParameterizedThreadStart to pass parameter(s) to threads, it is not typesafe and is clumsy to use. We could exploit anonymous delegates to share data between threads, however:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> number = <span class="hljs-number">1</span>;
+        Thread newThread = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> ThreadStart(<span class="hljs-keyword">delegate</span>
+        {
+            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+            {
+                number++;
+                Console.WriteLine(<span class="hljs-string">&quot;Second thread says &quot;</span> + number.ToString() + <span class="hljs-string">&quot;.&quot;</span>);
+                Thread.Sleep(<span class="hljs-number">1000</span>);
+            }
+        }));
+
+        newThread.Start();
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            number++;
+            Console.WriteLine(<span class="hljs-string">&quot;First thread says &quot;</span> + number.ToString() + <span class="hljs-string">&quot;.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">1000</span>);
+        }
+    }
+}</code></pre>
+<p>Notice how the body of the anonymous delegate can access the local variable number.</p><h2 id="asynchronous-delegates">Asynchronous Delegates</h2><p>Using anonymous delegates can lead to a lot of syntax, confusion of scope, and lack of encapsulation. However with the use of lambda expressions, some of these problems can be mitigated. Instead of anonymous delegates, you can use asynchronous delegates to pass and return data, all of which is type safe. It should be noted that when you use an asynchronous delegate, you are actually queuing a new thread to the thread pool. Also, using asynchronous delegates forces you to use the asynchronous model.</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+     <span class="hljs-function"><span class="hljs-keyword">delegate</span> <span class="hljs-keyword">int</span> <span class="hljs-title">del</span>(<span class="hljs-params"><span class="hljs-keyword">int</span>[] data</span>)</span>;
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">SumOfNumbers</span>(<span class="hljs-params"><span class="hljs-keyword">int</span>[] data</span>)
+     </span>{
+          <span class="hljs-keyword">int</span> sum = <span class="hljs-number">0</span>;
+          <span class="hljs-keyword">foreach</span> (<span class="hljs-keyword">int</span> number <span class="hljs-keyword">in</span> data) {
+               sum += number;
+          }
+
+          <span class="hljs-keyword">return</span> sum;
+     }
+
+     <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+     </span>{
+          <span class="hljs-keyword">int</span>[] numbers = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[] { <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> };
+          del func = SumOfNumbers;
+          IAsyncResult result = func.BeginInvoke(numbers, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);
+
+          <span class="hljs-comment">// I can do stuff here while numbers is being added</span>
+
+          <span class="hljs-keyword">int</span> sum = func.EndInvoke(result);
+           sum = <span class="hljs-number">15</span>
+     }
+}</code></pre>
+<h2 id="synchronization">Synchronization</h2><p>In the sharing data example, you may have noticed that often, if not all of the time, you will get the following output:</p><pre><code>First thread says 2.
+Second thread says 3.
+Second thread says 5.
+First thread says 4.
+Second thread says 7.
+First thread says 7.</code></pre>
+<p>One would expect that at least, the numbers would be printed in ascending order! This problem arises because of the fact that the two pieces of code are running at the same time. For example, it printed 3, 5, then 4. Let us examine what may have occurred:</p><ol><li>After &quot;First thread says 2&quot;, the first thread incremented <code>&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;</code>, making it 3, and printed it.
+</li>
+<li>The second thread then incremented <code>&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;</code>, making it 4.
+</li>
+<li>Just before the second thread got a chance to print <code>&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;</code>, the first thread incremented <code>&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;</code>, making it 5, and printed it.
+</li>
+<li>The second thread then printed what <code>&lt;span class=&quot;n&quot;&gt;number&lt;/span&gt;</code> was before the first thread incremented it, that is, 4. Note that this may have occurred due to console output buffering.
+</li></ol>
+<p>The solution to this problem is to synchronize the two threads, making sure their code doesn&apos;t interleave like it did. C# supports this through the lock keyword. We can put blocks of code under this keyword:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">int</span> number = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">object</span> numberLock = <span class="hljs-keyword">new</span> <span class="hljs-keyword">object</span>();
+        Thread newThread = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> ThreadStart(<span class="hljs-keyword">delegate</span>
+        {
+            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+            {
+                <span class="hljs-keyword">lock</span> (numberLock)
+                {
+                    number++;
+                    Console.WriteLine(<span class="hljs-string">&quot;Second thread says &quot;</span> + number.ToString() + <span class="hljs-string">&quot;.&quot;</span>);
+                }
+
+                Thread.Sleep(<span class="hljs-number">1000</span>);
+            }
+        }));
+
+        newThread.Start();
+
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)
+        {
+            <span class="hljs-keyword">lock</span> (numberLock)
+            {
+                number++;
+                Console.WriteLine(<span class="hljs-string">&quot;First thread says &quot;</span> + number.ToString() + <span class="hljs-string">&quot;.&quot;</span>);
+            }
+
+            Thread.Sleep(<span class="hljs-number">1000</span>);
+        }
+    }
+}</code></pre>
+<p>The variable numberLock is needed because the lock keyword only operates on reference types, not value types. This time, you will get the correct output:</p><pre><code>First thread says 2.
+Second thread says 3.
+Second thread says 4.
+First thread says 5.
+Second thread says 6.
+...</code></pre>
+<p>The lock keyword operates by trying to gain an exclusive lock on the object passed to it (numberLock). It will only release the lock when the code block has finished execution (that is, after the }). If an object is already locked when another thread tries to gain a lock on the same object, the thread will block (suspend execution) until the lock is released, and then lock the object. This way, sections of code can be prevented from interleaving.</p><h3 id="threadjoin">Thread.Join()</h3><p>The Join method of the Thread class allows a thread to wait for another thread, optionally specifying a timeout:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Threading;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        Thread newThread = <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> ThreadStart(<span class="hljs-keyword">delegate</span>
+        {
+            Console.WriteLine(<span class="hljs-string">&quot;Second thread reporting.&quot;</span>);
+            Thread.Sleep(<span class="hljs-number">5000</span>);
+            Console.WriteLine(<span class="hljs-string">&quot;Second thread done sleeping.&quot;</span>);
+        }));
+
+        newThread.Start();
+        Console.WriteLine(<span class="hljs-string">&quot;Just started second thread.&quot;</span>);
+        newThread.Join(<span class="hljs-number">1000</span>);
+        Console.WriteLine(<span class="hljs-string">&quot;First thread waited for 1 second.&quot;</span>);
+        newThread.Join();
+        Console.WriteLine(<span class="hljs-string">&quot;First thread finished waiting for second thread. Press any key.&quot;</span>);
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>The output is:</p><pre><code>Just started second thread.
+Second thread reporting.
+First thread waited for 1 second.
+Second thread done sleeping.
+First thread finished waiting for second thread. Press any key.</code></pre>
+<p><code>csharpC# Programming</code></p><p>The .NET Framework currently supports calling unmanaged functions and using unmanaged data, a process called marshalling. This is often done to use Windows API functions and data structures, but can also be used with custom libraries.</p><h2 id="getsystemtimes">GetSystemTimes</h2><p>A simple example to start with is the Windows API function GetSystemTimes. It is declared as:</p><pre><code class="lang-csharp"><span class="hljs-function">BOOL WINAPI <span class="hljs-title">GetSystemTimes</span>(<span class="hljs-params">
+  __out_opt  LPFILETIME lpIdleTime,
+  __out_opt  LPFILETIME lpKernelTime,
+  __out_opt  LPFILETIME lpUserTime
+</span>)</span>;</code></pre>
+<p>LPFILETIME is a pointer to a FILETIME structure, which is simply a 64-bit integer. Since C# supports 64-bit numbers through the long type, we can use that. We can then import and use the function as follows:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Runtime.InteropServices;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    [DllImport(<span class="hljs-string">&quot;kernel32.dll&quot;</span>)]
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">extern</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">GetSystemTimes</span>(<span class="hljs-params"><span class="hljs-keyword">out</span> <span class="hljs-keyword">long</span> idleTime, <span class="hljs-keyword">out</span> <span class="hljs-keyword">long</span> kernelTime, <span class="hljs-keyword">out</span> <span class="hljs-keyword">long</span> userTime</span>)</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        <span class="hljs-keyword">long</span> idleTime, kernelTime, userTime;
+
+        GetSystemTimes(<span class="hljs-keyword">out</span> idleTime, <span class="hljs-keyword">out</span> kernelTime, <span class="hljs-keyword">out</span> userTime);
+        Console.WriteLine(<span class="hljs-string">&quot;Your CPU(s) have been idle for: &quot;</span> + (<span class="hljs-keyword">new</span> TimeSpan(idleTime)).ToString());
+        Console.ReadKey();
+    }
+}</code></pre>
+<p>Note that the use of out or ref in parameters automatically makes it a pointer to the unmanaged function.</p><h2 id="getprocessiocounters">GetProcessIoCounters</h2><p>To pass pointers to structs, we can use the out or ref keyword:</p><pre><code class="lang-csharp"><span class="hljs-keyword">using</span> System;
+<span class="hljs-keyword">using</span> System.Runtime.InteropServices;
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Program</span>
+{
+    <span class="hljs-keyword">struct</span> IO_COUNTERS
+    {
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> ReadOperationCount;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> WriteOperationCount;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> OtherOperationCount;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> ReadTransferCount;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> WriteTransferCount;
+        <span class="hljs-keyword">public</span> <span class="hljs-keyword">ulong</span> OtherTransferCount;
+    }
+
+    [DllImport(<span class="hljs-string">&quot;kernel32.dll&quot;</span>)]
+    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">extern</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">GetProcessIoCounters</span>(<span class="hljs-params">IntPtr ProcessHandle, <span class="hljs-keyword">out</span> IO_COUNTERS IoCounters</span>)</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"></span>)
+    </span>{
+        IO_COUNTERS counters;
+
+        GetProcessIoCounters(System.Diagnostics.Process.GetCurrentProcess().Handle, <span class="hljs-keyword">out</span> counters);
+        Console.WriteLine(<span class="hljs-string">&quot;This process has read &quot;</span> + counters.ReadTransferCount.ToString(<span class="hljs-string">&quot;N0&quot;</span>) + 
+            <span class="hljs-string">&quot; bytes of data.&quot;</span>);
+        Console.ReadKey();
+    }
+}</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Lesson3.html" class="navigation navigation-prev " aria-label="Previous page: Advanced Concepts">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Lesson5.html" class="navigation navigation-next " aria-label="Next page: Keywords">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"The .NET Framework","level":"1.5","depth":1,"next":{"title":"Keywords","level":"1.6","depth":1,"path":"Lesson5.md","ref":"Lesson5.md","articles":[]},"previous":{"title":"Advanced Concepts","level":"1.4","depth":1,"path":"Lesson3.md","ref":"Lesson3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Lesson4.md","mtime":"2016-08-04T18:05:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.0","time":"2016-08-04T18:05:25.850Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
